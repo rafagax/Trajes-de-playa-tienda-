@@ -183,8 +183,6 @@ body {
 .primary-btn:hover {
   transform: translateY(-1px);
   box-shadow: 0 18px 40px rgba(243, 26, 232, 0.767);
-   animation: pulse 1.8s infinite;
-  z-index: 50;
 }
 
 .secondary-btn {
@@ -376,7 +374,6 @@ body {
   animation: pulse 1.8s infinite;
   z-index: 50;
   box-shadow: 0 18px 40px rgba(243, 26, 232, 0.767);
-  
 }
 
 .whatsapp-icon {
