@@ -3,8 +3,8 @@ import React from 'react';
 import './App.css';
 
 // Imágenes
-import traje1 from './assets/traje de baño 1.jpeg';
-import traje2 from './assets/traje de baño 2.jpeg';
+import traje1 from './assets/traje de baño 2.jpeg';
+import traje2 from './assets/traje de baño 1.jpeg';
 import traje3 from './assets/traje de baño 3.jpg';
 import traje4 from './assets/traje de baño 4.webp';
 import traje5 from './assets/logoGeorgina.jpeg';
