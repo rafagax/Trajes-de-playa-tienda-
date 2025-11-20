@@ -9,7 +9,7 @@ import traje3 from './assets/traje de baño 3.jpg';
 import traje4 from './assets/traje de baño 4.webp';
 import traje5 from './assets/logoGeorgina.jpeg';
 // Número de WhatsApp (sin +, sin espacios)
-const WHATSAPP_NUMBER = '584144735431';
+const WHATSAPP_NUMBER = '584228151085'; 
 
 // Mensaje general (botón flotante / contacto)
 const WHATSAPP_FLOAT_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
