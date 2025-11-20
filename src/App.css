@@ -1,0 +1,130 @@
+/* src/SwimwearShop.css */
+
+/* Estilos Generales y Reset Básico */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f7f9;
+  color: #333;
+}
+
+.shop-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* --- Encabezado --- */
+.shop-header {
+  text-align: center;
+  padding: 40px 20px;
+  margin-bottom: 30px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.shop-header h1 {
+  /* ELIGE UNO: Ejemplo con Turquesa */
+  color: #00bcd4; 
+  /* color: #003366; /* Opción Azul Marino */
+  /* color: #ff7f50; /* Opción Coral */
+  margin-bottom: 10px;
+}
+
+/* --- Grid de Productos --- */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  padding-bottom: 80px; 
+}
+
+.product-card {
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.product-image {
+  width: 100%; /* Ocupa el 100% del ancho de la tarjeta */
+  height: 350px; /* Altura fija para todas las imágenes */
+  object-fit: cover; /* ¡CLAVE! Ajusta la imagen sin distorsionarla */
+  object-position: center; /* ¡CLAVE! Centra la parte visible de la imagen */
+  display: block;
+  /* border-radius: 8px 8px 0 0;  Opcional: si quieres bordes redondeados solo arriba */
+}
+
+.product-card h2 {
+  font-size: 1.5em;
+  color: #00bcd4;
+  margin: 15px 0 5px;
+}
+
+.product-price {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #388e3c; 
+  margin-bottom: 15px;
+}
+
+.details-button {
+  background-color: #211ee9; /* Color actual (rosa vibrante) */
+  color: white;
+  /* ... resto de estilos ... */
+}
+
+.details-button:hover {
+  background-color: #1823c2; /* Color de hover */
+}
+
+/* --- Botón Flotante de WhatsApp --- */
+.whatsapp-button-float {
+  /* Posicionamiento Fijo */
+  position: fixed;
+  bottom: 20px; 
+  right: 20px; 
+  
+  /* Estilo visual */
+  background-color: #25d366; 
+  color: white;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%; 
+  text-align: center;
+  line-height: 60px;
+  font-size: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000; 
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  text-decoration: none; 
+}
+
+.whatsapp-button-float:hover {
+  background-color: #128c7e;
+  transform: scale(1.05);
+}
+
+.whatsapp-icon {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* --- Pie de Página --- */
+.shop-footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+    border-top: 1px solid #ddd;
+    color: #777;
+}
+
