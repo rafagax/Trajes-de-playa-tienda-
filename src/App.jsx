@@ -1,7 +1,7 @@
 // src/App.jsx
 import React from 'react';
 // Importamos el CSS de la tienda que crearás en el siguiente paso
- 
+import './../../Trajes-de-playa-tienda/src/App.css'; 
 // --- 1. IMPORTACIÓN DE IMÁGENES (NUEVAS LÍNEAS) ---
 import traje1 from './assets/traje de baño 1.jpeg';
 import traje2 from './assets/traje de baño 2.jpeg';
