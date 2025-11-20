@@ -1,7 +1,7 @@
 // src/App.jsx
 import React from 'react';
 // Importamos el CSS de la tienda que crearás en el siguiente paso
-import './../../GeorginaPg/src/App.css'; 
+ 
 // --- 1. IMPORTACIÓN DE IMÁGENES (NUEVAS LÍNEAS) ---
 import traje1 from './assets/traje de baño 1.jpeg';
 import traje2 from './assets/traje de baño 2.jpeg';
@@ -28,7 +28,7 @@ const App = () => {
     <div className="shop-container">
       {/* --- Encabezado --- */}
       <header className="shop-header">
-        <h1>🌊 GeorginaPg Trajes de Baño ☀️🌴</h1>
+        <h1> GeorginaPg Trajes de Baño ☀️🌴🌊</h1>
         <p>Estilo y confort para la playa y la piscina.</p>
       </header>
       
