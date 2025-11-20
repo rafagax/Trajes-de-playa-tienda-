@@ -454,7 +454,7 @@ body {
   filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.35));
 }
 .brand-logo {
-  height: 150px;
+  height: 120px;
   max-width: 150px;
   /* ... */
 }
@@ -468,7 +468,7 @@ body {
 /* Más grande aún en pantallas grandes (opcional) */
 @media (min-width: 768px) {
   .brand-logo {
-    height: 150px;
+    height: 100px;
     max-width: 360px;
   }
 }
