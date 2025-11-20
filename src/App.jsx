@@ -215,7 +215,7 @@ const App = () => {
 
       {/* Footer */}
       <footer className="shop-footer">
-        <p>&copy; 2025 GeorginaPg. Todos los derechos reservados.</p>
+        <p>&copy; 2025 L'Borgina. Todos los derechos reservados.</p>
         <small>Hecho con 💜💙 para que te vistas de verano todo el año.</small>
       </footer>
     </div>
