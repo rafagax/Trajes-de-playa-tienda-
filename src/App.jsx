@@ -7,7 +7,7 @@ import traje1 from './assets/traje de baño 1.jpeg';
 import traje2 from './assets/traje de baño 2.jpeg';
 import traje3 from './assets/traje de baño 3.jpg';
 import traje4 from './assets/traje de baño 4.webp';
-
+import traje5 from './assets/logoGeorgina.jpeg';
 // Número de WhatsApp (sin +, sin espacios)
 const WHATSAPP_NUMBER = '584144735431';
 
@@ -74,10 +74,13 @@ const App = () => {
     <div className="app">
       {/* HEADER + NAV + HERO */}
       <header className="shop-header">
+       
         <nav className="navbar">
           <div className="logo">
-            <span className="logo-mark">GL</span>
-            <span className="logo-text">L'borgina</span>
+          <img src={traje5} alt="Logo L'borgina" className="brand-logo" />
+            {/* <span className="logo-mark">L'B</span> */}
+            
+            
           </div>
 
           <ul className="nav-links">
@@ -101,9 +104,11 @@ const App = () => {
 
         <div className="hero">
           <div className="hero-content">
+            <span className="logo-text">L'borgina</span>
             <span className="hero-badge">Nueva colección 2025</span>
+            
             <h1 className="hero-title">
-              Trajes de baño con actitud veraniega ☀️🌴
+           Trajes de baño con actitud veraniega☀️🌴🌊
             </h1>
             <p className="hero-subtitle">
               Diseños pensados para realzar tu figura, sentirte segura y
