@@ -31,7 +31,7 @@ const products = [
   {
     id: 1,
     name: 'Bikini Tropical Sunrise',
-    price: 45.0,
+    price: 15.0,
     imageUrl: traje1,
     badge: 'Best seller',
     tag: 'Ideal para playa y piscina',
@@ -40,7 +40,7 @@ const products = [
   {
     id: 2,
     name: 'Traje Entero Clásico Azul',
-    price: 60.0,
+    price: 15.0,
     imageUrl: traje2,
     badge: 'Clásico',
     tag: 'Soporte y comodidad',
@@ -49,7 +49,7 @@ const products = [
   {
     id: 3,
     name: 'Bañador de Lentejuelas',
-    price: 55.0,
+    price: 15.0,
     imageUrl: traje3,
     badge: 'Edición limitada',
     tag: 'Brilla de noche',
@@ -58,7 +58,7 @@ const products = [
   {
     id: 4,
     name: 'Tanga Brasileña Naranja',
-    price: 40.0,
+    price: 15.0,
     imageUrl: traje4,
     badge: 'Nuevo',
     tag: 'Corte brasileño',
@@ -76,7 +76,7 @@ const products = [
   {
     id: 6,
     name: 'Bikini Tropical Sunrise',
-    price: 45.0,
+    price: 15.0,
     imageUrl: traje6,
     badge: 'Best seller',
     tag: 'Ideal para playa y piscina',
