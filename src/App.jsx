@@ -28,60 +28,61 @@ const createWhatsAppUrl = (productName) => {
 
 // Datos de los productos
 const products = [
+
   {
-    id: 1,
-    name: 'Bikini Tropical Sunrise',
-    price: 15.0,
-    imageUrl: traje1,
-    badge: 'Best seller',
-    tag: 'Ideal para playa y piscina',
-    description: 'Bikini de tiro alto con estampado tropical que realza tu figura.'
-  },
-  {
-    id: 2,
-    name: 'Traje Entero Clásico Azul',
-    price: 15.0,
-    imageUrl: traje2,
-    badge: 'Clásico',
-    tag: 'Soporte y comodidad',
-    description: 'Traje entero moldeador, perfecto para un look elegante y cómodo.'
-  },
-  {
-    id: 3,
-    name: 'Bañador de Lentejuelas',
-    price: 15.0,
-    imageUrl: traje3,
-    badge: 'Edición limitada',
-    tag: 'Brilla de noche',
-    description: 'Bañador con detalles de brillo para tus pool parties y viajes.'
-  },
-  {
-    id: 4,
-    name: 'Tanga Brasileña Naranja',
-    price: 15.0,
-    imageUrl: traje4,
-    badge: 'Nuevo',
-    tag: 'Corte brasileño',
-    description: 'Diseño atrevido y cómodo para lucir piernas infinitas.'
-  },
-  {
-    id: 5,
-   name: 'Traje Entero Clásico Azul',
-    price: 60.0,
-    imageUrl: traje5,
-    badge: 'Clásico',
-    tag: 'Soporte y comodidad',
-    description: 'Traje entero moldeador, perfecto para un look elegante y cómodo.'
-  },
-  {
-    id: 6,
-    name: 'Bikini Tropical Sunrise',
-    price: 15.0,
-    imageUrl: traje6,
-    badge: 'Best seller',
-    tag: 'Ideal para playa y piscina',
-    description: 'Bikini de tiro alto con estampado tropical que realza tu figura.'
-  },
+  id: 1,
+  name: 'Bikini Morado Lavanda - "Soft Dream"', // Color: Morado
+  price: 15.0,
+  imageUrl: traje1, 
+  badge: 'COLOR TENDENCIA',
+  tag: 'Look romántico y chic',
+  description: 'El tono Lavanda más buscado. Diseño de triángulo ajustable con frunce que se adapta a cualquier talla de busto, ofreciendo un soporte sutil y muy cómodo.'
+ },
+ {
+  id: 2,
+  name: 'Bikini Verde Menta - "Electric Pop"', // Color: Verde Menta/Turquesa
+  price: 15.0,
+  imageUrl: traje2, 
+  badge: 'BEST SELLER',
+  tag: 'Atrévete a brillar bajo el sol',
+  description: 'Máxima energía. Este turquesa vibrante garantiza que todas las miradas sean para ti. La tela de secado rápido es perfecta para días largos en la playa.' 
+ },
+ {
+  id: 3,
+  name: 'Bikini Negro Espalda Cruzada - "Aqua Wave"', // Color: Negro
+  price: 15.0,
+  imageUrl: traje3, 
+  badge: 'EDICIÓN VERANO',
+  tag: 'Fresco como el mar',
+  description: 'Elegante negro con tiras cruzadas en la espalda. Su diseño clásico de tiras atadas te permite personalizar el ajuste tanto en el cuello como en la espalda.' 
+ },
+ {
+  id: 4,
+  name: 'Bikini Rosado Barbie - "The Classic"', // Color: Rosado/Fucsia Brillante
+  price: 15.0,
+  imageUrl: traje4, 
+  badge: 'FONDO DE ARMARIO',
+  tag: 'Infaltable y combinable',
+  description: 'Este tono rosado suave es atemporal y fácil de combinar con cualquier pareo o accesorio. Corte de triángulo, súper versátil para múltiples looks.' 
+ },
+ {
+  id: 5,
+  name: 'Bikini Rojo Borgoña - "Sunset Glow"', // ¡NOMBRE CORREGIDO AL COLOR ROJO/VINO!
+  price: 15.0, 
+  imageUrl: traje5, 
+  badge: 'NUEVO',
+  tag: 'Inspirado en el atardecer',
+  description: 'Un tono rojo vino profundo y cálido que evoca las tardes de verano. El detalle del frunce añade textura y ayuda a moldear la figura naturalmente.' // Descripción ajustada al nuevo color
+ },
+ {
+  id: 6,
+  name: 'Bikini Negro Total - "Poolside Vibe"', // Color: Negro
+  price: 15.0,
+  imageUrl: traje6, 
+  badge: 'EXCLUSIVO',
+  tag: 'Perfecto para la piscina',
+  description: 'Un negro sólido y moderno. Este bikini de tela premium mantiene su forma y color, garantizando durabilidad temporada tras temporada.' 
+ },
 ];
 
 const App = () => {
