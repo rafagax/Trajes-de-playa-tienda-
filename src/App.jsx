@@ -3,11 +3,13 @@ import React from 'react';
 import './App.css';
 
 // Imágenes
-import traje1 from './assets/traje de baño 2.jpeg';
-import traje2 from './assets/traje de baño 1.jpeg';
+import traje1 from './assets/traje de baño 1.jpeg';
+import traje2 from './assets/traje de baño 2.jpeg';
 import traje3 from './assets/traje de baño 3.jpg';
 import traje4 from './assets/traje de baño 4.webp';
-import traje5 from './assets/logoGeorgina.jpeg';
+import traje5 from './assets/traje de baño 5.jpeg';
+import traje6 from './assets/traje de baño 6.jpeg';
+import trajeLogo from './assets/logoGeorgina.jpeg';
 // Número de WhatsApp (sin +, sin espacios)
 const WHATSAPP_NUMBER = '584228151085'; 
 
@@ -59,7 +61,25 @@ const products = [
     badge: 'Nuevo',
     tag: 'Corte brasileño',
     description: 'Diseño atrevido y cómodo para lucir piernas infinitas.'
-  }
+  },
+  {
+    id: 5,
+   name: 'Traje Entero Clásico Azul',
+    price: 60.0,
+    imageUrl: traje5,
+    badge: 'Clásico',
+    tag: 'Soporte y comodidad',
+    description: 'Traje entero moldeador, perfecto para un look elegante y cómodo.'
+  },
+  {
+    id: 6,
+    name: 'Bikini Tropical Sunrise',
+    price: 45.0,
+    imageUrl: traje6,
+    badge: 'Best seller',
+    tag: 'Ideal para playa y piscina',
+    description: 'Bikini de tiro alto con estampado tropical que realza tu figura.'
+  },
 ];
 
 const App = () => {
@@ -77,7 +97,7 @@ const App = () => {
        
         <nav className="navbar">
           <div className="logo">
-          <img src={traje5} alt="Logo L'borgina" className="brand-logo" />
+          <img src={trajeLogo} alt="Logo L'borgina" className="brand-logo" />
             {/* <span className="logo-mark">L'B</span> */}
             
             
