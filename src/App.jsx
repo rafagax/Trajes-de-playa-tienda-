@@ -6,10 +6,12 @@ import './App.css';
 import traje1 from './assets/traje de baño 1.jpeg';
 import traje2 from './assets/traje de baño 2.jpeg';
 import traje3 from './assets/traje de baño 3.jpg';
-import traje4 from './assets/traje de baño 4.webp';
+import traje4 from './assets/traje de baño 4.jpeg';
 import traje5 from './assets/traje de baño 5.jpeg';
 import traje6 from './assets/traje de baño 6.jpeg';
 import trajeLogo from './assets/logoGeorgina.jpeg';
+import precios from './assets/1.jpeg';
+import bikinis from './assets/2.jpeg';
 // Número de WhatsApp (sin +, sin espacios)
 const WHATSAPP_NUMBER = '584228151085'; 
 
@@ -130,6 +132,14 @@ const App = () => {
             <h1 className="hero-title">
            Trajes de baño con actitud veraniega☀️🌴🌊
             </h1>
+
+            {/* IMAGEN INSERTADA AQUÍ */}
+            <img 
+                src={precios} 
+                alt="Bikini destacada en el banner" 
+                className="product-image-wrapper" 
+            /> 
+            {/* FIN DE IMAGEN INSERTADA */}
             <p className="hero-subtitle">
               Diseños pensados para realzar tu figura, sentirte segura y
               disfrutar al máximo la playa, la piscina y cada momento bajo el sol.
@@ -177,6 +187,13 @@ const App = () => {
         {/* Colección */}
         <section id="coleccion" className="product-section">
           <div className="section-header">
+            {/* IMAGEN INSERTADA AQUÍ */}
+            <img 
+                src={bikinis} 
+                alt="Bikini destacada en el banner" 
+                className="product-image-wrapper" 
+            /> 
+            {/* FIN DE IMAGEN INSERTADA */}
             <h2>Colección Georgina'S Tienda - Trajes de Baño</h2>
             <p>Elige tu modelo favorito y escríbenos para reservar tu talla.</p>
           </div>
