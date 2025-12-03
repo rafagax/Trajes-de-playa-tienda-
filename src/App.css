@@ -78,7 +78,7 @@ body {
   overflow: hidden; 
   
   /* REDUCIMOS el padding de 5px a 2px para pegarlo más a la imagen */
-  padding: 2px; 
+  padding: 0px; 
   
   /* Aplicación de la animación */
   animation: pulse-red 2s infinite; 
