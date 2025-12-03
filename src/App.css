@@ -47,11 +47,51 @@ body {
   justify-content: space-between;
  
 }
+/* -------------------------------------------
+   ESTILOS : LOGO CIRCULAR CON PULSO ROJO
+   ------------------------------------------- */
 
+/* 1. Definición de la Animación de Pulso */
+@keyframes pulse-red {
+  0% {
+    /* La onda comienza pequeña y roja intensa (255, 0, 0) */
+    box-shadow: 0 0 0 0 rgba(255, 0, 0, 0.7); 
+  }
+  30% {
+    /* La onda se expande (15px) y se vuelve más transparente */
+    box-shadow: 0 0 0 15px rgba(255, 0, 0, 0); 
+  }
+  50% {
+    /* El ciclo se repite */
+    box-shadow: 0 0 0 0 rgba(255, 0, 0, 0);
+  }
+}
+
+
+/* 2. Estilos del Contenedor .logo */
 .logo {
   display: flex;
   align-items: center;
   gap: 0.6rem;
+  
+  border-radius: 50%;
+  overflow: hidden; 
+  
+  /* REDUCIMOS el padding de 5px a 2px para pegarlo más a la imagen */
+  padding: 2px; 
+  
+  /* Aplicación de la animación */
+  animation: pulse-red 2s infinite; 
+}
+
+
+/* 3. Estilos de la Imagen (brand-logo) */
+.brand-logo {
+  /* Opcional: Esto asegura que si la imagen no es cuadrada, se vea bien dentro del contenedor circular */
+      height: 150px;
+    max-width: 152px;
+  object-fit: cover;
+  border-radius: 50%; /* Esto es crucial si la imagen fuera rectangular */
 }
 
 .logo-mark {
@@ -291,6 +331,7 @@ body {
   width: 100%;
   aspect-ratio: 4 / 5;
   overflow: hidden;
+  margin-bottom: 15px;
 }
 
 .product-image {
