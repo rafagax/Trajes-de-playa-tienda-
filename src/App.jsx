@@ -12,7 +12,7 @@ import traje6 from './assets/traje de baño 6.jpeg';
 import trajeLogo from './assets/LOGO-PNG.png';
 import precios from './assets/22.png';
 import bikinis from './assets/2.jpeg';
-import musicaFondo from './musica/Girls.mp3';
+import musicaFondo from './musica/summer.mp3';
 
 // Número de WhatsApp (sin +, sin espacios)
 const WHATSAPP_NUMBER = '584228151085';
