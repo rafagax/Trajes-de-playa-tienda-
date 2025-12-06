@@ -344,7 +344,7 @@ const App = () => {
    o simplemente integrado aquí. Para simplicidad, lo haremos inline o un mini componente. */
 const AudioController = () => {
   const audioRef = React.useRef(null);
-  const [isPlaying, setIsPlaying] = React.useState(false);
+  const [isPlaying, setIsPlaying] = React.useState(true);
 
   React.useEffect(() => {
     const playAudio = async () => {
