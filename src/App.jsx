@@ -13,6 +13,7 @@ import trajeLogo from './assets/LOGO-PNG.png';
 import precios from './assets/22.png';
 import bikinis from './assets/2.jpeg';
 import musicaFondo from './musica/Girls.mp3';
+
 // Número de WhatsApp (sin +, sin espacios)
 const WHATSAPP_NUMBER = '584228151085';
 
@@ -29,7 +30,6 @@ const createWhatsAppUrl = (productName) => {
 
 // Datos de los productos
 const products = [
-
   {
     id: 1,
     name: 'Bikini Morado Lavanda - "Soft Dream"', // Color: Morado
@@ -73,7 +73,7 @@ const products = [
     imageUrl: traje5,
     badge: 'NUEVO',
     tag: 'Inspirado en el atardecer',
-    description: 'Un tono rojo vino profundo y cálido que evoca las tardes de verano. El detalle del frunce añade textura y ayuda a moldear la figura naturalmente.' // Descripción ajustada al nuevo color
+    description: 'Un tono rojo vino profundo y cálido que evoca las tardes de verano. El detalle del frunce añade textura y ayuda a moldear la figura naturalmente.'
   },
   {
     id: 6,
@@ -102,9 +102,6 @@ const App = () => {
         <nav className="navbar">
           <div className="logo">
             <img src={trajeLogo} alt="Logo L'borgina" className="brand-logo" />
-            {/* <span className="logo-mark">L'B</span> */}
-
-
           </div>
 
           <ul className="nav-links">
@@ -256,7 +253,7 @@ const App = () => {
       <footer className="shop-footer">
         {/* Sección de Redes Sociales */}
         <div className="social-links" style={{ display: 'flex', justifyContent: 'center', gap: '20px', marginBottom: '15px' }}>
-          {/* INSTAGRAM - Coloca tu enlace aquí abajo en href="..." */}
+          {/* INSTAGRAM */}
           <a href="https://www.instagram.com/lborgina/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -276,6 +273,7 @@ const App = () => {
             </svg>
           </a>
 
+          {/* TIKTOK */}
           <a href="https://www.tiktok.com/@l.borgina?_r=1&_t=ZM-91z4v6FN6Pj" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -294,7 +292,7 @@ const App = () => {
             </svg>
           </a>
 
-          {/* YOUTUBE - Coloca tu enlace aquí abajo en href="..." */}
+          {/* YOUTUBE */}
           <a href="https://youtube.com/@lborgina?si=AfmXNj1znSltDWwx" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -313,7 +311,7 @@ const App = () => {
             </svg>
           </a>
 
-          {/* FACEBOOK - ¡NUEVO ÍCONO! */}
+          {/* FACEBOOK */}
           <a href="https://www.facebook.com/share/19GGDVHqeM/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -340,54 +338,64 @@ const App = () => {
   );
 };
 
-/* Componente para manejar el audio fuera del flujo principal de renderizado si se prefiere,
-   o simplemente integrado aquí. Para simplicidad, lo haremos inline o un mini componente. */
+/* Componente para manejar el audio */
 const AudioController = () => {
   const audioRef = React.useRef(null);
-  const [isPlaying, setIsPlaying] = React.useState(true);
+  // Iniciamos en false porque hasta que no suene de verdad, no está "playing".
+  // El evento onPlay lo pondrá en true automáticamente.
+  const [isPlaying, setIsPlaying] = React.useState(false);
 
   React.useEffect(() => {
-    const playAudio = async () => {
+    // Intentar reproducir al cargar
+    const tryPlay = async () => {
+      if (!audioRef.current) return;
       try {
-        if (audioRef.current) {
-          audioRef.current.volume = 0.5; // Volumen al 50%
-          await audioRef.current.play();
-          setIsPlaying(true);
-        }
+        audioRef.current.volume = 0.5;
+        await audioRef.current.play();
+        // Si tiene éxito, onPlay actualizará el estado
       } catch (err) {
-        console.log("Autoplay bloqueado por el navegador. Esperando interacción del usuario.");
-        // Si falla, esperamos al primer clic en cualquier lugar para iniciar
-        const handleInteraction = () => {
+        console.log("Autoplay bloqueado. Esperando interacción...");
+        // Fallback: reproducir al hacer cualquier clic en la página
+        const enableAudio = () => {
           if (audioRef.current) {
             audioRef.current.play()
               .then(() => {
-                setIsPlaying(true);
-                // Remover listeners una vez que suene
-                document.removeEventListener('click', handleInteraction);
-                document.removeEventListener('keydown', handleInteraction);
+                // Éxito: removemos los listeners
+                document.removeEventListener('click', enableAudio);
+                document.removeEventListener('keydown', enableAudio);
               })
-              .catch(e => console.error("Aún no se puede reproducir:", e));
+              .catch(e => console.error("Error al intentar reproducir:", e));
           }
         };
-        document.addEventListener('click', handleInteraction);
-        document.addEventListener('keydown', handleInteraction);
+        document.addEventListener('click', enableAudio);
+        document.addEventListener('keydown', enableAudio);
       }
     };
-
-    playAudio();
+    tryPlay();
   }, []);
+
+  const togglePlay = () => {
+    if (!audioRef.current) return;
+    if (isPlaying) {
+      audioRef.current.pause();
+    } else {
+      audioRef.current.play().catch(e => console.error(e));
+    }
+  };
 
   return (
     <div className="audio-control" style={{ position: 'fixed', bottom: '20px', left: '20px', zIndex: 9999 }}>
-      <audio ref={audioRef} loop preload="auto" src={musicaFondo} />
+      {/* Usamos los eventos nativos para controlar el estado visual */}
+      <audio
+        ref={audioRef}
+        loop
+        preload="auto"
+        src={musicaFondo}
+        onPlay={() => setIsPlaying(true)}
+        onPause={() => setIsPlaying(false)}
+      />
       <button
-        onClick={() => {
-          if (audioRef.current) {
-            if (isPlaying) audioRef.current.pause();
-            else audioRef.current.play();
-            setIsPlaying(!isPlaying);
-          }
-        }}
+        onClick={togglePlay}
         style={{
           background: 'rgba(255,255,255,0.8)',
           border: 'none',
@@ -401,7 +409,7 @@ const AudioController = () => {
           alignItems: 'center',
           justifyContent: 'center'
         }}
-        aria-label="Controlar música"
+        aria-label={isPlaying ? "Silenciar música" : "Activar música"}
       >
         {isPlaying ? '🔊' : '🔇'}
       </button>
