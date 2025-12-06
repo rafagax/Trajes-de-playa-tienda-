@@ -364,8 +364,9 @@ const AudioController = () => {
     const addListeners = () => {
       window.addEventListener('click', handleInteraction);
       window.addEventListener('keydown', handleInteraction);
-      window.addEventListener('scroll', handleInteraction, { once: true }); // Scroll es muy frecuente, intentamos una vez
+      window.addEventListener('scroll', handleInteraction, { once: true });
       window.addEventListener('touchstart', handleInteraction);
+      window.addEventListener('touchend', handleInteraction);
     };
 
     const removeListeners = () => {
@@ -373,6 +374,7 @@ const AudioController = () => {
       window.removeEventListener('keydown', handleInteraction);
       window.removeEventListener('scroll', handleInteraction);
       window.removeEventListener('touchstart', handleInteraction);
+      window.removeEventListener('touchend', handleInteraction);
     };
 
     // Intentar reproducir apenas cargue
