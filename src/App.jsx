@@ -28,6 +28,11 @@ const createWhatsAppUrl = (productName) => {
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
 };
 
+// Evento personalizado para silenciar
+const triggerSilence = () => {
+  window.dispatchEvent(new Event('silence-audio'));
+};
+
 // Datos de los productos
 const products = [
   {
@@ -76,6 +81,7 @@ const products = [
     description: 'Un tono rojo vino profundo y cálido que evoca las tardes de verano. El detalle del frunce añade textura y ayuda a moldear la figura naturalmente.'
   },
   {
+
     id: 6,
     name: 'Bikini Negro Total - "Poolside Vibe"', // Color: Negro
     price: 15.0,
@@ -116,6 +122,7 @@ const App = () => {
                 href={WHATSAPP_FLOAT_URL}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={triggerSilence}
               >
                 Contacto
               </a>
@@ -153,6 +160,7 @@ const App = () => {
                 href={WHATSAPP_FLOAT_URL}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={triggerSilence}
               >
                 Hablar por WhatsApp
               </a>
@@ -224,9 +232,10 @@ const App = () => {
                     </span>
                     <button
                       className="details-button"
-                      onClick={() =>
-                        window.open(createWhatsAppUrl(product.name), '_blank')
-                      }
+                      onClick={() => {
+                        triggerSilence();
+                        window.open(createWhatsAppUrl(product.name), '_blank');
+                      }}
                     >
                       Preguntar por WhatsApp
                     </button>
@@ -245,6 +254,7 @@ const App = () => {
         rel="noopener noreferrer"
         className="whatsapp-button-float"
         aria-label="Contactar por WhatsApp"
+        onClick={triggerSilence}
       >
         <span className="whatsapp-icon">💬</span>
       </a>
@@ -344,6 +354,14 @@ const AudioController = () => {
   const [isPlaying, setIsPlaying] = React.useState(false);
 
   React.useEffect(() => {
+    // Escuchar evento de silencio
+    const handleSilence = () => {
+      if (audioRef.current) {
+        audioRef.current.pause();
+      }
+    };
+    window.addEventListener('silence-audio', handleSilence);
+
     // Definimos la función de interacción fuera para poder removerla después
     const handleInteraction = () => {
       if (!audioRef.current) return;
@@ -395,6 +413,7 @@ const AudioController = () => {
     // Cleanup al desmontar
     return () => {
       removeListeners();
+      window.removeEventListener('silence-audio', handleSilence);
     };
   }, []);
 
