@@ -341,37 +341,59 @@ const App = () => {
 /* Componente para manejar el audio */
 const AudioController = () => {
   const audioRef = React.useRef(null);
-  // Iniciamos en false porque hasta que no suene de verdad, no está "playing".
-  // El evento onPlay lo pondrá en true automáticamente.
   const [isPlaying, setIsPlaying] = React.useState(false);
 
   React.useEffect(() => {
-    // Intentar reproducir al cargar
-    const tryPlay = async () => {
+    // Definimos la función de interacción fuera para poder removerla después
+    const handleInteraction = () => {
+      if (!audioRef.current) return;
+
+      const playPromise = audioRef.current.play();
+      if (playPromise !== undefined) {
+        playPromise
+          .then(() => {
+            // Éxito: limpiamos todos los listeners
+            removeListeners();
+          })
+          .catch(error => {
+            console.log("Autoplay prevenido (esperando más interacción):", error);
+          });
+      }
+    };
+
+    const addListeners = () => {
+      window.addEventListener('click', handleInteraction);
+      window.addEventListener('keydown', handleInteraction);
+      window.addEventListener('scroll', handleInteraction, { once: true }); // Scroll es muy frecuente, intentamos una vez
+      window.addEventListener('touchstart', handleInteraction);
+    };
+
+    const removeListeners = () => {
+      window.removeEventListener('click', handleInteraction);
+      window.removeEventListener('keydown', handleInteraction);
+      window.removeEventListener('scroll', handleInteraction);
+      window.removeEventListener('touchstart', handleInteraction);
+    };
+
+    // Intentar reproducir apenas cargue
+    const tryAutoPlay = async () => {
       if (!audioRef.current) return;
       try {
         audioRef.current.volume = 0.5;
         await audioRef.current.play();
-        // Si tiene éxito, onPlay actualizará el estado
+        // Si funcionó (ej. el usuario refrescó y el navegador recuerda la interacción), no necesitamos listeners
       } catch (err) {
-        console.log("Autoplay bloqueado. Esperando interacción...");
-        // Fallback: reproducir al hacer cualquier clic en la página
-        const enableAudio = () => {
-          if (audioRef.current) {
-            audioRef.current.play()
-              .then(() => {
-                // Éxito: removemos los listeners
-                document.removeEventListener('click', enableAudio);
-                document.removeEventListener('keydown', enableAudio);
-              })
-              .catch(e => console.error("Error al intentar reproducir:", e));
-          }
-        };
-        document.addEventListener('click', enableAudio);
-        document.addEventListener('keydown', enableAudio);
+        console.log("Autoplay inicial bloqueado. Activando listeners de interacción.");
+        addListeners();
       }
     };
-    tryPlay();
+
+    tryAutoPlay();
+
+    // Cleanup al desmontar
+    return () => {
+      removeListeners();
+    };
   }, []);
 
   const togglePlay = () => {
