@@ -12,6 +12,7 @@ import traje6 from './assets/traje de baño 6.jpeg';
 import trajeLogo from './assets/LOGO-PNG.png';
 import precios from './assets/22.png';
 import bikinis from './assets/2.jpeg';
+import musicaFondo from './musica/Girls.mp3';
 // Número de WhatsApp (sin +, sin espacios)
 const WHATSAPP_NUMBER = '584228151085';
 
@@ -334,6 +335,76 @@ const App = () => {
         <p>&copy; 2025 L'Borgina. Todos los derechos reservados.</p>
         <small>Hecho con 💜💙 para que te vistas de verano todo el año.</small>
       </footer>
+      <AudioController />
+    </div>
+  );
+};
+
+/* Componente para manejar el audio fuera del flujo principal de renderizado si se prefiere,
+   o simplemente integrado aquí. Para simplicidad, lo haremos inline o un mini componente. */
+const AudioController = () => {
+  const audioRef = React.useRef(null);
+  const [isPlaying, setIsPlaying] = React.useState(false);
+
+  React.useEffect(() => {
+    const playAudio = async () => {
+      try {
+        if (audioRef.current) {
+          audioRef.current.volume = 0.5; // Volumen al 50%
+          await audioRef.current.play();
+          setIsPlaying(true);
+        }
+      } catch (err) {
+        console.log("Autoplay bloqueado por el navegador. Esperando interacción del usuario.");
+        // Si falla, esperamos al primer clic en cualquier lugar para iniciar
+        const handleInteraction = () => {
+          if (audioRef.current) {
+            audioRef.current.play()
+              .then(() => {
+                setIsPlaying(true);
+                // Remover listeners una vez que suene
+                document.removeEventListener('click', handleInteraction);
+                document.removeEventListener('keydown', handleInteraction);
+              })
+              .catch(e => console.error("Aún no se puede reproducir:", e));
+          }
+        };
+        document.addEventListener('click', handleInteraction);
+        document.addEventListener('keydown', handleInteraction);
+      }
+    };
+
+    playAudio();
+  }, []);
+
+  return (
+    <div className="audio-control" style={{ position: 'fixed', bottom: '20px', left: '20px', zIndex: 9999 }}>
+      <audio ref={audioRef} loop preload="auto" src={musicaFondo} />
+      <button
+        onClick={() => {
+          if (audioRef.current) {
+            if (isPlaying) audioRef.current.pause();
+            else audioRef.current.play();
+            setIsPlaying(!isPlaying);
+          }
+        }}
+        style={{
+          background: 'rgba(255,255,255,0.8)',
+          border: 'none',
+          borderRadius: '50%',
+          width: '40px',
+          height: '40px',
+          cursor: 'pointer',
+          boxShadow: '0 2px 5px rgba(0,0,0,0.2)',
+          fontSize: '20px',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center'
+        }}
+        aria-label="Controlar música"
+      >
+        {isPlaying ? '🔊' : '🔇'}
+      </button>
     </div>
   );
 };
