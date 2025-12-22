@@ -411,7 +411,7 @@ const App = () => {
         {/* Sección de Redes Sociales */}
         <div className="social-links" style={{ display: 'flex', justifyContent: 'center', gap: '20px', marginBottom: '15px' }}>
           {/* INSTAGRAM */}
-          <a href="https://www.instagram.com/lborgina/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <a href="https://www.instagram.com/lborgina/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" onClick={triggerSilence}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -431,7 +431,7 @@ const App = () => {
           </a>
 
           {/* TIKTOK */}
-          <a href="https://www.tiktok.com/@l.borgina?_r=1&_t=ZM-91z4v6FN6Pj" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+          <a href="https://www.tiktok.com/@l.borgina?_r=1&_t=ZM-91z4v6FN6Pj" target="_blank" rel="noopener noreferrer" aria-label="TikTok" onClick={triggerSilence}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -450,7 +450,7 @@ const App = () => {
           </a>
 
           {/* YOUTUBE */}
-          <a href="https://youtube.com/@lborgina?si=AfmXNj1znSltDWwx" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+          <a href="https://youtube.com/@lborgina?si=AfmXNj1znSltDWwx" target="_blank" rel="noopener noreferrer" aria-label="YouTube" onClick={triggerSilence}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -469,7 +469,7 @@ const App = () => {
           </a>
 
           {/* FACEBOOK */}
-          <a href="https://www.facebook.com/share/19GGDVHqeM/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+          <a href="https://www.facebook.com/share/19GGDVHqeM/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" onClick={triggerSilence}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
