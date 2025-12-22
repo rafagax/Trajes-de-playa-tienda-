@@ -557,9 +557,9 @@ body {
 }
 
 .wholesale-image {
-  width: 386px;
-  height: 470px;
-  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
 }
 
 .wholesale-content h2 {
