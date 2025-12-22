@@ -11,8 +11,22 @@ import traje5 from './assets/traje de baño 5.jpeg';
 import traje6 from './assets/traje de baño 6.jpeg';
 import trajeLogo from './assets/LOGO-PNG.png';
 import precios from './assets/22.png';
-import bikinis from './assets/2.jpeg';
+// import bikinis from './assets/2.jpeg';
 import musicaFondo from './musica/summer.mp3';
+
+// Nuevos imports para modelos del 1 al 12 (Extension .jfif)
+import model1 from './assets/modelo-1.jfif';
+import model2 from './assets/modelo-2.jfif';
+import model3 from './assets/modelo-3.jfif';
+import model4 from './assets/modelo-4.jfif';
+import model5 from './assets/modelo-5.jfif';
+import model6 from './assets/modelo-6.jfif';
+import model7 from './assets/modelo-7.jfif';
+import model8 from './assets/modelo-8.jfif';
+import model9 from './assets/modelo-9.jfif';
+import model10 from './assets/modelo-10.jfif';
+import model11 from './assets/modelo-11.jfif';
+import model12 from './assets/modelo-12.jfif';
 
 // Número de WhatsApp (sin +, sin espacios)
 const WHATSAPP_NUMBER = '584228151085';
@@ -90,6 +104,125 @@ const products = [
     tag: 'Perfecto para la piscina',
     description: 'Un negro sólido y moderno. Este bikini de tela premium mantiene su forma y color, garantizando durabilidad temporada tras temporada.'
   },
+  // Nuevos Modelos (Genéricos)
+  {
+    id: 7,
+    name: 'Bikini Modelo 01',
+    price: 15.0,
+    imageUrl: model1,
+    badge: 'NUEVA COLECCIÓN',
+    tag: 'Diseño Exclusivo',
+    description: 'Gran variedad de modelos de trajes de baño disponibles. Calidad premium y diseños en tendencia.'
+  },
+  {
+    id: 8,
+    name: 'Bikini Modelo 02',
+    price: 15.0,
+    imageUrl: model2,
+    badge: 'TENDENCIA',
+    tag: 'Estilo Único',
+    description: 'Gran variedad de modelos de trajes de baño disponibles. Calidad premium y diseños en tendencia.'
+  },
+  {
+    id: 9,
+    name: 'Bikini Modelo 03',
+    price: 15.0,
+    imageUrl: model3,
+    badge: 'DESTACADO',
+    tag: 'Moda Verano',
+    description: 'Gran variedad de modelos de trajes de baño disponibles. Calidad premium y diseños en tendencia.'
+  },
+  {
+    id: 10,
+    name: 'Bikini Modelo 04',
+    price: 15.0,
+    imageUrl: model4,
+    badge: 'COLOR VIBRANTE',
+    tag: 'Look de Playa',
+    description: 'Gran variedad de modelos de trajes de baño disponibles. Calidad premium y diseños en tendencia.'
+  },
+  {
+    id: 11,
+    name: 'Bikini Modelo 05',
+    price: 15.0,
+    imageUrl: model5,
+    badge: 'ELEGANCIA',
+    tag: 'Sofisticado',
+    description: 'Gran variedad de modelos de trajes de baño disponibles. Calidad premium y diseños en tendencia.'
+  },
+  {
+    id: 12,
+    name: 'Bikini Modelo 06',
+    price: 15.0,
+    imageUrl: model6,
+    badge: 'CHIC',
+    tag: 'Moderno',
+    description: 'Gran variedad de modelos de trajes de baño disponibles. Calidad premium y diseños en tendencia.'
+  },
+  {
+    id: 13,
+    name: 'Bikini Modelo 07',
+    price: 15.0,
+    imageUrl: model7,
+    badge: 'FRESH',
+    tag: 'Confort',
+    description: 'Gran variedad de modelos de trajes de baño disponibles. Calidad premium y diseños en tendencia.'
+  },
+  {
+    id: 14,
+    name: 'Bikini Modelo 08',
+    price: 15.0,
+    imageUrl: model8,
+    badge: 'SUMMER',
+    tag: 'Playero',
+    description: 'Gran variedad de modelos de trajes de baño disponibles. Calidad premium y diseños en tendencia.'
+  },
+  {
+    id: 15,
+    name: 'Bikini Modelo 09',
+    price: 15.0,
+    imageUrl: model9,
+    badge: 'GLAM',
+    tag: 'Brilla',
+    description: 'Gran variedad de modelos de trajes de baño disponibles. Calidad premium y diseños en tendencia.'
+  },
+  {
+    id: 16,
+    name: 'Bikini Modelo 10',
+    price: 15.0,
+    imageUrl: model10,
+    badge: 'NUEVO',
+    tag: 'Original',
+    description: 'Gran variedad de modelos de trajes de baño disponibles. Calidad premium y diseños en tendencia.'
+  },
+  {
+    id: 17,
+    name: 'Bikini Modelo 11',
+    price: 15.0,
+    imageUrl: model11,
+    badge: 'TOP',
+    tag: 'Must Have',
+    description: 'Gran variedad de modelos de trajes de baño disponibles. Calidad premium y diseños en tendencia.'
+  },
+  {
+    id: 18,
+    name: 'Bikini Modelo 12',
+    price: 15.0,
+    imageUrl: model12,
+    badge: 'EXCLUSIVE',
+    tag: 'Premium',
+    description: 'Gran variedad de modelos de trajes de baño disponibles. Calidad premium y diseños en tendencia.'
+  },
+
+  // {
+  //   id: 19,
+  //   name: 'Precios al Mayor',
+  //   price: 5.0,
+  //   imageUrl: precios,
+  //   badge: 'AL MAYOR',
+  //   tag: 'Premium',
+  //   description: 'Precios al mayor para empresas y tiendas. Colección Georgina\'S Tienda - Trajes de Baño'
+  // },
 ];
 
 const App = () => {
@@ -140,12 +273,12 @@ const App = () => {
             </h1>
 
             {/* IMAGEN INSERTADA AQUÍ */}
-            <img
+            {/* <img
               src={bikinis}
               alt="Bikini destacada en el banner"
               className="product-image-wrapper"
-            />
-            {/* FIN DE IMAGEN INSERTADA */}
+            /> */}
+            {/* FIN DE IMAGEN INSERTADA OMITIDA TEMPORALMENTE */}
             <p className="hero-subtitle">
               Diseños pensados para realzar tu figura, sentirte segura y
               disfrutar al máximo la playa, la piscina y cada momento bajo el sol.
@@ -193,17 +326,17 @@ const App = () => {
 
         {/* Colección */}
         <section id="coleccion" className="product-section">
-          <div className="section-header">
-            {/* IMAGEN INSERTADA AQUÍ */}
-            <img
+          {/* <div className="section-header">
+
+            {<img
               src={precios}
               alt="Bikini destacada en el banner"
               className="product-image-wrapper"
-            />
-            {/* FIN DE IMAGEN INSERTADA */}
+            />}
+
             <h2>Colección Georgina'S Tienda - Trajes de Baño</h2>
             <p>Elige tu modelo favorito y escríbenos para reservar tu talla.</p>
-          </div>
+          </div> */}
 
           <div className="product-grid">
             {products.map((product) => (
@@ -245,6 +378,18 @@ const App = () => {
             ))}
           </div>
         </section>
+        {/* Banner Precios al Mayor */}
+        <section className="wholesale-banner">
+          <div className="wholesale-image-container">
+            <img
+              src={precios}
+              alt="Lista de precios mayoristas"
+              className="wholesale-image"
+            />
+          </div>
+
+        </section>
+
       </main>
 
       {/* Botón flotante WhatsApp */}
