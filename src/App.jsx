@@ -312,16 +312,16 @@ const App = () => {
         <section className="benefits">
           <div className="benefit-card">
             <h3>✨ Calidad & confort</h3>
-            <p>Telas suaves, que se ajustan a tu cuerpo y secado rápido.</p>
+            <p>Telas de la mejor calidad, que se ajustan a tu cuerpo con doble tela.</p>
           </div>
           <div className="benefit-card">
             <h3>📦 Envíos seguros</h3>
             <p>Empaques cuidados y seguimiento hasta que te llegue.</p>
           </div>
-          <div className="benefit-card">
+          {/* <div className="benefit-card">
             <h3>💬 Asesoría personalizada</h3>
             <p>Te ayudamos a elegir talla y modelo ideal por WhatsApp.</p>
-          </div>
+          </div> */}
         </section>
 
         {/* Colección */}
