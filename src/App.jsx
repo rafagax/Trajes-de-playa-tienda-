@@ -310,13 +310,15 @@ const App = () => {
       <main className="shop-main">
         {/* Beneficios rápidos */}
         <section className="benefits">
-          <div className="benefit-card">
+          {/* <div className="benefit-card">
             <h3>✨ Calidad & confort</h3>
             <p>Telas de la mejor calidad, que se ajustan a tu cuerpo con doble tela.</p>
-          </div>
+          </div> */}
           <div className="benefit-card">
-            <h3>📦 Envíos seguros</h3>
-            <p>Empaques cuidados y seguimiento hasta que te llegue.</p>
+            <h3>✨ Calidad & confort con 📦 Envíos seguros</h3>
+            <p> Telas de la mejor calidad, que se ajustan a tu cuerpo con doble tela, envíos a nivel nacional.
+
+            </p>
           </div>
           {/* <div className="benefit-card">
             <h3>💬 Asesoría personalizada</h3>
