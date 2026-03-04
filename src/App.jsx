@@ -95,7 +95,6 @@ const Navbar = ({ onScrollToCollection }) => (
       <li>{onScrollToCollection ? <button className="nav-link" onClick={onScrollToCollection}>Colección</button> : <Link className="nav-link" to="/" title="Ver catálogo de trajes de baño online">Tienda</Link>}</li>
       <li><Link className="nav-link" to="/blog" title="Blog sobre tendencias de moda playera en Maracay">Blog</Link></li>
       <li><Link className="nav-link" to="/envios" title="Políticas de envíos y devoluciones en Venezuela">Envíos</Link></li>
-      <li><Link className="nav-link" to="/guia-tallas" title="Guía de tallas para comprar bikinis sin errores">Tallas</Link></li>
       <li><Link className="nav-link" to="/contacto" title="Contacta con nuestra tienda de trajes de baño en Maracay">Contacto</Link></li>
     </ul>
   </nav>
@@ -163,6 +162,62 @@ const products = [
   { id: 18, category: 'enterizos', name: 'Bikini Modelo 12', price: 15.0, imageUrl: model12, badge: 'EXCLUSIVE', tag: 'Premium', description: 'Calidad premium y diseños en tendencia.' },
 ];
 
+const blogPosts = [
+  {
+    id: 'colores-2026',
+    category: 'TENDENCIAS',
+    title: 'Bikinis 2026: Los colores que dominarán esta temporada',
+    description: 'Desde el lila lavanda hasta el verde eléctrico, descubre qué tonos serán tendencia este año en las playas venezolanas.',
+    content: `
+      <p>El 2026 llega cargado de energía y frescura. En **L'Borgina**, hemos analizado las pasarelas y el estilo de calle para traerte lo último en moda playera.</p>
+      
+      <h3>1. Lavanda Dream</h3>
+      <p>El color morado lavanda sigue siendo el rey. Es un tono romántico que resalta el bronceado de forma espectacular.</p>
+      
+      <h3>2. Neón Eléctrico</h3>
+      <p>Para las que buscan no pasar desapercibidas, el verde menta y el amarillo neón vuelven con fuerza. Ideales para fiestas en la piscina o días de sol intenso.</p>
+      
+      <h3>3. Clásicos Atemporales</h3>
+      <p>El negro y el rojo borgoña nunca mueren. Son piezas elegantes que toda mujer debe tener en su maleta de viaje.</p>
+    `,
+    image: model1
+  },
+  {
+    id: 'cuidado-bikinis',
+    category: 'CONSEJOS',
+    title: 'Guía definitiva para que tus bikinis duren años',
+    description: 'El cloro y el sol pueden dañar las telas. Te enseñamos los trucos de lavado para mantener los colores vibrantes.',
+    content: `
+      <p>Invertir en un buen traje de baño es importante, pero saber cuidarlo es vital para que mantenga su forma y color original.</p>
+      
+      <h3>Lavado a mano</h3>
+      <p>Nunca metas tus bikinis en la lavadora. El calor y la agitación rompen las fibras de lycra. Usa agua fría y jabón neutro.</p>
+      
+      <h3>Secado a la sombra</h3>
+      <p>El sol directo es el peor enemigo de los colores. Seca tus prendas a la sombra y nunca las exprimas con fuerza.</p>
+    `,
+    image: model5
+  },
+  {
+    id: 'playas-aragua',
+    category: 'DESTINOS',
+    title: '5 Playas de Aragua ideales para lucir tu L\'Borgina',
+    description: 'De Cata a Cepe: un recorrido por los mejores paraísos cercanos a Maracay para tu próxima escapada.',
+    content: `
+      <p>Viviendo en Maracay, tenemos la suerte de tener el paraíso a pocos kilómetros. Aquí te dejamos nuestro top 5:</p>
+      
+      <ul>
+        <li><strong>Bahía de Cata:</strong> El clásico por excelencia, perfecto para fotos con el mar azul de fondo.</li>
+        <li><strong>La Ciénaga:</strong> Aguas cristalinas y tranquilas para lucir tus bikinis más delicados.</li>
+        <li><strong>Cepe:</strong> Para las que buscan aventura y un contacto más puro con la naturaleza.</li>
+        <li><strong>Choroní:</strong> Estilo y tradición en un solo lugar.</li>
+        <li><strong>Cuyagua:</strong> El spot favorito para las amantes del surf y el estilo deportivo.</li>
+      </ul>
+    `,
+    image: model8
+  }
+];
+
 const ProductGrid = ({ items }) => (
   <div className="product-grid">
     {items.map((product) => (
@@ -220,11 +275,11 @@ const Home = () => {
 
         <main className="shop-main">
           {/* Categorías destacadas */}
-          <section className="categories-preview" aria-label="Categorías de trajes de baño" style={{ marginBottom: '3rem', display: 'flex', gap: '10px', overflowX: 'auto', padding: '10px' }}>
-            <Link to="/tienda/bikinis" className="nav-link" style={{ background: 'var(--accent)', color: 'white' }}>Bikinis (Dos piezas)</Link>
-            <Link to="/tienda/enterizos" className="nav-link" style={{ background: 'var(--accent)', color: 'white' }}>Enterizos</Link>
-            <Link to="/tienda/tallas-plus" className="nav-link" style={{ background: 'var(--accent)', color: 'white' }}>Tallas Plus (Curvy)</Link>
-            <Link to="/tienda/salidas" className="nav-link" style={{ background: 'var(--accent)', color: 'white' }}>Salidas de Baño</Link>
+          <section className="categories-preview" aria-label="Categorías de trajes de baño">
+            <Link to="/tienda/bikinis" className="category-pill">Bikinis (Dos piezas)</Link>
+            <Link to="/tienda/enterizos" className="category-pill">Enterizos</Link>
+            <Link to="/tienda/tallas-plus" className="category-pill">Tallas Plus (Curvy)</Link>
+            <Link to="/tienda/salidas" className="category-pill">Salidas de Baño</Link>
           </section>
 
           <section className="benefits">
@@ -298,39 +353,6 @@ const Tienda = () => {
   );
 };
 
-const GuiaTallas = () => (
-  <div className="app">
-    <Helmet>
-      <title>Guía de Tallas de Bikinis | Medidas para comprar trajes de baño</title>
-      <meta name="description" content="Consulta nuestra guía de tallas antes de comprar tus bikinis. Asegura el ajuste perfecto con nuestras tablas de medidas en centímetros." />
-    </Helmet>
-    <header className="shop-header"><Navbar /></header>
-    <main className="shop-main" style={{ padding: '3rem 1.5rem', color: 'white' }}>
-      <h1 style={{ textAlign: 'center', marginBottom: '2rem' }}>📏 Guía de Tallas de Trajes de Baño</h1>
-      <p style={{ textAlign: 'center', maxWidth: '700px', margin: '0 auto 2rem' }}>En Bikinis L'Borgina queremos que te sientas perfecta. Sigue nuestra tabla de medidas para elegir tu talla ideal de bikini o enterizo.</p>
-      <div style={{ overflowX: 'auto' }}>
-        <table style={{ width: '100%', maxWidth: '600px', margin: '0 auto', borderCollapse: 'collapse', background: 'rgba(255,255,255,0.1)', borderRadius: '15px' }}>
-          <thead>
-            <tr style={{ background: 'var(--accent)' }}>
-              <th style={{ padding: '15px' }}>Talla</th>
-              <th style={{ padding: '15px' }}>Busto (cm)</th>
-              <th style={{ padding: '15px' }}>Cintura (cm)</th>
-              <th style={{ padding: '15px' }}>Cadera (cm)</th>
-            </tr>
-          </thead>
-          <tbody>
-            {[['S', '85-90', '60-65', '85-95'], ['M', '90-95', '65-72', '95-102'], ['L', '95-100', '72-80', '102-110'], ['XL', '100-110', '80-92', '110-120']].map(row => (
-              <tr key={row[0]} style={{ borderBottom: '1px solid rgba(255,255,255,0.1)' }}>
-                {row.map((cell, i) => <td key={i} style={{ padding: '15px', textAlign: 'center' }}>{cell}</td>)}
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
-    </main>
-    <Footer />
-  </div>
-);
 
 const Envios = () => (
   <div className="app">
@@ -347,7 +369,7 @@ const Envios = () => (
         <h3 style={{ marginTop: '1.5rem' }}>🚚 Envíos Nacionales (Toda Venezuela)</h3>
         <p>Tus trajes de baño viajan seguros con <strong>MRW, Zoom y Tealca</strong>. Despachos rápidos para que estrenes tus bikinis en tiempo récord.</p>
         <h3 style={{ marginTop: '1.5rem' }}>⚠️ Políticas de Devolución por Higiene</h3>
-        <p>Por razones de salud, <strong>no aceptamos devoluciones de las partes inferiores</strong>. Recomendamos revisar cuidadosamente la Guía de Tallas. Garantía por defectos de fábrica disponible las primeras 48h.</p>
+        <p>Por razones de salud, <strong>no aceptamos devoluciones de las partes inferiores</strong>. Si hay un defecto de fábrica, tienes 48h para reportarlo.</p>
       </div>
     </main>
     <Footer />
@@ -439,46 +461,56 @@ const Blog = () => (
       </header>
 
       <div className="blog-posts-grid">
-        <article className="blog-post-card">
-          <div className="post-image-container">
-            <img src={model1} alt="Tendencias de bikinis 2026" />
-          </div>
-          <div className="post-content">
-            <span className="post-category">TENDENCIAS</span>
-            <h3>Bikinis 2026: Los colores que dominarán esta temporada</h3>
-            <p>Desde el lila lavanda hasta el verde eléctrico, descubre qué tonos serán tendencia este año en las playas venezolanas.</p>
-            <button className="read-more">Leer más ✦</button>
-          </div>
-        </article>
-
-        <article className="blog-post-card">
-          <div className="post-image-container">
-            <img src={model5} alt="Cómo cuidar tu traje de baño" />
-          </div>
-          <div className="post-content">
-            <span className="post-category">CONSEJOS</span>
-            <h3>Guía definitiva para que tus bikinis duren años</h3>
-            <p>El cloro y el sol pueden dañar las telas. Te enseñamos los trucos de lavado para mantener los colores vibrantes.</p>
-            <button className="read-more">Leer más ✦</button>
-          </div>
-        </article>
-
-        <article className="blog-post-card">
-          <div className="post-image-container">
-            <img src={model8} alt="Mejores playas de Aragua" />
-          </div>
-          <div className="post-content">
-            <span className="post-category">DESTINOS</span>
-            <h3>5 Playas de Aragua ideales para lucir tu L'Borgina</h3>
-            <p>De Cata a Cepe: un recorrido por los mejores paraísos cercanos a Maracay para tu próxima escapada.</p>
-            <button className="read-more">Leer más ✦</button>
-          </div>
-        </article>
+        {blogPosts.map(post => (
+          <article key={post.id} className="blog-post-card">
+            <div className="post-image-container">
+              <img src={post.image} alt={post.title} />
+            </div>
+            <div className="post-content">
+              <span className="post-category">{post.category}</span>
+              <h3>{post.title}</h3>
+              <p>{post.description}</p>
+              <Link to={`/blog/${post.id}`} className="read-more" style={{ textDecoration: 'none' }}>Leer más ✦</Link>
+            </div>
+          </article>
+        ))}
       </div>
     </main>
     <Footer />
   </div>
 );
+
+const Articulo = () => {
+  const { id } = useParams();
+  const post = blogPosts.find(p => p.id === id);
+
+  if (!post) return <div className="app" style={{ color: 'white', textAlign: 'center', padding: '5rem' }}><h1>Artículo no encontrado</h1><Link to="/blog" className="primary-btn">Volver al Blog</Link></div>;
+
+  return (
+    <div className="app">
+      <Helmet>
+        <title>{post.title} | Blog L'Borgina</title>
+        <meta name="description" content={post.description} />
+      </Helmet>
+      <header className="shop-header"><Navbar /></header>
+      <main className="shop-main" style={{ padding: '3rem 1.5rem', color: 'white', maxWidth: '800px', margin: '0 auto' }}>
+        <Link to="/blog" style={{ color: 'var(--accent)', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '2rem' }}>← Volver al Blog</Link>
+        <span className="post-category">{post.category}</span>
+        <h1 style={{ fontSize: '2.5rem', marginTop: '1rem', marginBottom: '1.5rem' }}>{post.title}</h1>
+        <div className="article-image-full" style={{ width: '100%', borderRadius: '25px', overflow: 'hidden', marginBottom: '2rem' }}>
+          <img src={post.image} alt={post.title} style={{ width: '100%', height: 'auto', display: 'block' }} />
+        </div>
+        <div className="article-content" style={{ lineHeight: '1.8', fontSize: '1.1rem' }} dangerouslySetInnerHTML={{ __html: post.content }}></div>
+        <div style={{ marginTop: '4rem', padding: '2rem', background: 'rgba(255,255,255,0.1)', borderRadius: '25px', textAlign: 'center' }}>
+          <h3>¿Te gustó este artículo?</h3>
+          <p>Mira nuestra colección completa de trajes de baño.</p>
+          <Link to="/" className="primary-btn" style={{ marginTop: '1rem' }}>Ir a la Tienda ✦</Link>
+        </div>
+      </main>
+      <Footer />
+    </div>
+  );
+};
 
 const App = () => (
   <Router>
@@ -487,10 +519,10 @@ const App = () => (
         <Route path="/" element={<Home />} />
         <Route path="/tienda" element={<Tienda />} />
         <Route path="/tienda/:cat" element={<Tienda />} />
-        <Route path="/guia-tallas" element={<GuiaTallas />} />
         <Route path="/envios" element={<Envios />} />
         <Route path="/contacto" element={<Contacto />} />
         <Route path="/blog" element={<Blog />} />
+        <Route path="/blog/:id" element={<Articulo />} />
       </Routes>
       <a href={WHATSAPP_FLOAT_URL} target="_blank" rel="noopener noreferrer" className="whatsapp-button-float" aria-label="Hablar por WhatsApp con la tienda" onClick={triggerSilence}>
         <WhatsAppIcon />
