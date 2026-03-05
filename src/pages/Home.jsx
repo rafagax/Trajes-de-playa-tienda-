@@ -16,6 +16,17 @@ import { WHATSAPP_FLOAT_URL } from '../constants/whatsapp';
 import precios from '../assets/22.png';
 
 /**
+ * Iconos SVG para beneficios
+ */
+const SparklesIcon = () => (
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 3l1.912 5.813a2 2 0 0 0 1.275 1.275L21 12l-5.813 1.912a2 2 0 0 0-1.275 1.275L12 21l-1.912-5.813a2 2 0 0 0-1.275-1.275L3 12l1.813-1.912a2 2 0 0 0 1.275-1.275L12 3z"></path><path d="M5 3L6 4"></path><path d="M19 3L18 4"></path><path d="M5 21L6 20"></path><path d="M19 21L18 20"></path></svg>
+);
+
+const PackageIcon = () => (
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="16.5" y1="9.4" x2="7.5" y2="4.21"></line><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+);
+
+/**
  * Componente funcional para la página de Inicio.
  */
 const Home = () => {
@@ -63,8 +74,10 @@ const Home = () => {
 
                     <section className="benefits">
                         <div className="benefit-card">
-                            <h3>✨ Calidad Premium & Envíos a toda Venezuela 📦</h3>
-                            <p>Telas de la mejor calidad que se ajustan a tu cuerpo con doble tela. Hacemos que tus bikinis lleguen seguros a cualquier parte del país.</p>
+                            <h3 style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '10px' }}>
+                                <SparklesIcon /> Calidad Premium & Envíos Nacionales <PackageIcon />
+                            </h3>
+                            <p>Telas de la mejor calidad que se ajustan a tu cuerpo con doble tela. Hacemos que tus bikinis lleguen seguros a cualquier parte del país (Zoom, Tealca y MRW).</p>
                         </div>
                     </section>
 
