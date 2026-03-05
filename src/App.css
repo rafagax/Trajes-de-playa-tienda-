@@ -193,12 +193,12 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
-  padding: 0.3rem 1rem;
+  padding: 0.4rem 1.2rem;
   border-radius: 999px;
   background: rgba(232, 121, 249, 0.18);
   border: 1px solid rgba(232, 121, 249, 0.45);
   color: #f0abfc;
-  font-size: 0.72rem;
+  font-size: 0.85rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.14em;
@@ -334,7 +334,7 @@ body {
 .shop-main {
   flex: 1;
   max-width: 1120px;
-  margin: 0 auto;
+  margin: 30px auto -30px auto;
   padding: 0 1.25rem 2rem;
 }
 
@@ -875,21 +875,113 @@ body {
 .contact-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 4rem;
+  gap: 1rem;
   align-items: start;
   color: white;
+}
+
+.social-connect-wrapper {
+  display: none;
+  /* Removido en favor de secciones separadas en JSX */
+}
+
+.contact-header-section,
+.contact-info-section,
+.contact-form-section,
+.social-info-section {
+  margin-bottom: 1rem;
+}
+
+/* ESCRITORIO (SIDE BY SIDE) */
+@media (min-width: 900px) {
+  .contact-container {
+    grid-template-columns: 1fr 1.1fr;
+    grid-template-areas:
+      "header form"
+      "whatsapp form"
+      "social form";
+    gap: 1.5rem 3rem;
+    align-items: start;
+    grid-template-rows: auto auto auto;
+    margin-bottom: 0rem;
+  }
+
+  .contact-header-section {
+    grid-area: header;
+    text-align: left !important;
+    margin-bottom: 0;
+  }
+
+  .contact-info-section {
+    grid-area: whatsapp;
+    margin-bottom: 0;
+  }
+
+  .social-info-section {
+    grid-area: social;
+    margin-bottom: 0;
+  }
+
+  .contact-form-section {
+    grid-area: form;
+    margin-bottom: 0;
+  }
+
+  .contact-header-section,
+  .contact-description,
+  .section-title {
+    text-align: left !important;
+    margin-left: 0;
+    max-width: 100%;
+  }
+
+  .section-title {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .contact-description {
+    margin-bottom: 1rem;
+  }
+
+  /* Footer más grande y más arriba */
+  .shop-footer {
+    padding: 2.5rem 1.5rem;
+    margin-top: 1rem;
+  }
+
+  .shop-footer p {
+    font-size: 1.25rem !important;
+    margin-bottom: 0.6rem;
+  }
+
+  .shop-footer small {
+    font-size: 1.05rem;
+    max-width: 850px;
+    margin: 0 auto;
+    display: block;
+    line-height: 1.5;
+  }
+}
+
+.section-title {
+  color: white;
+  text-align: center;
+  margin-bottom: 1rem;
 }
 
 .contact-info-section h1 {
   font-size: 2.5rem;
   margin-bottom: 1.5rem;
+  color: white;
 }
 
 .contact-description {
   font-size: 1.1rem;
   line-height: 1.8;
-  margin-bottom: 2rem;
+  margin-bottom: 0.5rem;
   color: rgba(255, 255, 255, 0.9);
+  text-align: center;
 }
 
 .direct-contact-cards {
@@ -995,7 +1087,7 @@ body {
 @media (max-width: 900px) {
   .contact-container {
     grid-template-columns: 1fr;
-    gap: 3rem;
+    gap: 1rem;
   }
 }
 

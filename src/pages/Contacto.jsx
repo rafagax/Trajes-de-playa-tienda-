@@ -29,15 +29,10 @@ const Contacto = () => {
                 <meta name="description" content="Conoce la historia de L'Borgina y contacta con nuestra tienda de trajes de baño en Maracay. Asesoría personalizada por WhatsApp para tus compras online." />
             </Helmet>
             <header className="shop-header"><Navbar /></header>
-            <main className="shop-main" style={{ padding: '3rem 1.5rem' }}>
+            <main className="shop-main" style={{ padding: 'rem 1.5rem 0' }}>
                 <div className="contact-container">
+                    {/* 1. SECCIÓN WHATSAPP (Aparece primero en móvil) */}
                     <section className="contact-info-section">
-                        <h1 className="section-title">✨ Conéctate con L'Borgina ✨</h1>
-                        <p className="contact-description">
-                            Estamos activos en todas nuestras plataformas de redes sociales para brindarte la mejor atención.
-                            Síguenos para no perderte las nuevas colecciones, ofertas exclusivas y tips de moda playera.
-                        </p>
-
                         <div className="direct-contact-cards">
                             <div className="contact-card-small">
                                 <h4>WhatsApp Directo</h4>
@@ -58,6 +53,7 @@ const Contacto = () => {
                         </div>
                     </section>
 
+                    {/* 2. SECCIÓN FORMULARIO (Aparece segundo en móvil) */}
                     <section className="contact-form-section">
                         {submitted ? (
                             <div className="form-success-message">
@@ -85,7 +81,17 @@ const Contacto = () => {
                         )}
                     </section>
 
-                    <section className="social-info-section" style={{ marginTop: '2rem' }}>
+                    {/* 3. SECCIÓN TÍTULO COMUNIDAD (Aparece tercero en móvil) */}
+                    <header className="contact-header-section">
+                        <h1 className="section-title">✨ Conéctate con L'Borgina ✨</h1>
+                        <p className="contact-description">
+                            Estamos activos en todas nuestras plataformas de redes sociales para brindarte la mejor atención.
+                            Síguenos para no perderte las nuevas colecciones, ofertas exclusivas y tips de moda playera.
+                        </p>
+                    </header>
+
+                    {/* 4. SECCIÓN REDES SOCIALES (Aparece cuarto en móvil) */}
+                    <section className="social-info-section">
                         <div className="contact-card-small" style={{ maxWidth: '600px', margin: '0 auto' }}>
                             <h4>Nuestras Redes Sociales</h4>
                             <p>¿Quieres ver nuestros últimos diseños? Visita nuestras redes sociales</p>

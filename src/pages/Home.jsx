@@ -40,7 +40,7 @@ const Home = () => {
                     <Navbar onScrollToCollection={handleScrollToCollection} />
                     <div className="hero">
                         <div className="hero-content">
-                            <span className="hero-badge">✨ Nueva colección Semana Santa 2026</span>
+                            <span className="hero-badge">Nueva colección Semana Santa 2026</span>
                             <h1 className="hero-title">Venta de trajes de baño en Maracay con actitud veraniega ☀️🌴🌊</h1>
                             <p className="hero-subtitle">Diseños pensados para realzar tu figura, sentirte segura y disfrutar al máximo la playa, la piscina y cada momento bajo el sol.</p>
                             <div className="hero-actions">
