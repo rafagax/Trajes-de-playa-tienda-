@@ -20,21 +20,33 @@ const AudioController = () => {
         // Escucha el evento global para silenciar el audio
         window.addEventListener('silence-audio', handleSilence);
 
-        // Función para manejar el inicio del audio tras interacción del usuario (Superar restricciones de navegadores)
+        let isTryingToPlay = false;
+
+        // Función para manejar el inicio del audio tras interacción del usuario
         const handleInteraction = () => {
-            audioRef.current?.play()
-                .then(() => removeListeners())
-                .catch(e => console.log("Autoplay blocked, waiting for more interaction"));
+            if (isTryingToPlay) return;
+            isTryingToPlay = true;
+
+            const playPromise = audioRef.current?.play();
+            if (playPromise !== undefined) {
+                playPromise.then(() => {
+                    removeListeners();
+                }).catch(e => {
+                    console.log("Autoplay blocked, waiting for more interaction");
+                    isTryingToPlay = false;
+                });
+            }
         };
 
         const addListeners = () => {
-            ['click', 'keydown', 'scroll', 'touchstart', 'touchend'].forEach(e =>
-                window.addEventListener(e, handleInteraction)
+            // Quitamos 'scroll' porque se dispara demasiadas veces y colapsa el navegador
+            ['click', 'keydown', 'touchstart'].forEach(e =>
+                window.addEventListener(e, handleInteraction, { passive: true })
             );
         };
 
         const removeListeners = () => {
-            ['click', 'keydown', 'scroll', 'touchstart', 'touchend'].forEach(e =>
+            ['click', 'keydown', 'touchstart'].forEach(e =>
                 window.removeEventListener(e, handleInteraction)
             );
         };

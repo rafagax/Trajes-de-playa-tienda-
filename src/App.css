@@ -599,7 +599,7 @@ body {
   }
 
   .hero {
-    padding: 2.5rem 1rem 4rem;
+    padding: 1rem 0rem 0rem;
   }
 
   .hero-title {
@@ -640,7 +640,7 @@ body {
   .categories-preview {
     gap: 5px;
     padding: 10px 2px;
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.5rem;
     flex-wrap: nowrap;
     justify-content: space-between;
   }
@@ -731,7 +731,7 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   padding: 15px 5px;
-  margin-bottom: 2.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .category-pill {
