@@ -91,7 +91,7 @@ const Contacto = () => {
                     </header>
 
                     {/* 4. SECCIÓN REDES SOCIALES (Aparece cuarto en móvil) */}
-                    <section className="social-info-section">
+                    <section className="social-info-section" style={{ marginBottom: '3rem' }}>
                         <div className="contact-card-small" style={{ maxWidth: '600px', margin: '0 auto' }}>
                             <h4>Nuestras Redes Sociales</h4>
                             <p>¿Quieres ver nuestros últimos diseños? Visita nuestras redes sociales</p>
