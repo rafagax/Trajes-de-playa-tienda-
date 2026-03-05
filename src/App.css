@@ -515,8 +515,9 @@ body {
 .shop-footer {
   text-align: center;
   padding: 0.5rem 1.25rem 5rem;
-  font-size: 0.85rem;
-  color: var(--text-muted);
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 1rem;
+  color: #000000;
 }
 
 /* Animación */
