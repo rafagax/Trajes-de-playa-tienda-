@@ -58,7 +58,7 @@ const Home = () => {
                                 <button className="primary-btn" onClick={handleScrollToCollection}>✦ Ver colección de bikinis</button>
                                 <a className="secondary-btn" href={WHATSAPP_FLOAT_URL} target="_blank" rel="noopener noreferrer">💬 WhatsApp Directo</a>
                             </div> */}
-                            <p className="hero-note">Envíos nacionales · Pagos móviles y transferencias · Atención personalizada</p>
+                            {/* <p className="hero-note">Envíos nacionales · Pagos móviles y transferencias · Atención personalizada</p> */}
                         </div>
                     </div>
                 </header>
