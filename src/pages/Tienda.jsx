@@ -25,16 +25,14 @@ const Tienda = () => {
     const titles = {
         bikinis: 'Precio de bikinis tiro alto | Comprar bikinis en Maracay',
         tornasol: 'Bikinis Tornasol | Diseños que brillan con el sol',
-        enterizos: 'Comprar traje de baño enterizo | Enterizos elegantes',
-        'talla-plus': 'Venta de trajes de baño tallas completas | Talla Plus Curvy'
+        enterizos: 'Comprar traje de baño enterizo | Enterizos elegantes'
     };
 
     // Descripciones dinámicas para optimización SEO
     const descriptions = {
         bikinis: 'Encuentra los mejores precios de bikinis tiro alto y diseños de dos piezas. Envíos a toda Venezuela desde nuestra tienda en Maracay.',
         tornasol: 'Descubre nuestra exclusiva colección de bikinis tornasol. Colores vibrantes y acabados que cambian con la luz.',
-        enterizos: '¿Buscas comprar un traje de baño enterizo con estilo? Descubre nuestra colección de enterizos elegantes y calidad premium.',
-        'talla-plus': 'Expertos en venta de trajes de baño tallas completas. Diseños Curvy que realzan tu figura y brindan el máximo confort.'
+        enterizos: '¿Buscas comprar un traje de baño enterizo con estilo? Descubre nuestra colección de enterizos elegantes y calidad premium.'
     };
 
     return (
@@ -58,7 +56,6 @@ const Tienda = () => {
                         <Link to="/tienda/bikinis" className="nav-link">Bikinis</Link>
                         <Link to="/tienda/tornasol" className="nav-link">Tornasol</Link>
                         <Link to="/tienda/enterizos" className="nav-link">Enterizos</Link>
-                        <Link to="/tienda/talla-plus" className="nav-link">Talla Plus</Link>
                     </div>
 
                     <ProductGrid items={filtered} />

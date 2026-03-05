@@ -1,7 +1,7 @@
-/**
+﻿/**
  * @file pages\Home.jsx
- * @description Página de inicio de L'Borgina.
- * Punto de entrada visual con la nueva colección de bikinis y trajes de baño en Maracay.
+ * @description P├ígina de inicio de L'Borgina.
+ * Punto de entrada visual con la nueva colecci├│n de bikinis y trajes de ba├▒o en Maracay.
  */
 
 import React from 'react';
@@ -27,11 +27,11 @@ const PackageIcon = () => (
 );
 
 /**
- * Componente funcional para la página de Inicio.
+ * Componente funcional para la p├ígina de Inicio.
  */
 const Home = () => {
     /**
-     * Maneja el scroll suave hacia la sección de la vitrina.
+     * Maneja el scroll suave hacia la secci├│n de la vitrina.
      */
     const handleScrollToCollection = () => {
         const section = document.getElementById('coleccion');
@@ -41,9 +41,9 @@ const Home = () => {
     return (
         <>
             <Helmet>
-                <title>Trajes de Baño en Maracay | Tienda de Bikinis L'Borgina</title>
-                <meta name="description" content="La mejor tienda de trajes de baño en Maracay. Bikinis, enterizos y tallas completas con envíos a toda Venezuela. ¡Diseños exclusivos de L'Borgina!" />
-                <meta name="keywords" content="trajes de baño en maracay, tienda de bikinis maracay, venta de trajes de baño online venezuela, bikinis lborgina maracay" />
+                <title>Trajes de Ba├▒o en Maracay | Tienda de Bikinis L'Borgina</title>
+                <meta name="description" content="La mejor tienda de trajes de ba├▒o en Maracay. Bikinis, enterizos y tallas completas con env├¡os a toda Venezuela. ┬íDise├▒os exclusivos de L'Borgina!" />
+                <meta name="keywords" content="trajes de ba├▒o en maracay, tienda de bikinis maracay, venta de trajes de ba├▒o online venezuela, bikinis lborgina maracay" />
             </Helmet>
 
             <div className="app">
@@ -51,37 +51,38 @@ const Home = () => {
                     <Navbar onScrollToCollection={handleScrollToCollection} />
                     <div className="hero">
                         <div className="hero-content">
-                            <span className="hero-badge">Nueva colección Semana Santa 2026</span>
-                            <h1 className="hero-title">Venta de trajes de baño en Maracay con actitud veraniega ☀️🌴🌊</h1>
-                            <p className="hero-subtitle">Diseños pensados para realzar tu figura, sentirte segura y disfrutar al máximo la playa, la piscina y cada momento bajo el sol.</p>
-                            {/* <div className="hero-actions">
-                                <button className="primary-btn" onClick={handleScrollToCollection}>✦ Ver colección de bikinis</button>
-                                <a className="secondary-btn" href={WHATSAPP_FLOAT_URL} target="_blank" rel="noopener noreferrer">💬 WhatsApp Directo</a>
-                            </div> */}
-                            {/* <p className="hero-note">Envíos nacionales · Pagos móviles y transferencias · Atención personalizada</p> */}
+                            <span className="hero-badge">Nueva colecci├│n Semana Santa 2026</span>
+                            <h1 className="hero-title">Venta de trajes de ba├▒o en Maracay con actitud veraniega ΓÿÇ∩╕Å≡ƒî┤≡ƒîè</h1>
+                            <p className="hero-subtitle">Dise├▒os pensados para realzar tu figura, sentirte segura y disfrutar al m├íximo la playa, la piscina y cada momento bajo el sol.</p>
+                            <div className="hero-actions">
+                                <button className="primary-btn" onClick={handleScrollToCollection}>Γ£ª Ver colecci├│n de bikinis</button>
+                                <a className="secondary-btn" href={WHATSAPP_FLOAT_URL} target="_blank" rel="noopener noreferrer">≡ƒÆ¼ WhatsApp Directo</a>
+                            </div>
+                            <p className="hero-note">Env├¡os nacionales ┬╖ Pagos m├│viles y transferencias ┬╖ Atenci├│n personalizada</p>
                         </div>
                     </div>
                 </header>
 
                 <main className="shop-main">
-                    {/* Categorías destacadas para navegación rápida */}
-                    <section className="categories-preview" aria-label="Categorías de trajes de baño">
+                    {/* Categor├¡as destacadas para navegaci├│n r├ípida */}
+                    <section className="categories-preview" aria-label="Categor├¡as de trajes de ba├▒o">
                         <Link to="/tienda/bikinis" className="category-pill">Bikinis</Link>
                         <Link to="/tienda/tornasol" className="category-pill">Tornasol</Link>
                         <Link to="/tienda/enterizos" className="category-pill">Enterizos</Link>
+                        <Link to="/tienda/talla-plus" className="category-pill">Talla Plus</Link>
                     </section>
 
                     {/* <section className="benefits">
                         <div className="benefit-card">
                             <h3 style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '10px' }}>
-                                <SparklesIcon /> Calidad Premium & Envíos Nacionales <PackageIcon />
+                                <SparklesIcon /> Calidad Premium & Env├¡os Nacionales <PackageIcon />
                             </h3>
-                            <p>Telas de la mejor calidad que se ajustan a tu cuerpo con doble tela. Hacemos que tus bikinis lleguen seguros a cualquier parte del país (Zoom, Tealca y MRW).</p>
+                            <p>Telas de la mejor calidad que se ajustan a tu cuerpo con doble tela. Hacemos que tus bikinis lleguen seguros a cualquier parte del pa├¡s (Zoom, Tealca y MRW).</p>
                         </div>
                     </section> */}
 
                     <section id="coleccion" className="product-section">
-                        <h2 style={{ color: 'white', marginBottom: '1.5rem', textAlign: 'center' }}>Vitrina de Bikinis y Trajes de Baño</h2>
+                        <h2 style={{ color: 'white', marginBottom: '1.5rem', textAlign: 'center' }}>Vitrina de Bikinis y Trajes de Ba├▒o</h2>
                         <ProductGrid items={products} />
                     </section>
 
@@ -89,7 +90,7 @@ const Home = () => {
                         <div className="wholesale-image-container">
                             <img
                                 src={precios}
-                                alt="Precios al mayor de trajes de baño en Maracay"
+                                alt="Precios al mayor de trajes de ba├▒o en Maracay"
                                 className="wholesale-image"
                                 width="1120"
                                 height="340"

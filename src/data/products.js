@@ -38,13 +38,10 @@ export const products = [
     { id: 7, category: 'bikinis', name: 'Bikini Modelo 01', price: 15.0, imageUrl: model1, badge: 'NUEVA COLECCIÓN', tag: 'Diseño Exclusivo', description: 'Calidad premium y diseños en tendencia.' },
     { id: 8, category: 'bikinis', name: 'Bikini Modelo 02', price: 15.0, imageUrl: model2, badge: 'TENDENCIA', tag: 'Estilo Único', description: 'Calidad premium y diseños en tendencia.' },
     { id: 9, category: 'enterizos', name: 'Bikini Modelo 03', price: 15.0, imageUrl: model3, badge: 'DESTACADO', tag: 'Moda Verano', description: 'Calidad premium y diseños en tendencia.' },
-    { id: 10, category: 'talla-plus', name: 'Bikini Modelo 04', price: 15.0, imageUrl: model4, badge: 'COLOR VIBRANTE', tag: 'Look de Playa', description: 'Calidad premium y diseños en tendencia.' },
     { id: 11, category: 'tornasol', name: 'Bikini Modelo 05', price: 15.0, imageUrl: model5, badge: 'ELEGANCIA', tag: 'Sofisticado', description: 'Calidad premium y diseños en tendencia.' },
-    { id: 12, category: 'talla-plus', name: 'Bikini Modelo 06', price: 15.0, imageUrl: model6, badge: 'CHIC', tag: 'Moderno', description: 'Calidad premium y diseños en tendencia.' },
     { id: 13, category: 'bikinis', name: 'Bikini Modelo 07', price: 15.0, imageUrl: model7, badge: 'FRESH', tag: 'Confort', description: 'Calidad premium y diseños en tendencia.' },
     { id: 14, category: 'enterizos', name: 'Bikini Modelo 08', price: 15.0, imageUrl: model8, badge: 'SUMMER', tag: 'Playero', description: 'Calidad premium y diseños en tendencia.' },
     { id: 15, category: 'tornasol', name: 'Bikini Modelo 09', price: 15.0, imageUrl: model9, badge: 'GLAM', tag: 'Brilla', description: 'Calidad premium y diseños en tendencia.' },
-    { id: 16, category: 'talla-plus', name: 'Bikini Modelo 10', price: 15.0, imageUrl: model10, badge: 'NUEVO', tag: 'Original', description: 'Calidad premium y diseños en tendencia.' },
     { id: 17, category: 'bikinis', name: 'Bikini Modelo 11', price: 15.0, imageUrl: model11, badge: 'TOP', tag: 'Must Have', description: 'Calidad premium y diseños en tendencia.' },
     { id: 18, category: 'enterizos', name: 'Bikini Modelo 12', price: 15.0, imageUrl: model12, badge: 'EXCLUSIVE', tag: 'Premium', description: 'Calidad premium y diseños en tendencia.' },
 ];
