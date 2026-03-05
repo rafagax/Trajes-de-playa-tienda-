@@ -30,9 +30,9 @@ const Home = () => {
     return (
         <>
             <Helmet>
-                <title>Venta de trajes de baño en Maracay | Tienda de bikinis Maracay | L'Borgina</title>
-                <meta name="description" content="Venta de trajes de baño en Maracay y online para toda Venezuela. Encuentra bikinis, enterizos y tallas completas con diseños exclusivos. ¡Compra hoy!" />
-                <meta name="keywords" content="venta de trajes de baño en maracay, tienda de bikinis maracay, venta de trajes de baño online venezuela, bikinis con envio a toda venezuela" />
+                <title>Trajes de Baño en Maracay | Tienda de Bikinis L'Borgina</title>
+                <meta name="description" content="La mejor tienda de trajes de baño en Maracay. Bikinis, enterizos y tallas completas con envíos a toda Venezuela. ¡Diseños exclusivos de L'Borgina!" />
+                <meta name="keywords" content="trajes de baño en maracay, tienda de bikinis maracay, venta de trajes de baño online venezuela, bikinis lborgina maracay" />
             </Helmet>
 
             <div className="app">
@@ -75,7 +75,14 @@ const Home = () => {
 
                     <section className="wholesale-banner">
                         <div className="wholesale-image-container">
-                            <img src={precios} alt="Precios al mayor de trajes de baño en Maracay" className="wholesale-image" />
+                            <img
+                                src={precios}
+                                alt="Precios al mayor de trajes de baño en Maracay"
+                                className="wholesale-image"
+                                width="1120"
+                                height="340"
+                                loading="lazy"
+                            />
                         </div>
                     </section>
                 </main>
