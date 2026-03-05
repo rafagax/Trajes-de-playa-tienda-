@@ -41,12 +41,12 @@ const SocialLinks = () => (
 /**
  * Footer component principal.
  */
-const Footer = () => (
+const Footer = ({ showSocial = true }) => (
     <footer className="shop-footer">
-        <SocialLinks />
+        {showSocial && <SocialLinks />}
         <p>© 2025 L'Borgina. Todos los derechos reservados.</p>
         <p style={{ marginTop: '5px', fontSize: '0.85rem' }}>
-            Sitio desarrollado por <a href="https://portafolio-kpi-jv.vercel.app/" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--accent)', textDecoration: 'none', fontWeight: 'bold' }}>Ing. Jesús Vásquez</a>
+            Sitio Web Desarrollado por <a href="https://portafolio-kpi-jv.vercel.app/" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--accent)', textDecoration: 'none', fontWeight: 'bold' }}>Ing. Jesús Vásquez</a>
         </p>
         <small>Hecho con 💜 para que te vistas de verano todo el año. <strong>Bikinis con envío a toda Venezuela.</strong> Venta de trajes de baño online Venezuela.</small>
     </footer>
