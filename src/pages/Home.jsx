@@ -72,14 +72,14 @@ const Home = () => {
                         <Link to="/tienda/talla-plus" className="category-pill">Talla Plus</Link>
                     </section>
 
-                    <section className="benefits">
+                    {/* <section className="benefits">
                         <div className="benefit-card">
                             <h3 style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '10px' }}>
                                 <SparklesIcon /> Calidad Premium & Envíos Nacionales <PackageIcon />
                             </h3>
                             <p>Telas de la mejor calidad que se ajustan a tu cuerpo con doble tela. Hacemos que tus bikinis lleguen seguros a cualquier parte del país (Zoom, Tealca y MRW).</p>
                         </div>
-                    </section>
+                    </section> */}
 
                     <section id="coleccion" className="product-section">
                         <h2 style={{ color: 'white', marginBottom: '1.5rem', textAlign: 'center' }}>Vitrina de Bikinis y Trajes de Baño</h2>

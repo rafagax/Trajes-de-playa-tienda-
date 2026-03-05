@@ -646,18 +646,20 @@ body {
   }
 
   .categories-preview {
-    gap: 8px;
-    padding: 10px 5px;
+    gap: 5px;
+    padding: 10px 2px;
     margin-bottom: 1.5rem;
+    flex-wrap: nowrap;
+    justify-content: space-between;
   }
 
   .category-pill {
-    padding: 0.5rem 0.9rem;
-    font-size: 0.78rem;
-    flex: 1 1 auto;
+    padding: 0.4rem 0.3rem;
+    font-size: 0.7rem;
+    flex: 1;
     text-align: center;
-    max-width: calc(50% - 8px);
-    white-space: normal;
+    max-width: none;
+    white-space: nowrap;
   }
 
   .benefit-card {
