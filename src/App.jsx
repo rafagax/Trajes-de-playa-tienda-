@@ -151,13 +151,13 @@ const products = [
   { id: 7, category: 'bikinis', name: 'Bikini Modelo 01', price: 15.0, imageUrl: model1, badge: 'NUEVA COLECCIÓN', tag: 'Diseño Exclusivo', description: 'Calidad premium y diseños en tendencia.' },
   { id: 8, category: 'bikinis', name: 'Bikini Modelo 02', price: 15.0, imageUrl: model2, badge: 'TENDENCIA', tag: 'Estilo Único', description: 'Calidad premium y diseños en tendencia.' },
   { id: 9, category: 'enterizos', name: 'Bikini Modelo 03', price: 15.0, imageUrl: model3, badge: 'DESTACADO', tag: 'Moda Verano', description: 'Calidad premium y diseños en tendencia.' },
-  { id: 10, category: 'tallas-plus', name: 'Bikini Modelo 04', price: 15.0, imageUrl: model4, badge: 'COLOR VIBRANTE', tag: 'Look de Playa', description: 'Calidad premium y diseños en tendencia.' },
-  { id: 11, category: 'salidas', name: 'Bikini Modelo 05', price: 15.0, imageUrl: model5, badge: 'ELEGANCIA', tag: 'Sofisticado', description: 'Calidad premium y diseños en tendencia.' },
-  { id: 12, category: 'tallas-plus', name: 'Bikini Modelo 06', price: 15.0, imageUrl: model6, badge: 'CHIC', tag: 'Moderno', description: 'Calidad premium y diseños en tendencia.' },
+  { id: 10, category: 'talla-plus', name: 'Bikini Modelo 04', price: 15.0, imageUrl: model4, badge: 'COLOR VIBRANTE', tag: 'Look de Playa', description: 'Calidad premium y diseños en tendencia.' },
+  { id: 11, category: 'tornasol', name: 'Bikini Modelo 05', price: 15.0, imageUrl: model5, badge: 'ELEGANCIA', tag: 'Sofisticado', description: 'Calidad premium y diseños en tendencia.' },
+  { id: 12, category: 'talla-plus', name: 'Bikini Modelo 06', price: 15.0, imageUrl: model6, badge: 'CHIC', tag: 'Moderno', description: 'Calidad premium y diseños en tendencia.' },
   { id: 13, category: 'bikinis', name: 'Bikini Modelo 07', price: 15.0, imageUrl: model7, badge: 'FRESH', tag: 'Confort', description: 'Calidad premium y diseños en tendencia.' },
   { id: 14, category: 'enterizos', name: 'Bikini Modelo 08', price: 15.0, imageUrl: model8, badge: 'SUMMER', tag: 'Playero', description: 'Calidad premium y diseños en tendencia.' },
-  { id: 15, category: 'salidas', name: 'Bikini Modelo 09', price: 15.0, imageUrl: model9, badge: 'GLAM', tag: 'Brilla', description: 'Calidad premium y diseños en tendencia.' },
-  { id: 16, category: 'tallas-plus', name: 'Bikini Modelo 10', price: 15.0, imageUrl: model10, badge: 'NUEVO', tag: 'Original', description: 'Calidad premium y diseños en tendencia.' },
+  { id: 15, category: 'tornasol', name: 'Bikini Modelo 09', price: 15.0, imageUrl: model9, badge: 'GLAM', tag: 'Brilla', description: 'Calidad premium y diseños en tendencia.' },
+  { id: 16, category: 'talla-plus', name: 'Bikini Modelo 10', price: 15.0, imageUrl: model10, badge: 'NUEVO', tag: 'Original', description: 'Calidad premium y diseños en tendencia.' },
   { id: 17, category: 'bikinis', name: 'Bikini Modelo 11', price: 15.0, imageUrl: model11, badge: 'TOP', tag: 'Must Have', description: 'Calidad premium y diseños en tendencia.' },
   { id: 18, category: 'enterizos', name: 'Bikini Modelo 12', price: 15.0, imageUrl: model12, badge: 'EXCLUSIVE', tag: 'Premium', description: 'Calidad premium y diseños en tendencia.' },
 ];
@@ -276,10 +276,10 @@ const Home = () => {
         <main className="shop-main">
           {/* Categorías destacadas */}
           <section className="categories-preview" aria-label="Categorías de trajes de baño">
-            <Link to="/tienda/bikinis" className="category-pill">Bikinis (Dos piezas)</Link>
+            <Link to="/tienda/bikinis" className="category-pill">Bikinis</Link>
+            <Link to="/tienda/tornasol" className="category-pill">Tornasol</Link>
             <Link to="/tienda/enterizos" className="category-pill">Enterizos</Link>
-            <Link to="/tienda/tallas-plus" className="category-pill">Tallas Plus (Curvy)</Link>
-            <Link to="/tienda/salidas" className="category-pill">Salidas de Baño</Link>
+            <Link to="/tienda/talla-plus" className="category-pill">Talla Plus</Link>
           </section>
 
           <section className="benefits">
@@ -313,17 +313,17 @@ const Tienda = () => {
   const filtered = cat ? products.filter(p => p.category === cat) : products;
 
   const titles = {
-    bikinis: 'Precio de bikinis tiro alto | Comprar bikinis online Venezuela',
-    enterizos: 'Comprar traje de baño enterizo negro | Enterizos elegantes',
-    'tallas-plus': 'Venta de trajes de baño tallas completas | Tallas Plus Curvy',
-    salidas: 'Comprar salida de baño tejida | Salidas de baño y pareos'
+    bikinis: 'Precio de bikinis tiro alto | Comprar bikinis en Maracay',
+    tornasol: 'Bikinis Tornasol | Diseños que brillan con el sol',
+    enterizos: 'Comprar traje de baño enterizo | Enterizos elegantes',
+    'talla-plus': 'Venta de trajes de baño tallas completas | Talla Plus Curvy'
   };
 
   const descriptions = {
     bikinis: 'Encuentra los mejores precios de bikinis tiro alto y diseños de dos piezas. Envíos a toda Venezuela desde nuestra tienda en Maracay.',
-    enterizos: '¿Buscas comprar un traje de baño enterizo negro con estilo? Descubre nuestra colección de enterizos elegantes y calidad premium.',
-    'tallas-plus': 'Expertos en venta de trajes de baño tallas completas. Diseños Curvy que realzan tu figura y brindan el máximo confort.',
-    salidas: 'Completa tu look playero. Comprar salida de baño tejida, pareos y más en nuestra tienda online.'
+    tornasol: 'Descubre nuestra exclusiva colección de bikinis tornasol. Colores vibrantes y acabados que cambian con la luz.',
+    enterizos: '¿Buscas comprar un traje de baño enterizo con estilo? Descubre nuestra colección de enterizos elegantes y calidad premium.',
+    'talla-plus': 'Expertos en venta de trajes de baño tallas completas. Diseños Curvy que realzan tu figura y brindan el máximo confort.'
   };
 
   return (
@@ -341,9 +341,9 @@ const Tienda = () => {
           <h1 style={{ color: 'white', textAlign: 'center', marginBottom: '2rem' }}>{cat ? titles[cat].split('|')[0].trim() : 'Nuestra Tienda de Trajes de Baño'}</h1>
           <div style={{ display: 'flex', justifyContent: 'center', gap: '10px', marginBottom: '2rem', flexWrap: 'wrap' }}>
             <Link to="/tienda/bikinis" className="nav-link">Bikinis</Link>
+            <Link to="/tienda/tornasol" className="nav-link">Tornasol</Link>
             <Link to="/tienda/enterizos" className="nav-link">Enterizos</Link>
-            <Link to="/tienda/tallas-plus" className="nav-link">Tallas Plus</Link>
-            <Link to="/tienda/salidas" className="nav-link">Salidas de Baño</Link>
+            <Link to="/tienda/talla-plus" className="nav-link">Talla Plus</Link>
           </div>
           <ProductGrid items={filtered} />
         </main>
@@ -454,26 +454,28 @@ const Blog = () => (
       <meta name="description" content="Descubre tips de estilo, tendencias de trajes de baño en Maracay y consejos para cuidar tus bikinis en nuestro Blog oficial." />
     </Helmet>
     <header className="shop-header"><Navbar /></header>
-    <main className="shop-main" style={{ padding: '3rem 1.5rem' }}>
-      <header className="blog-page-header">
-        <h1 className="section-title" style={{ color: 'white', fontSize: '2.5rem' }}>L'Borgina Blog: Verano Infinito 🌊</h1>
-        <p style={{ color: 'rgba(255,255,255,0.8)', fontSize: '1.1rem' }}>Tendencias, cuidado de prendas y mucho más.</p>
-      </header>
+    <main className="shop-main">
+      <div className="blog-container">
+        <header className="blog-page-header">
+          <h1 className="section-title" style={{ color: 'white', fontSize: '2.5rem' }}>L'Borgina Blog: Verano Infinito 🌊</h1>
+          <p style={{ color: 'rgba(255,255,255,0.8)', fontSize: '1.1rem' }}>Tendencias, cuidado de prendas y mucho más.</p>
+        </header>
 
-      <div className="blog-posts-grid">
-        {blogPosts.map(post => (
-          <article key={post.id} className="blog-post-card">
-            <div className="post-image-container">
-              <img src={post.image} alt={post.title} />
-            </div>
-            <div className="post-content">
-              <span className="post-category">{post.category}</span>
-              <h3>{post.title}</h3>
-              <p>{post.description}</p>
-              <Link to={`/blog/${post.id}`} className="read-more" style={{ textDecoration: 'none' }}>Leer más ✦</Link>
-            </div>
-          </article>
-        ))}
+        <div className="blog-posts-grid">
+          {blogPosts.map(post => (
+            <article key={post.id} className="blog-post-card">
+              <div className="post-image-container">
+                <img src={post.image} alt={post.title} />
+              </div>
+              <div className="post-content">
+                <span className="post-category">{post.category}</span>
+                <h3>{post.title}</h3>
+                <p>{post.description}</p>
+                <Link to={`/blog/${post.id}`} className="read-more" style={{ textDecoration: 'none' }}>Leer más ✦</Link>
+              </div>
+            </article>
+          ))}
+        </div>
       </div>
     </main>
     <Footer />
@@ -493,18 +495,20 @@ const Articulo = () => {
         <meta name="description" content={post.description} />
       </Helmet>
       <header className="shop-header"><Navbar /></header>
-      <main className="shop-main" style={{ padding: '3rem 1.5rem', color: 'white', maxWidth: '800px', margin: '0 auto' }}>
-        <Link to="/blog" style={{ color: 'var(--accent)', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '2rem' }}>← Volver al Blog</Link>
-        <span className="post-category">{post.category}</span>
-        <h1 style={{ fontSize: '2.5rem', marginTop: '1rem', marginBottom: '1.5rem' }}>{post.title}</h1>
-        <div className="article-image-full" style={{ width: '100%', borderRadius: '25px', overflow: 'hidden', marginBottom: '2rem' }}>
-          <img src={post.image} alt={post.title} style={{ width: '100%', height: 'auto', display: 'block' }} />
-        </div>
-        <div className="article-content" style={{ lineHeight: '1.8', fontSize: '1.1rem' }} dangerouslySetInnerHTML={{ __html: post.content }}></div>
-        <div style={{ marginTop: '4rem', padding: '2rem', background: 'rgba(255,255,255,0.1)', borderRadius: '25px', textAlign: 'center' }}>
-          <h3>¿Te gustó este artículo?</h3>
-          <p>Mira nuestra colección completa de trajes de baño.</p>
-          <Link to="/" className="primary-btn" style={{ marginTop: '1rem' }}>Ir a la Tienda ✦</Link>
+      <main className="shop-main">
+        <div className="blog-container" style={{ padding: '3rem 1.5rem' }}>
+          <Link to="/blog" style={{ color: 'var(--accent)', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '2rem' }}>← Volver al Blog</Link>
+          <span className="post-category">{post.category}</span>
+          <h1 style={{ fontSize: '2.5rem', marginTop: '1rem', marginBottom: '1.5rem' }}>{post.title}</h1>
+          <div className="article-image-full" style={{ width: '100%', borderRadius: '25px', overflow: 'hidden', marginBottom: '2rem' }}>
+            <img src={post.image} alt={post.title} style={{ width: '100%', height: 'auto', display: 'block' }} />
+          </div>
+          <div className="article-content" style={{ lineHeight: '1.8', fontSize: '1.1rem' }} dangerouslySetInnerHTML={{ __html: post.content }}></div>
+          <div style={{ marginTop: '4rem', padding: '2rem', background: 'rgba(255,255,255,0.1)', borderRadius: '25px', textAlign: 'center' }}>
+            <h3>¿Te gustó este artículo?</h3>
+            <p>Mira nuestra colección completa de trajes de baño.</p>
+            <Link to="/" className="primary-btn" style={{ marginTop: '1rem' }}>Ir a la Tienda ✦</Link>
+          </div>
         </div>
       </main>
       <Footer />

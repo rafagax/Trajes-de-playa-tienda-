@@ -644,6 +644,36 @@ body {
     right: 1.2rem;
     bottom: 1.2rem;
   }
+
+  .categories-preview {
+    gap: 8px;
+    padding: 10px 5px;
+    margin-bottom: 1.5rem;
+  }
+
+  .category-pill {
+    padding: 0.5rem 0.9rem;
+    font-size: 0.78rem;
+    flex: 1 1 auto;
+    text-align: center;
+    max-width: calc(50% - 8px);
+    white-space: normal;
+  }
+
+  .benefit-card {
+    padding: 1.2rem;
+    margin: 0 0.5rem;
+  }
+
+  .benefit-card h3 {
+    font-size: 1.1rem;
+    line-height: 1.3;
+  }
+
+  .benefit-card p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
 }
 
 /* brand-logo responsive (el bloque principal ya está arriba) */
@@ -704,18 +734,10 @@ body {
 .categories-preview {
   display: flex;
   gap: 12px;
-  overflow-x: auto;
+  flex-wrap: wrap;
+  justify-content: center;
   padding: 15px 5px;
   margin-bottom: 2.5rem;
-  scrollbar-width: none;
-  /* Firefox */
-  -ms-overflow-style: none;
-  /* IE/Edge */
-}
-
-.categories-preview::-webkit-scrollbar {
-  display: none;
-  /* Chrome/Safari */
 }
 
 .category-pill {
@@ -751,6 +773,13 @@ body {
 /* ============================================
    BLOG PAGE STYLES
    ============================================ */
+.blog-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  width: 100%;
+}
+
 .blog-page-header {
   text-align: center;
   margin-bottom: 3rem;
@@ -758,8 +787,9 @@ body {
 
 .blog-posts-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
+  padding: 1rem 0;
 }
 
 .blog-post-card {
