@@ -13,7 +13,7 @@ import AudioController from '../components/common/AudioController';
 import ProductGrid from '../components/shop/ProductGrid';
 import { products } from '../data/products';
 import { WHATSAPP_FLOAT_URL } from '../constants/whatsapp';
-import precios from '../assets/22.png';
+import precios from '../assets/1.jpeg';
 
 /**
  * Iconos SVG para beneficios
