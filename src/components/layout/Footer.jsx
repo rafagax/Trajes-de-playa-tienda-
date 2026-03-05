@@ -44,7 +44,7 @@ const Footer = ({ showSocial = true }) => (
             © 2026 L'Borgina | Tu tienda de bikinis en Maracay. | Todos los derechos reservados.
             <strong> Sitio Web Desarrollado por</strong> <a href="https://portafolio-kpi-jv.vercel.app/" target="_blank" rel="noopener noreferrer" style={{ color: '#ffffff', textDecoration: 'none', fontWeight: 'bold' }}>Ing. Jesús Vásquez</a>
             <p style={{ marginTop: '5px' }}>
-                Hecho con 💜 para que te vistas de verano todo el año. <strong>Bikinis con envío a toda Venezuela.</strong> Venta de trajes de baño online Venezuela.
+                Hecho con 💜 para que te vistas de verano todo el año. <strong>Bikinis con envío a toda Venezuela.</strong> Venta de trajes de baño online.
             </p>
         </p>
     </footer>
