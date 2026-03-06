@@ -7,6 +7,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import trajeLogo from '../../assets/LOGO-PNG.png';
+import trajeLogoWebp from '../../assets/LOGO-PNG.webp';
 
 /**
  * Navbar component.
@@ -16,7 +17,10 @@ import trajeLogo from '../../assets/LOGO-PNG.png';
 const Navbar = ({ onScrollToCollection }) => (
     <nav className="navbar">
         <Link to="/" className="logo" style={{ textDecoration: 'none' }} title="Ir a la página de inicio de L'Borgina - Trajes de baño en Maracay">
-            <img src={trajeLogo} alt="Logotipo de L'Borgina - Tienda de bikinis en Maracay" className="brand-logo" />
+            <picture>
+                <source srcSet={trajeLogoWebp} type="image/webp" />
+                <img src={trajeLogo} alt="Logotipo de L'Borgina - Tienda de bikinis en Maracay" className="brand-logo" />
+            </picture>
             <span className="logo-text">L'borgina</span>
         </Link>
         <ul className="nav-links">

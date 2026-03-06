@@ -39,7 +39,10 @@ const Articulo = () => {
                     <span className="post-category">{post.category}</span>
                     <h1 style={{ fontSize: '2.5rem', marginTop: '1rem', marginBottom: '1.5rem' }}>{post.title}</h1>
                     <div className="article-image-full" style={{ width: '100%', borderRadius: '25px', overflow: 'hidden', marginBottom: '2rem' }}>
-                        <img src={post.image} alt={post.title} style={{ width: '100%', height: 'auto', display: 'block' }} />
+                        <picture>
+                            <source srcSet={post.imageWebp || post.image} type="image/webp" />
+                            <img src={post.image} alt={post.title} style={{ width: '100%', height: 'auto', display: 'block' }} loading="lazy" />
+                        </picture>
                     </div>
                     <div className="article-content" style={{ lineHeight: '1.8', fontSize: '1.1rem' }} dangerouslySetInnerHTML={{ __html: post.content }}></div>
 

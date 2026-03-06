@@ -31,7 +31,10 @@ const Blog = () => (
                     {blogPosts.map(post => (
                         <article key={post.id} className="blog-post-card">
                             <div className="post-image-container">
-                                <img src={post.image} alt={post.title} />
+                                <picture>
+                                    <source srcSet={post.imageWebp || post.image} type="image/webp" />
+                                    <img src={post.image} alt={post.title} loading="lazy" />
+                                </picture>
                             </div>
                             <div className="post-content">
                                 <span className="post-category">{post.category}</span>

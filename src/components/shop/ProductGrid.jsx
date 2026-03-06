@@ -21,12 +21,15 @@ const ProductCard = ({ product }) => {
         <article className="product-card">
             {product.badge && <span className="product-badge">{product.badge}</span>}
             <div className="product-image-wrapper">
-                <img
-                    src={product.imageUrl}
-                    alt={`Comprar ${product.name} - Traje de baño exclusivo en Venezuela`}
-                    className="product-image"
-                    loading="lazy"
-                />
+                <picture>
+                    {product.imageWebp && <source srcSet={product.imageWebp} type="image/webp" />}
+                    <img
+                        src={product.imageUrl}
+                        alt={`Comprar ${product.name} - Traje de baño exclusivo en Venezuela`}
+                        className="product-image"
+                        loading="lazy"
+                    />
+                </picture>
             </div>
             <div className="product-info">
                 <h3 className="product-name">{product.name}</h3>

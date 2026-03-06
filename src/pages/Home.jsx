@@ -14,6 +14,7 @@ import ProductGrid from '../components/shop/ProductGrid';
 import { products } from '../data/products';
 import { WHATSAPP_FLOAT_URL } from '../constants/whatsapp';
 import precios from '../assets/1.jpeg';
+import preciosWebp from '../assets/1.webp';
 
 /**
  * Iconos SVG para beneficios
@@ -87,14 +88,17 @@ const Home = () => {
 
                     <section className="wholesale-banner">
                         <div className="wholesale-image-container">
-                            <img
-                                src={precios}
-                                alt="Precios al mayor de trajes de baño en Maracay"
-                                className="wholesale-image"
-                                width="1120"
-                                height="340"
-                                loading="lazy"
-                            />
+                            <picture>
+                                <source srcSet={preciosWebp} type="image/webp" />
+                                <img
+                                    src={precios}
+                                    alt="Precios al mayor de trajes de baño en Maracay"
+                                    className="wholesale-image"
+                                    width="1120"
+                                    height="340"
+                                    loading="lazy"
+                                />
+                            </picture>
                         </div>
                     </section>
                 </main>
