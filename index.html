@@ -2,14 +2,7 @@
 <html lang="es">
 
 <head>
-  <script>(function (w, d, s, l, i) {
-      w[l] = w[l] || []; w[l].push({
-        'gtm.start':
-          new Date().getTime(), event: 'gtm.js'
-      }); var f = d.getElementsByTagName(s)[0],
-        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-    })(window, document, 'script', 'dataLayer', 'GTM-5RRZZGLZ');</script>
+
   <meta charset="UTF-8" />
   <link rel="icon" type="image/png" href="/favicon.png" />
   <link rel="shortcut icon" href="/favicon.png" />
@@ -43,12 +36,39 @@
 <body>
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5RRZZGLZ" height="0" width="0"
       style="display:none;visibility:hidden"></iframe></noscript>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q57XVT6TH4"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'G-Q57XVT6TH4');
+
+    // Lazy Load para GTM y GTAG
+    let analyticsLoaded = false;
+    const loadAnalytics = () => {
+      if (analyticsLoaded) return;
+      analyticsLoaded = true;
+
+      // 1. Inyectar GTM
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || []; w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+        var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true; j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-5RRZZGLZ');
+
+      // 2. Inyectar gtag.js (GA4)
+      const gtagScript = document.createElement('script');
+      gtagScript.async = true;
+      gtagScript.src = "https://www.googletagmanager.com/gtag/js?id=G-Q57XVT6TH4";
+      document.head.appendChild(gtagScript);
+
+      gtag('js', new Date());
+      gtag('config', 'G-Q57XVT6TH4');
+    };
+
+    // Aplazar la carga hasta que el usuario interactúe (scroll, mouse, touch) o pasen 3.5 segundos
+    setTimeout(loadAnalytics, 3500);
+    ['scroll', 'mousemove', 'touchstart', 'click'].forEach(evt =>
+      window.addEventListener(evt, loadAnalytics, { once: true, passive: true })
+    );
   </script>
 
   <div id="root"></div>

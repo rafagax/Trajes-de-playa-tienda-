@@ -22,7 +22,13 @@ const ProductCard = ({ product, priority }) => {
             {product.badge && <span className="product-badge">{product.badge}</span>}
             <div className="product-image-wrapper">
                 <picture>
-                    {product.imageWebp && <source srcSet={product.imageWebp} type="image/webp" />}
+                    {product.imageWebp400 && product.imageWebp && (
+                        <source
+                            srcSet={`${product.imageWebp400} 400w, ${product.imageWebp} 800w`}
+                            sizes="(max-width: 600px) 400px, 800px"
+                            type="image/webp"
+                        />
+                    )}
                     <img
                         src={product.imageUrl}
                         alt={`Comprar ${product.name} - Traje de baño exclusivo en Venezuela`}
