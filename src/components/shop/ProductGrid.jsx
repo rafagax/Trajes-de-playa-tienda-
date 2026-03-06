@@ -10,7 +10,7 @@ import { createWhatsAppUrl } from '../../constants/whatsapp';
 /**
  * Componente de tarjeta de producto individual.
  */
-const ProductCard = ({ product }) => {
+const ProductCard = ({ product, priority }) => {
     const handleWhatsAppClick = () => {
         // Silenciamos audio si está sonando al salir a WhatsApp
         window.dispatchEvent(new Event('silence-audio'));
@@ -27,7 +27,8 @@ const ProductCard = ({ product }) => {
                         src={product.imageUrl}
                         alt={`Comprar ${product.name} - Traje de baño exclusivo en Venezuela`}
                         className="product-image"
-                        loading="lazy"
+                        loading={priority ? "eager" : "lazy"}
+                        fetchpriority={priority ? "high" : "auto"}
                     />
                 </picture>
             </div>
@@ -56,8 +57,8 @@ const ProductCard = ({ product }) => {
  */
 const ProductGrid = ({ items }) => (
     <div className="product-grid">
-        {items.map((product) => (
-            <ProductCard key={product.id} product={product} />
+        {items.map((product, index) => (
+            <ProductCard key={product.id} product={product} priority={index < 2} />
         ))}
     </div>
 );
