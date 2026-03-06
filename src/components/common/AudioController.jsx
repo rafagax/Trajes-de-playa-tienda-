@@ -2,10 +2,10 @@
  * @file components\common\AudioController.jsx
  * @description Controlador de música de fondo para la tienda L'Borgina.
  * Gestiona el autoplay y el silencio al interactuar con enlaces externos de WhatsApp o redes sociales.
+ * Aplica Lazy Loading para el archivo de audio.
  */
 
 import React, { useRef, useState, useEffect } from 'react';
-import musicaFondo from '../../musica/summer.mp3';
 
 /**
  * AudioController component.
@@ -17,29 +17,38 @@ const AudioController = () => {
     useEffect(() => {
         const handleSilence = () => audioRef.current?.pause();
 
-        // Escucha el evento global para silenciar el audio
         window.addEventListener('silence-audio', handleSilence);
 
         let isTryingToPlay = false;
 
         // Función para manejar el inicio del audio tras interacción del usuario
-        const handleInteraction = () => {
+        const handleInteraction = async () => {
             if (isTryingToPlay) return;
             isTryingToPlay = true;
 
-            const playPromise = audioRef.current?.play();
-            if (playPromise !== undefined) {
-                playPromise.then(() => {
-                    removeListeners();
-                }).catch(e => {
-                    console.log("Autoplay blocked, waiting for more interaction");
-                    isTryingToPlay = false;
-                });
+            try {
+                // Carga interactiva (Lazy Load) del archivo de audio optimizado
+                if (audioRef.current && (!audioRef.current.src || audioRef.current.src === window.location.href)) {
+                    const module = await import('../../musica/summer-opt.mp3');
+                    audioRef.current.src = module.default;
+                    audioRef.current.load();
+                }
+
+                const playPromise = audioRef.current?.play();
+                if (playPromise !== undefined) {
+                    playPromise.then(() => {
+                        removeListeners();
+                    }).catch(e => {
+                        isTryingToPlay = false;
+                    });
+                }
+            } catch (error) {
+                console.error("Error loading audio:", error);
+                isTryingToPlay = false;
             }
         };
 
         const addListeners = () => {
-            // Quitamos 'scroll' porque se dispara demasiadas veces y colapsa el navegador
             ['click', 'keydown', 'touchstart'].forEach(e =>
                 window.addEventListener(e, handleInteraction, { passive: true })
             );
@@ -53,8 +62,9 @@ const AudioController = () => {
 
         if (audioRef.current) audioRef.current.volume = 0.5;
 
-        // Intento de autoplay inicial
-        audioRef.current?.play().catch(() => addListeners());
+        // Intentar agregar listeners de inmediato,
+        // (ya que no podemos reproducir sin interacción primero y sin el archivo cargado)
+        addListeners();
 
         return () => {
             removeListeners();
@@ -62,10 +72,16 @@ const AudioController = () => {
         };
     }, []);
 
-    const togglePlay = () => {
+    const togglePlay = async () => {
         if (isPlaying) {
             audioRef.current?.pause();
         } else {
+            // Carga bajo demanda si le da directo al botón
+            if (audioRef.current && (!audioRef.current.src || audioRef.current.src === window.location.href)) {
+                const module = await import('../../musica/summer-opt.mp3');
+                audioRef.current.src = module.default;
+                audioRef.current.load();
+            }
             audioRef.current?.play();
         }
     };
@@ -75,7 +91,6 @@ const AudioController = () => {
             <audio
                 ref={audioRef}
                 loop
-                src={musicaFondo}
                 onPlay={() => setIsPlaying(true)}
                 onPause={() => setIsPlaying(false)}
             />
