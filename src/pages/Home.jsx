@@ -95,7 +95,7 @@ const Home = () => {
                                     alt="Precios al mayor de trajes de baño en Maracay"
                                     className="wholesale-image"
                                     width="1120"
-                                    height="600"
+                                    height="340"
                                     loading="lazy"
                                 />
                             </picture>
