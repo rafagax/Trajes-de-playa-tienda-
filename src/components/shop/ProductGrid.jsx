@@ -29,6 +29,8 @@ const ProductCard = ({ product, priority }) => {
                         className="product-image"
                         loading={priority ? "eager" : "lazy"}
                         fetchpriority={priority ? "high" : "auto"}
+                        width="400"
+                        height="500"
                     />
                 </picture>
             </div>

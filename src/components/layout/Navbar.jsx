@@ -19,7 +19,7 @@ const Navbar = ({ onScrollToCollection }) => (
         <Link to="/" className="logo" style={{ textDecoration: 'none' }} title="Ir a la página de inicio de L'Borgina - Trajes de baño en Maracay">
             <picture>
                 <source srcSet={trajeLogoWebp} type="image/webp" />
-                <img src={trajeLogo} alt="Logotipo de L'Borgina - Tienda de bikinis en Maracay" className="brand-logo" />
+                <img src={trajeLogo} alt="Logotipo de L'Borgina - Tienda de bikinis en Maracay" className="brand-logo" width="160" height="58" />
             </picture>
             <span className="logo-text">L'borgina</span>
         </Link>
