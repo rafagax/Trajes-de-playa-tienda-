@@ -9,12 +9,35 @@ import model5 from '../assets/modelo-5.jfif';
 import model5Webp from '../assets/modelo-5.webp';
 import model8 from '../assets/modelo-8.jfif';
 import model8Webp from '../assets/modelo-8.webp';
+import tornasol1 from '../assets/tornasol1.webp';
 
 /**
  * Array de posts del blog.
  * @type {Array<{id: string, category: string, title: string, description: string, content: string, image: string}>}
  */
 export const blogPosts = [
+  {
+    id: 'coleccion-tornasol-2026',
+    category: 'NUEVA COLECCIÓN',
+    title: 'Tornasol: La tendencia iridiscente que domina las playas en 2026',
+    description: 'Bikinis que cambian de color con la luz del sol. Descubre por qué la colección Tornasol es el must-have de este año.',
+    content: `
+      <p>Este 2026, la moda playera da un salto hacia lo futurista y fantástico con nuestra nueva colección **Tornasol**. Inspirada en los reflejos del mar y los colores del prisma, estas piezas están diseñadas para brillar con cada movimiento.</p>
+      
+      <h3>1. Efecto Iridiscente Único</h3>
+      <p>Nuestros modelos, como el popular **"Aurora"**, utilizan telas con tecnología iridiscente que cambian de tono según el ángulo de la luz solar. De púrpuras profundos a verdes esmeralda, tu bikini nunca se verá igual.</p>
+      
+      <h3>2. Diseños para Todo Estilo</h3>
+      <p>Ya sea que prefieras la mística del modelo **"Galaxia"** o la elegancia del **"Prisma"**, hay un diseño tornasol esperando por ti. Cada pieza ha sido probada para mantener su brillo incluso después de muchos baños de sol y mar.</p>
+      
+      <h3>3. Magnetismo Natural</h3>
+      <p>Lo que hace especial a la línea Tornasol es cómo interactúa con el entorno. En la "hora dorada" del atardecer, estos bikinis crean destellos espectaculares que resaltan cualquier tono de piel.</p>
+      
+      <p>¿Estás lista para ser el centro de atención? Explora la colección en nuestra tienda y elige el brillo que más te guste.</p>
+    `,
+    image: tornasol1,
+    imageWebp: tornasol1
+  },
   {
     id: 'colores-2026',
     category: 'TENDENCIAS',
