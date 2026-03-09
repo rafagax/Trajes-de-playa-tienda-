@@ -39,6 +39,25 @@ export const blogPosts = [
     imageWebp: tornasol1
   },
   {
+    id: 'playas-aragua',
+    category: 'DESTINOS',
+    title: '5 Playas de Aragua ideales para lucir tu L\'Borgina',
+    description: 'De Cata a Cepe: un recorrido por los mejores paraísos cercanos a Maracay para tu próxima escapada.',
+    content: `
+      <p>Viviendo en Maracay, tenemos la suerte de tener el paraíso a pocos kilómetros. Aquí te dejamos nuestro top 5:</p>
+      
+      <ul>
+        <li><strong>Bahía de Cata:</strong> El clásico por excelencia, perfecto para fotos con el mar azul de fondo.</li>
+        <li><strong>La Ciénaga:</strong> Aguas cristalinas y tranquilas para lucir tus bikinis más delicados.</li>
+        <li><strong>Cepe:</strong> Para las que buscan aventura y un contacto más puro con la naturaleza.</li>
+        <li><strong>Choroní:</strong> Estilo y tradición en un solo lugar.</li>
+        <li><strong>Cuyagua:</strong> El spot favorito para las amantes del surf y el estilo deportivo.</li>
+      </ul>
+    `,
+    image: model8,
+    imageWebp: model8Webp
+  },
+  {
     id: 'colores-2026',
     category: 'TENDENCIAS',
     title: 'Bikinis 2026: Los colores que dominarán esta temporada',
@@ -74,24 +93,5 @@ export const blogPosts = [
     `,
     image: model5,
     imageWebp: model5Webp
-  },
-  {
-    id: 'playas-aragua',
-    category: 'DESTINOS',
-    title: '5 Playas de Aragua ideales para lucir tu L\'Borgina',
-    description: 'De Cata a Cepe: un recorrido por los mejores paraísos cercanos a Maracay para tu próxima escapada.',
-    content: `
-      <p>Viviendo en Maracay, tenemos la suerte de tener el paraíso a pocos kilómetros. Aquí te dejamos nuestro top 5:</p>
-      
-      <ul>
-        <li><strong>Bahía de Cata:</strong> El clásico por excelencia, perfecto para fotos con el mar azul de fondo.</li>
-        <li><strong>La Ciénaga:</strong> Aguas cristalinas y tranquilas para lucir tus bikinis más delicados.</li>
-        <li><strong>Cepe:</strong> Para las que buscan aventura y un contacto más puro con la naturaleza.</li>
-        <li><strong>Choroní:</strong> Estilo y tradición en un solo lugar.</li>
-        <li><strong>Cuyagua:</strong> El spot favorito para las amantes del surf y el estilo deportivo.</li>
-      </ul>
-    `,
-    image: model8,
-    imageWebp: model8Webp
   }
 ];
