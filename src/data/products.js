@@ -64,6 +64,8 @@ import tornasol1 from '../assets/tornasol1.webp';
 import tornasol2 from '../assets/tornasol2.webp';
 import tornasol3 from '../assets/tornasol3.webp';
 import tornasol4 from '../assets/tornasol4.webp';
+import tornasol5 from '../assets/tornasol5.webp';
+import tornasol6 from '../assets/tornasol6.webp';
 
 /**
  * Array de productos con metadatos SEO.
@@ -87,4 +89,6 @@ export const products = [
     { id: 102, category: 'tornasol', name: 'Tornasol "Prisma"', price: 15.0, imageUrl: tornasol2, imageWebp: tornasol2, badge: 'EDICIÓN ESPECIAL', tag: 'Brillo Camaleónico', description: 'Destellos multicolores y un acabado perlado que te hará brillar como nunca en la playa.' },
     { id: 103, category: 'tornasol', name: 'Tornasol "Galaxia"', price: 15.0, imageUrl: tornasol3, imageWebp: tornasol3, badge: 'POPULAR', tag: 'Reflejos Mágicos', description: 'Un diseño místico con reflejos púrpuras y azulados que evocan la belleza del mar profundo.' },
     { id: 104, category: 'tornasol', name: 'Tornasol "Destello"', price: 15.0, imageUrl: tornasol4, imageWebp: tornasol4, badge: 'GLAMOUR', tag: 'Acabado Espejo', description: 'Elegancia y magnetismo con un brillo tornasol que resalta tu bronceado de forma espectacular.' },
+    { id: 105, category: 'tornasol', name: 'Tornasol "Místico"', price: 15.0, imageUrl: tornasol5, imageWebp: tornasol5, badge: 'NUEVO', tag: 'Destellos Violetas', description: 'Un tono profundo que reacciona a la luz con destellos violetas y rosados. Especial para atardeceres.' },
+    { id: 106, category: 'tornasol', name: 'Tornasol "Solar"', price: 15.0, imageUrl: tornasol6, imageWebp: tornasol6, badge: 'TENDENCIA', tag: 'Brillo Dorado', description: 'Captura la energía del sol con este acabado tornasol que vira hacia tonos cálidos y dorados.' },
 ];

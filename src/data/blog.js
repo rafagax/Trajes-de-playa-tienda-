@@ -19,7 +19,7 @@ export const blogPosts = [
   {
     id: 'coleccion-tornasol-2026',
     category: 'NUEVA COLECCIÓN',
-    title: 'Tornasol: La tendencia iridiscente que domina las playas en 2026',
+    title: 'Bikinis Tornasol: La tendencia que domina las playas en 2026',
     description: 'Bikinis que cambian de color con la luz del sol. Descubre por qué la colección Tornasol es el must-have de este año.',
     content: `
       <p>Este 2026, la moda playera da un salto hacia lo futurista y fantástico con nuestra nueva colección **Tornasol**. Inspirada en los reflejos del mar y los colores del prisma, estas piezas están diseñadas para brillar con cada movimiento.</p>
