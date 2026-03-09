@@ -60,6 +60,11 @@ import model12 from '../assets/modelo-12.jfif';
 import model12Webp from '../assets/modelo-12.webp';
 import model12Webp400 from '../assets/modelo-12-400w.webp';
 
+import tornasol1 from '../assets/tornasol1.webp';
+import tornasol2 from '../assets/tornasol2.webp';
+import tornasol3 from '../assets/tornasol3.webp';
+import tornasol4 from '../assets/tornasol4.webp';
+
 /**
  * Array de productos con metadatos SEO.
  * @type {Array<{id: number, category: string, name: string, price: number, imageUrl: string, imageWebp: stringWebp, imageWebp400: stringWebp400, badge: string, tag: string, description: string}>}
@@ -74,10 +79,12 @@ export const products = [
     { id: 7, category: 'bikinis', name: 'Bikini Modelo 01', price: 15.0, imageUrl: model1, imageWebp: model1Webp, imageWebp400: model1Webp400, badge: 'NUEVA COLECCIÓN', tag: 'Diseño Exclusivo', description: 'Calidad premium y diseños en tendencia.' },
     { id: 8, category: 'bikinis', name: 'Bikini Modelo 02', price: 15.0, imageUrl: model2, imageWebp: model2Webp, imageWebp400: model2Webp400, badge: 'TENDENCIA', tag: 'Estilo Único', description: 'Calidad premium y diseños en tendencia.' },
     { id: 9, category: 'enterizos', name: 'Bikini Modelo 03', price: 15.0, imageUrl: model3, imageWebp: model3Webp, imageWebp400: model3Webp400, badge: 'DESTACADO', tag: 'Moda Verano', description: 'Calidad premium y diseños en tendencia.' },
-    { id: 11, category: 'tornasol', name: 'Bikini Modelo 05', price: 15.0, imageUrl: model5, imageWebp: model5Webp, imageWebp400: model5Webp400, badge: 'ELEGANCIA', tag: 'Sofisticado', description: 'Calidad premium y diseños en tendencia.' },
     { id: 13, category: 'bikinis', name: 'Bikini Modelo 07', price: 15.0, imageUrl: model7, imageWebp: model7Webp, imageWebp400: model7Webp400, badge: 'FRESH', tag: 'Confort', description: 'Calidad premium y diseños en tendencia.' },
     { id: 14, category: 'enterizos', name: 'Bikini Modelo 08', price: 15.0, imageUrl: model8, imageWebp: model8Webp, imageWebp400: model8Webp400, badge: 'SUMMER', tag: 'Playero', description: 'Calidad premium y diseños en tendencia.' },
-    { id: 15, category: 'tornasol', name: 'Bikini Modelo 09', price: 15.0, imageUrl: model9, imageWebp: model9Webp, imageWebp400: model9Webp400, badge: 'GLAM', tag: 'Brilla', description: 'Calidad premium y diseños en tendencia.' },
     { id: 17, category: 'bikinis', name: 'Bikini Modelo 11', price: 15.0, imageUrl: model11, imageWebp: model11Webp, imageWebp400: model11Webp400, badge: 'TOP', tag: 'Must Have', description: 'Calidad premium y diseños en tendencia.' },
     { id: 18, category: 'enterizos', name: 'Bikini Modelo 12', price: 15.0, imageUrl: model12, imageWebp: model12Webp, imageWebp400: model12Webp400, badge: 'EXCLUSIVE', tag: 'Premium', description: 'Calidad premium y diseños en tendencia.' },
+    { id: 101, category: 'tornasol', name: 'Tornasol "Aurora"', price: 15.0, imageUrl: tornasol1, imageWebp: tornasol1, badge: 'NUEVO', tag: 'Efecto Iridiscente', description: 'Un efecto iridiscente que cambia de color según el ángulo de la luz. Ideal para destacar bajo el sol.' },
+    { id: 102, category: 'tornasol', name: 'Tornasol "Prisma"', price: 15.0, imageUrl: tornasol2, imageWebp: tornasol2, badge: 'EDICIÓN ESPECIAL', tag: 'Brillo Camaleónico', description: 'Destellos multicolores y un acabado perlado que te hará brillar como nunca en la playa.' },
+    { id: 103, category: 'tornasol', name: 'Tornasol "Galaxia"', price: 15.0, imageUrl: tornasol3, imageWebp: tornasol3, badge: 'POPULAR', tag: 'Reflejos Mágicos', description: 'Un diseño místico con reflejos púrpuras y azulados que evocan la belleza del mar profundo.' },
+    { id: 104, category: 'tornasol', name: 'Tornasol "Destello"', price: 15.0, imageUrl: tornasol4, imageWebp: tornasol4, badge: 'GLAMOUR', tag: 'Acabado Espejo', description: 'Elegancia y magnetismo con un brillo tornasol que resalta tu bronceado de forma espectacular.' },
 ];
