@@ -41,6 +41,7 @@ const Tienda = () => {
                 <title>{cat ? titles[cat] : 'Tienda de bikinis Maracay precios | Comprar traje de baño'}</title>
                 <meta name="description" content={cat ? descriptions[cat] : 'Explora nuestra tienda de bikinis en Maracay con los mejores precios. Venta de trajes de baño online en Venezuela con envíos rápidos.'} />
                 <meta name="keywords" content="comprar traje de baño, bikinis maracay precios, trajes de baño online venezuela, bikinis con envio" />
+                <link rel="canonical" href={`https://bikinislborgina.vercel.app/tienda${cat ? '/' + cat : ''}`} />
             </Helmet>
             <div className="app">
                 <header className="shop-header">

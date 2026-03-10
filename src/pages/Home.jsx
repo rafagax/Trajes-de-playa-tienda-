@@ -45,6 +45,7 @@ const Home = () => {
                 <title>Trajes de Baño en Maracay | Tienda de Bikinis L'Borgina</title>
                 <meta name="description" content="La mejor tienda de trajes de baño en Maracay. Bikinis, enterizos y tallas completas con envíos a toda Venezuela. ¡Diseños exclusivos de L'Borgina!" />
                 <meta name="keywords" content="trajes de baño en maracay, tienda de bikinis maracay, venta de trajes de baño online venezuela, bikinis lborgina maracay" />
+                <link rel="canonical" href="https://bikinislborgina.vercel.app/" />
             </Helmet>
 
             <div className="app">

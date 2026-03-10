@@ -27,6 +27,7 @@ const Contacto = () => {
             <Helmet>
                 <title>Contacto y Quiénes Somos | Tienda de trajes de baño Maracay</title>
                 <meta name="description" content="Conoce la historia de L'Borgina y contacta con nuestra tienda de trajes de baño en Maracay. Asesoría personalizada por WhatsApp para tus compras online." />
+                <link rel="canonical" href="https://bikinislborgina.vercel.app/contacto" />
             </Helmet>
             <header className="shop-header"><Navbar /></header>
             <main className="shop-main" style={{ padding: '2rem 1.5rem 0' }}>

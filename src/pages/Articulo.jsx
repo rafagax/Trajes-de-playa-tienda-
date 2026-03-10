@@ -31,6 +31,7 @@ const Articulo = () => {
             <Helmet>
                 <title>{post.title} | Blog L'Borgina</title>
                 <meta name="description" content={post.description} />
+                <link rel="canonical" href={`https://bikinislborgina.vercel.app/blog/${id}`} />
             </Helmet>
             <header className="shop-header"><Navbar /></header>
             <main className="shop-main">
