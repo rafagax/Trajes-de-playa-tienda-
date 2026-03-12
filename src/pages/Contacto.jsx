@@ -15,11 +15,23 @@ import { WHATSAPP_FLOAT_URL } from '../constants/whatsapp';
  */
 const Contacto = () => {
     const [submitted, setSubmitted] = useState(false);
+    const [form, setForm] = useState({ name: '', email: '', message: '' });
+
+    const handleChange = (e) => {
+        setForm({ ...form, [e.target.name]: e.target.value });
+    };
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        const texto = `Hola L'Borgina! 👙 Me contacto desde la página web.
+
+📋 *Nombre:* ${form.name}
+📧 *Correo:* ${form.email}
+💬 *Mensaje:* ${form.message}`;
+
+        const url = `https://wa.me/584228151085?text=${encodeURIComponent(texto)}`;
+        window.open(url, '_blank');
         setSubmitted(true);
-        // Simulación de envío de formulario
     };
 
     return (
@@ -58,26 +70,26 @@ const Contacto = () => {
                     <section className="contact-form-section">
                         {submitted ? (
                             <div className="form-success-message">
-                                <h3>¡Mensaje enviado con éxito! ✨</h3>
-                                <p>Te responderemos lo antes posible por correo electrónico.</p>
-                                <button className="primary-btn" onClick={() => setSubmitted(false)}>Enviar otro mensaje</button>
+                                <h3>¡Mensaje enviado a WhatsApp! ✨</h3>
+                                <p>Se abrió WhatsApp con tu mensaje listo. Si no se abrió automáticamente, intenta de nuevo.</p>
+                                <button className="primary-btn" onClick={() => { setSubmitted(false); setForm({ name: '', email: '', message: '' }); }}>Enviar otro mensaje</button>
                             </div>
                         ) : (
                             <form className="contact-form" onSubmit={handleSubmit}>
                                 <h2>Cuéntanos qué necesitas</h2>
                                 <div className="form-group">
                                     <label htmlFor="name">Nombre completo</label>
-                                    <input type="text" id="name" name="name" placeholder="Ej. Maria Perez" required />
+                                    <input type="text" id="name" name="name" placeholder="Ej. Maria Perez" value={form.name} onChange={handleChange} required />
                                 </div>
                                 <div className="form-group">
                                     <label htmlFor="email">Correo electrónico</label>
-                                    <input type="email" id="email" name="email" placeholder="maria@ejemplo.com" required />
+                                    <input type="email" id="email" name="email" placeholder="maria@ejemplo.com" value={form.email} onChange={handleChange} required />
                                 </div>
                                 <div className="form-group">
                                     <label htmlFor="message">Mensaje</label>
-                                    <textarea id="message" name="message" rows="4" placeholder="¿En qué podemos ayudarte con tus bikinis?" required></textarea>
+                                    <textarea id="message" name="message" rows="4" placeholder="¿En qué podemos ayudarte con tus bikinis?" value={form.message} onChange={handleChange} required></textarea>
                                 </div>
-                                <button type="submit" className="primary-btn form-submit-btn">Enviar Mensaje ✦</button>
+                                <button type="submit" className="primary-btn form-submit-btn">Enviar por WhatsApp 💬</button>
                             </form>
                         )}
                     </section>
