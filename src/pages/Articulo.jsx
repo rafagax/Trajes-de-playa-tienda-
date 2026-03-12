@@ -3,7 +3,7 @@
  * @description Vista detallada de un artículo del blog de L'Borgina.
  */
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 import { Link, useParams } from 'react-router-dom';
 import Navbar from '../components/layout/Navbar';
@@ -16,6 +16,10 @@ import { blogPosts } from '../data/blog';
 const Articulo = () => {
     const { id } = useParams();
     const post = blogPosts.find(p => p.id === id);
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [id]);
 
     if (!post) {
         return (
