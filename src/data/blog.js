@@ -82,16 +82,15 @@ export const blogPosts = [
     title: '5 Playas de Aragua ideales para lucir tu L\'Borgina',
     description: 'Guía de las mejores playas de Aragua: Cata, Choroní, Cuyagua y más. Descubre qué traje de baño usar según el destino y luce espectacular este verano.',
     content: `
-      <p>Viviendo en Maracay o de visita en la región central, tenemos la inmensa suerte de contar con el paraíso a pocos kilómetros de distancia. La costa aragüeña es famosa no solo por sus montañas impresionantes que chocan con el mar, sino por la calidez de sus aguas. ¡El escenario perfecto para estrenar ese <a href="/tienda/bikinis" class="blog-link">bikini nuevo</a>!</p>
-
-      <p>A continuación, te dejamos nuestro <strong>Top 5 de playas imperdibles</strong> en Aragua, detallando qué estilo de traje de baño de L'Borgina va mejor con la vibra de cada destino.</p>
+      <p>Es una suerte tener el paraíso tan cerca de Maracay. La costa aragüeña es el escenario ideal para estrenar tu <a href="/tienda/bikinis" class="blog-link">bikini L'Borgina</a> entre montañas y aguas cálidas. Aquí te presentamos nuestro <strong>Top 5 de playas imperdibles</strong> en Aragua y el estilo que mejor combina con cada destino para que brilles en tu próxima escapada.</p>
 
       <h3>1. Bahía de Cata: El Clásico de Aguas Azules</h3>
-      <p>Cata es probablemente la playa más icónica de Aragua. Su forma de medialuna y sus aguas de un azul profundo la hacen el fondo perfecto para tus fotos de verano. Aquí reina el estilo clásico. Un <a href="/tienda/enterizos" class="blog-link">enterizo negro asimétrico</a> o un bikini en colores sólidos brillantes como nuestro "Verde Menta" contrastarán maravillosamente con la arena blanca y el azul del Caribe.</p>
 
       <div class="blog-image-wrapper">
         <img src="${cataWebp}" alt="Bahía de Cata Aragua Venezuela destino para bikinis L'Borgina" class="blog-inline-image" loading="lazy" />
       </div>
+
+      <p>Cata es probablemente la playa más icónica de Aragua. Su forma de medialuna y sus aguas de un azul profundo la hacen el fondo perfecto para tus fotos de verano. Aquí reina el estilo clásico. Un <a href="/tienda/enterizos" class="blog-link">enterizo negro asimétrico</a> o un bikini en colores sólidos brillantes como nuestro "Verde Menta" contrastarán maravillosamente con la arena blanca y el azul del Caribe.</p>
 
       <h3>2. La Ciénaga: El Refugio de Aguas Cristalinas</h3>
       <p>Solo accesible por lancha, La Ciénaga es prácticamente una piscina gigante natural de aguas tranquilas y transparentes. Es el lugar ideal para relajarse y hacer paddle o snorkel. Para este ambiente chill, recomendamos nuestros bikinis de la <a href="/blog/coleccion-tornasol-2026" class="blog-link">Colección Tornasol</a>; bajo este sol despejado brillarán en su máximo esplendor mientras flotas en sus aguas.</p>
