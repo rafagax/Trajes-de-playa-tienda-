@@ -39,8 +39,8 @@ const Articulo = () => {
             </Helmet>
             <header className="shop-header"><Navbar /></header>
             <main className="shop-main">
-                <div className="blog-container" style={{ padding: '3rem 1.5rem' }}>
-                    <Link to="/blog" style={{ color: 'var(--accent)', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '2rem' }}>← Volver al Blog</Link>
+                <div className="blog-container" style={{ padding: '1.5rem 1.5rem 3rem' }}>
+                    <Link to="/blog" style={{ color: 'var(--accent)', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '1rem' }}>← Volver al Blog</Link>
                     <span className="post-category">{post.category}</span>
                     <h1 className="article-title">{post.title}</h1>
                     <div className="blog-image-wrapper" style={{ marginBottom: '3rem' }}>
