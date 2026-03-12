@@ -34,14 +34,14 @@ export const blogPosts = [
     id: 'coleccion-tornasol-2026',
     category: 'NUEVA COLECCIÓN',
     title: 'Bikinis Tornasol: La tendencia que domina las playas en 2026',
-    description: 'Bikinis que cambian de color con la luz del sol. Descubre por qué la colección Tornasol es el must-have de este año.',
+    description: 'Descubre la magia de los bikinis tornasol en Venezuela. Trajes de baño que cambian de color con el sol, tendencia exclusiva de L\'Borgina para el 2026.',
     content: `
       <p>Este 2026, la moda playera da un salto hacia lo futurista y fantástico con nuestra nueva colección <strong>Tornasol</strong>. Inspirada en los reflejos del mar y los colores del prisma, estas piezas están diseñadas para brillar con cada movimiento, ofreciendo una apariencia única que te hará destacar en cualquier playa, piscina o yate.</p>
       
       <p>Atrás quedaron los días en que un traje de baño debía ser simple o monótono. La tecnología textil ha avanzado y en <a href="/tienda" class="blog-link">L'Borgina</a> hemos abrazado estas innovaciones para traerte piezas de lujo accesibles. Los tejidos iridiscentes son la gran apuesta del año y te contamos exactamente por qué no querrás quitártelos esta temporada.</p>
 
       <div class="blog-image-wrapper">
-        <img src="${tornasol2}" alt="Modelo luciendo traje de baño tornasol en la playa" class="blog-inline-image" loading="lazy" />
+        <img src="${tornasol2}" alt="Modelo con bikini tornasol L'Borgina en playa de Venezuela" class="blog-inline-image" loading="lazy" />
       </div>
       
       <h3>1. El Efecto Iridiscente Único y Tecnológico</h3>
@@ -50,7 +50,7 @@ export const blogPosts = [
       <p>Esta capacidad de reflejar la luz crea un efecto visual hipnótico. Las fotografías al aire libre, sin filtros, parecieran tomadas en un estudio. Es un nivel de fotogenia que garantiza que tus fotos de Instagram sean absolutamente inolvidables.</p>
 
       <div class="blog-image-wrapper">
-        <img src="${tornasol3}" alt="Bikini colección tornasol detalle iridiscente" class="blog-inline-image" loading="lazy" />
+        <img src="${tornasol3}" alt="Detalle de tela iridiscente bikini tornasol tendencia 2026" class="blog-inline-image" loading="lazy" />
       </div>
       
       <h3>2. Diseños Vanguardistas y Exclusivos</h3>
@@ -59,7 +59,7 @@ export const blogPosts = [
       <p>Cada pieza ha sido probada durante meses en agua salada y cloro para asegurar que los colores resplandecientes se mantengan igual de brillantes que el primer día. (Para saber más de cómo lavar estas piezas, visita nuestra <a href="/blog/cuidado-bikinis" class="blog-link">Guía definitiva de cuidados</a>).</p>
 
       <div class="blog-image-wrapper">
-        <img src="${tornasol4}" alt="Diseños de bikinis tornasol en Venezuela" class="blog-inline-image" loading="lazy" />
+        <img src="${tornasol4}" alt="Colección de trajes de baño tornasol L'Borgina Maracay" class="blog-inline-image" loading="lazy" />
       </div>
       
       <h3>3. Magnetismo Natural: La Hora Dorada</h3>
@@ -80,7 +80,7 @@ export const blogPosts = [
     id: 'playas-aragua',
     category: 'DESTINOS',
     title: '5 Playas de Aragua ideales para lucir tu L\'Borgina',
-    description: 'De Cata a Cepe: un recorrido por los mejores paraísos cercanos a Maracay para tu próxima escapada.',
+    description: 'Guía de las mejores playas de Aragua: Cata, Choroní, Cuyagua y más. Descubre qué traje de baño usar según el destino y luce espectacular este verano.',
     content: `
       <p>Viviendo en Maracay o de visita en la región central, tenemos la inmensa suerte de contar con el paraíso a pocos kilómetros de distancia. La costa aragüeña es famosa no solo por sus montañas impresionantes que chocan con el mar, sino por la calidez de sus aguas. ¡El escenario perfecto para estrenar ese <a href="/tienda/bikinis" class="blog-link">bikini nuevo</a>!</p>
 
@@ -90,35 +90,35 @@ export const blogPosts = [
       <p>Cata es probablemente la playa más icónica de Aragua. Su forma de medialuna y sus aguas de un azul profundo la hacen el fondo perfecto para tus fotos de verano. Aquí reina el estilo clásico. Un <a href="/tienda/enterizos" class="blog-link">enterizo negro asimétrico</a> o un bikini en colores sólidos brillantes como nuestro "Verde Menta" contrastarán maravillosamente con la arena blanca y el azul del Caribe.</p>
 
       <div class="blog-image-wrapper">
-        <img src="${cataWebp}" alt="Hermosa vista aérea de la Bahía de Cata" class="blog-inline-image" loading="lazy" />
+        <img src="${cataWebp}" alt="Bahía de Cata Aragua Venezuela destino para bikinis L'Borgina" class="blog-inline-image" loading="lazy" />
       </div>
 
       <h3>2. La Ciénaga: El Refugio de Aguas Cristalinas</h3>
       <p>Solo accesible por lancha, La Ciénaga es prácticamente una piscina gigante natural de aguas tranquilas y transparentes. Es el lugar ideal para relajarse y hacer paddle o snorkel. Para este ambiente chill, recomendamos nuestros bikinis de la <a href="/blog/coleccion-tornasol-2026" class="blog-link">Colección Tornasol</a>; bajo este sol despejado brillarán en su máximo esplendor mientras flotas en sus aguas.</p>
 
       <div class="blog-image-wrapper">
-        <img src="${cienagaWebp}" alt="Aguas cristalinas de La Ciénaga" class="blog-inline-image" loading="lazy" />
+        <img src="${cienagaWebp}" alt="La Ciénaga Ocumare de la Costa aguas cristalinas trajes de baño" class="blog-inline-image" loading="lazy" />
       </div>
 
       <h3>3. Cepe: Naturaleza Pura y Aventura</h3>
       <p>Si buscas un contacto más puro con la naturaleza, alejándote de las multitudes, Cepe es para ti. Rodeada de montañas verdes y un mar más movido, aquí el espíritu es aventurero. Necesitarás algo cómodo y seguro. Te sugerimos nuestros modelos deportivos tipo top, que te brindarán soporte mientras exploras y caminas por sus senderos.</p>
 
       <div class="blog-image-wrapper">
-        <img src="${cepeWebp}" alt="Paisaje natural de Cepe en Aragua" class="blog-inline-image" loading="lazy" />
+        <img src="${cepeWebp}" alt="Playa Cepe Aragua Venezuela paraíso moda playera L'Borgina" class="blog-inline-image" loading="lazy" />
       </div>
 
       <h3>4. Choroní (Playa Grande): Tradición y Sabor</h3>
       <p>Choroní no es solo playa, es cultura y sabor. Después de un día bajo el sol en Playa Grande, probablemente vayas al malecón a escuchar tambores. Aquí puedes lucir estilos más atrevidos, estampados tropicales y colores neón cálidos que combinen con la energía vibrante, como el rojo atardecer o naranjas.</p>
 
       <div class="blog-image-wrapper">
-        <img src="${choroniWebp}" alt="Palmeral de Playa Grande, Choroní" class="blog-inline-image" loading="lazy" />
+        <img src="${choroniWebp}" alt="Choroní Playa Grande Aragua Venezuela palmeras y sol" class="blog-inline-image" loading="lazy" />
       </div>
 
       <h3>5. Cuyagua: La Meca del Surf</h3>
       <p>Cuyagua es libertad, olas grandes, buena vibra surfista y campamentos bajo las estrellas. El ambiente es ultra relajado. Aquí recomendamos conjuntos prácticos, resistentes a las olas y que puedas usar como top de uso diario junto a unos shorts vaqueros. (¡Recuerda leer nuestros <a href="/blog/cuidado-bikinis" class="blog-link">consejos de cuidado</a> si pasas muchos días acampando!).</p>
 
       <div class="blog-image-wrapper">
-        <img src="${cuyaguaWebp}" alt="Surf y olas en Cuyagua" class="blog-inline-image" loading="lazy" />
+        <img src="${cuyaguaWebp}" alt="Cuyagua Aragua Venezuela playa de surf y camping" class="blog-inline-image" loading="lazy" />
       </div>
 
       <div class="blog-cta-box">
@@ -138,7 +138,7 @@ export const blogPosts = [
     id: 'colores-2026',
     category: 'TENDENCIAS',
     title: 'Bikinis 2026: Los colores que dominarán esta temporada',
-    description: 'Desde el lila lavanda hasta el verde eléctrico, descubre qué tonos serán tendencia este año en las playas venezolanas.',
+    description: '¿Qué colores de trajes de baño son tendencia en 2026? Del lavanda al verde neón, te enseñamos los tonos que no pueden faltar en tu maleta este año.',
     content: `
       <p>El 2026 llega cargado de energía y frescura. En <a href="/tienda" class="blog-link">L'Borgina</a>, hemos analizado las pasarelas, las playas internacionales y el estilo de calle para traerte lo último en moda playera. Este año, la paleta de colores se divide entre los tonos magnéticos y los clásicos reimaginados. Te mostramos los must-have absolutos.</p>
       
@@ -146,14 +146,14 @@ export const blogPosts = [
       <p>El color morado lavanda, que el año pasado hizo tímidas apariciones, ahora se consolida como el rey de la temporada. Es un tono excepcionalmente romántico y suave que tiene una gran ventaja: resalta el bronceado de forma espectacular sin ser agresivo a la vista.</p>
       
       <div class="blog-image-wrapper">
-        <img src="${traje1Webp}" alt="Bikini morado lavanda de tendencia" class="blog-inline-image" loading="lazy" />
+        <img src="${traje1Webp}" alt="Bikini morado lavanda tendencia de moda playera 2026" class="blog-inline-image" loading="lazy" />
       </div>
       
       <h3>2. Neón Eléctrico: Para No Pasar Desapercibida</h3>
       <p>Para las que tienen una personalidad vibrante y aman ser el centro de atención, los tonos neón regresan con fuerza, especialmente el <strong>verde menta eléctrico</strong> y los amarillos cítricos. Son ideales para <a href="/blog/playas-aragua" class="blog-link">fiestas en la piscina en Maracay</a> o días de sol intenso en altamar.</p>
 
       <div class="blog-image-wrapper">
-        <img src="${traje2Webp}" alt="Bikini verde menta eléctrico" class="blog-inline-image" loading="lazy" />
+        <img src="${traje2Webp}" alt="Bikini verde neón menta eléctrico traje de baño vibrante" class="blog-inline-image" loading="lazy" />
       </div>
       
       <h3>3. Brillos Especiales y Tornasol</h3>
@@ -177,7 +177,7 @@ export const blogPosts = [
     id: 'cuidado-bikinis',
     category: 'CONSEJOS',
     title: 'Guía definitiva para que tus bikinis duren años',
-    description: 'El cloro y el sol pueden dañar las telas. Te enseñamos los trucos de lavado para mantener los colores vibrantes.',
+    description: 'Aprende cómo lavar y cuidar tus trajes de baño de lycra para que no pierdan su color ni su forma. Consejos expertos de L\'Borgina para una durabilidad total.',
     content: `
       <p>Invertir en un buen traje de baño de <a href="/tienda" class="blog-link">L'Borgina</a> es asegurarte de tener una pieza de calidad premium. Sin embargo, el cuidado que le des en casa es vital para que las fibras de lycra no cedan y los colores se mantengan vibrantes verano tras verano. Aquí tienes la guía definitiva dictada por los expertos.</p>
       
@@ -185,7 +185,7 @@ export const blogPosts = [
       <p>Esta es la regla de oro: nunca metas tus bikinis en la lavadora ni uses suavizantes agresivos. El calor, la fricción y los químicos fuertes rompen las fibras de lycra y elastano. Inmediatamente después de salir de la playa o la piscina, sumerge tu traje de baño en agua fría con un chorrito de jabón suave o neutro. Frota delicadamente para sacar la sal o el cloro.</p>
       
       <div class="blog-image-wrapper">
-        <img src="${traje5Webp}" alt="Cuidados del traje de baño rojo en la playa" class="blog-inline-image" loading="lazy" />
+        <img src="${traje5Webp}" alt="Cómo lavar trajes de baño de lycra rojos L'Borgina" class="blog-inline-image" loading="lazy" />
       </div>
       
       <h3>2. Especial Cuidado con Telas Iridiscentes</h3>
@@ -195,7 +195,7 @@ export const blogPosts = [
       <p>El sol directo es el peor enemigo de la ropa de color, y más aún de los trajes de baño mojados. Si bien los materiales están hechos para estar bajo el sol marino mientras los usas, dejarlos goteando colgando al sol horas y horas es lo que "tuesta" la tela y destiñe colores intensos como <a href="/blog/colores-2026" class="blog-link">el Neón o el negro de nuestros enterizos</a>. Sécalos planos sobre una superficie seca a la sombra o extendidos en un área muy ventilada.</p>
       
       <div class="blog-image-wrapper">
-        <img src="${traje6Webp}" alt="Un traje de baño negro clásico bien cuidado es eterno" class="blog-inline-image" loading="lazy" />
+        <img src="${traje6Webp}" alt="Bikini negro clásico duradero consejos de cuidado de ropa" class="blog-inline-image" loading="lazy" />
       </div>
 
       <h3>4. Cuidado con los Protectores Solares</h3>
