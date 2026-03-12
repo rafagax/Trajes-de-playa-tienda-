@@ -130,7 +130,9 @@ export const blogPosts = [
       </div>
     `,
     image: model8Webp,
-    imageWebp: model8Webp
+    imageWebp: model8Webp,
+    listImage: cataWebp,
+    listImageWebp: cataWebp
   },
   {
     id: 'colores-2026',

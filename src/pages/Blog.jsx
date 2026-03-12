@@ -33,8 +33,8 @@ const Blog = () => (
                         <article key={post.id} className="blog-post-card">
                             <div className="post-image-container">
                                 <picture>
-                                    <source srcSet={post.imageWebp || post.image} type="image/webp" />
-                                    <img src={post.image} alt={post.title} loading="lazy" />
+                                    <source srcSet={post.listImageWebp || post.listImage || post.imageWebp || post.image} type="image/webp" />
+                                    <img src={post.listImage || post.image} alt={post.title} loading="lazy" />
                                 </picture>
                             </div>
                             <div className="post-content">
