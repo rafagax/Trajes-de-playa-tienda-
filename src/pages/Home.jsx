@@ -84,7 +84,7 @@ const Home = () => {
 
                     <section id="coleccion" className="product-section">
                         <h2 style={{ color: 'white', marginBottom: '1.5rem', textAlign: 'center' }}>Vitrina de Bikinis y Trajes de Baño</h2>
-                        <ProductGrid items={products} />
+                        <ProductGrid items={products.slice(0, 9)} />
                     </section>
 
                     <section className="wholesale-banner">
