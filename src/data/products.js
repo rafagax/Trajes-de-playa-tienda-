@@ -67,6 +67,10 @@ import tornasol4 from '../assets/tornasol4.webp';
 import tornasol5 from '../assets/tornasol5.webp';
 import tornasol6 from '../assets/tornasol6.webp';
 
+import enterizoNegro from '../assets/trajedebaño-enterizo-negro-mujer.webp';
+import enterizoRojo from '../assets/enterizo-rojo-premium.webp';
+import enterizoRosado from '../assets/enterizo-rosado-premium- .webp';
+
 /**
  * Array de productos con metadatos SEO.
  * @type {Array<{id: number, category: string, name: string, price: number, imageUrl: string, imageWebp: stringWebp, imageWebp400: stringWebp400, badge: string, tag: string, description: string}>}
@@ -77,14 +81,14 @@ export const products = [
     { id: 3, category: 'bikinis', name: 'Bikini Negro Espalda Cruzada - "Aqua Wave"', price: 15.0, imageUrl: traje3, imageWebp: traje3Webp, imageWebp400: traje3Webp400, badge: 'EDICIÓN VERANO', tag: 'Fresco como el mar', description: 'Elegante negro con tiras cruzadas en la espalda. Diseño de tiras atadas.' },
     { id: 4, category: 'bikinis', name: 'Bikini Rosado Barbie - "The Classic"', price: 15.0, imageUrl: traje4, imageWebp: traje4Webp, imageWebp400: traje4Webp400, badge: 'FONDO DE ARMARIO', tag: 'Infaltable y combinable', description: 'Este tono rosado suave es atemporal y fácil de combinar. Corte de triángulo.' },
     { id: 5, category: 'bikinis', name: 'Bikini Rojo Borgoña - "Sunset Glow"', price: 15.0, imageUrl: traje5, imageWebp: traje5Webp, imageWebp400: traje5Webp400, badge: 'NUEVO', tag: 'Inspirado en el atardecer', description: 'Un tono rojo vino profundo y cálido. El detalle del frunce añade textura.' },
-    { id: 6, category: 'enterizos', name: 'Bikini Negro Total - "Poolside Vibe"', price: 15.0, imageUrl: traje6, imageWebp: traje6Webp, imageWebp400: traje6Webp400, badge: 'EXCLUSIVO', tag: 'Perfecto para la piscina', description: 'Un negro sólido y moderno. Este bikini de tela premium mantiene su forma.' },
+    { id: 6, category: 'bikinis', name: 'Bikini Negro Total - "Poolside Vibe"', price: 15.0, imageUrl: traje6, imageWebp: traje6Webp, imageWebp400: traje6Webp400, badge: 'EXCLUSIVO', tag: 'Perfecto para la piscina', description: 'Un negro sólido y moderno. Este bikini de tela premium mantiene su forma.' },
     { id: 7, category: 'bikinis', name: 'Bikini Modelo 01', price: 15.0, imageUrl: model1, imageWebp: model1Webp, imageWebp400: model1Webp400, badge: 'NUEVA COLECCIÓN', tag: 'Diseño Exclusivo', description: 'Calidad premium y diseños en tendencia.' },
     { id: 8, category: 'bikinis', name: 'Bikini Modelo 02', price: 15.0, imageUrl: model2, imageWebp: model2Webp, imageWebp400: model2Webp400, badge: 'TENDENCIA', tag: 'Estilo Único', description: 'Calidad premium y diseños en tendencia.' },
-    { id: 9, category: 'enterizos', name: 'Bikini Modelo 03', price: 15.0, imageUrl: model3, imageWebp: model3Webp, imageWebp400: model3Webp400, badge: 'DESTACADO', tag: 'Moda Verano', description: 'Calidad premium y diseños en tendencia.' },
+    { id: 201, category: 'enterizos', name: 'Enterizo Negro Elegante', price: 15.0, imageUrl: enterizoNegro, imageWebp: enterizoNegro, imageWebp400: enterizoNegro, badge: 'TENDENCIA', tag: 'Sofisticada y atrevida', description: 'El negro eterno en versión enterizo. Corte moderno que realza la figura.' },
     { id: 13, category: 'bikinis', name: 'Bikini Modelo 07', price: 15.0, imageUrl: model7, imageWebp: model7Webp, imageWebp400: model7Webp400, badge: 'FRESH', tag: 'Confort', description: 'Calidad premium y diseños en tendencia.' },
-    { id: 14, category: 'enterizos', name: 'Bikini Modelo 08', price: 15.0, imageUrl: model8, imageWebp: model8Webp, imageWebp400: model8Webp400, badge: 'SUMMER', tag: 'Playero', description: 'Calidad premium y diseños en tendencia.' },
-    { id: 17, category: 'bikinis', name: 'Bikini Modelo 11', price: 15.0, imageUrl: model11, imageWebp: model11Webp, imageWebp400: model11Webp400, badge: 'TOP', tag: 'Must Have', description: 'Calidad premium y diseños en tendencia.' },
-    { id: 18, category: 'enterizos', name: 'Bikini Modelo 12', price: 15.0, imageUrl: model12, imageWebp: model12Webp, imageWebp400: model12Webp400, badge: 'EXCLUSIVE', tag: 'Premium', description: 'Calidad premium y diseños en tendencia.' },
+    { id: 202, category: 'enterizos', name: 'Enterizo Rojo Pasión', price: 15.0, imageUrl: enterizoRojo, imageWebp: enterizoRojo, imageWebp400: enterizoRojo, badge: 'BEST SELLER', tag: 'Hecho para brillar', description: 'Un rojo intenso que resalta la figura de la mujer venezolana. Diseño estilizado.' },
+    // { id: 17, category: 'bikinis', name: 'Bikini Modelo 11', price: 15.0, imageUrl: model11, imageWebp: model11Webp, imageWebp400: model11Webp400, badge: 'TOP', tag: 'Must Have', description: 'Calidad premium y diseños en tendencia.' },
+    { id: 203, category: 'enterizos', name: 'Enterizo Rosado Dulce', price: 15.0, imageUrl: enterizoRosado, imageWebp: enterizoRosado, imageWebp400: enterizoRosado, badge: 'NUEVA COLECCIÓN', tag: 'Femenina y tropical', description: 'Un rosado suave y coqueto. Perfecto para la playa venezolana.' },
     { id: 101, category: 'tornasol', name: 'Tornasol "Aurora"', price: 15.0, imageUrl: tornasol1, imageWebp: tornasol1, badge: 'NUEVO', tag: 'Efecto Iridiscente', description: 'Un efecto iridiscente que cambia de color según el ángulo de la luz. Ideal para destacar bajo el sol.' },
     { id: 102, category: 'tornasol', name: 'Tornasol "Prisma"', price: 15.0, imageUrl: tornasol2, imageWebp: tornasol2, badge: 'EDICIÓN ESPECIAL', tag: 'Brillo Camaleónico', description: 'Destellos multicolores y un acabado perlado que te hará brillar como nunca en la playa.' },
     { id: 103, category: 'tornasol', name: 'Tornasol "Galaxia"', price: 15.0, imageUrl: tornasol3, imageWebp: tornasol3, badge: 'POPULAR', tag: 'Reflejos Mágicos', description: 'Un diseño místico con reflejos púrpuras y azulados que evocan la belleza del mar profundo.' },
