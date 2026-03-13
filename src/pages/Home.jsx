@@ -91,12 +91,12 @@ const Home = () => {
                             textAlign: 'center',
                             marginTop: '3.5rem',
                             marginBottom: '0rem',
-                            fontSize: '1.2rem',
-                            fontWeight: '500',
-                            opacity: '0.9',
+                            fontSize: '1.4rem',
+                            fontWeight: '600',
+                            textTransform: 'uppercase',
                             letterSpacing: '0.05em'
                         }}>
-                            ¡Explora más modelos increíbles haz click aqui!  ⬇⬇⬇
+                            ¡Explora más modelos increíbles haz click aqui! ⬇⬇⬇
                         </h3>
 
                         <div className="categories-preview" style={{ marginTop: '0.5rem' }}>
@@ -120,27 +120,27 @@ const Home = () => {
                                 />
                             </picture>
                         </div>
-                        
+
                         <div style={{ textAlign: 'center', marginTop: '2rem' }}>
-                            <h3 style={{ 
-                                color: 'white', 
-                                marginBottom: '1.5rem', 
+                            <a
+                                href={WHATSAPP_FLOAT_URL}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="secondary-btn"
+                                style={{ padding: '1rem 1rem', fontSize: '1.2rem', marginBottom: '0rem', marginTop: '0rem' }}
+                            >
+                                💬 ¡Comprar ahora!
+                            </a>
+                            <h3 style={{
+                                color: 'white',
+                                marginTop: '0.5rem',
                                 fontSize: '1.4rem',
                                 fontWeight: '600',
                                 textTransform: 'uppercase',
                                 letterSpacing: '0.05em'
                             }}>
-                                ¡Compra tu modelo ahora aquí! 🛍️✨
+                                ¡Compra tu modelo aquí!
                             </h3>
-                            <a 
-                                href={WHATSAPP_FLOAT_URL} 
-                                target="_blank" 
-                                rel="noopener noreferrer" 
-                                className="secondary-btn"
-                                style={{ padding: '1rem 2rem', fontSize: '1.1rem' }}
-                            >
-                                💬 Comprar por WhatsApp
-                            </a>
                         </div>
                     </section>
                 </main>
