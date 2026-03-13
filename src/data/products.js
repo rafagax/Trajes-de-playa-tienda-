@@ -60,6 +60,15 @@ import model12 from '../assets/modelo-12.jfif';
 import model12Webp from '../assets/modelo-12.webp';
 import model12Webp400 from '../assets/modelo-12-400w.webp';
 
+<<<<<<< HEAD
+import enterizoRosado1 from '../assets/vestido_de_bano_enterizo_rosado.webp';
+import enterizoNegro1 from '../assets/traje-enterizo-negro-mujer-2.webp';
+import enterizoRojo1 from '../assets/traje-de-baño-rojo-enterizo-rojo - copia.webp';
+import enterizoRosadoPremium from '../assets/enterizo-rosado-premium.webp';
+import enterizoRojoPremium from '../assets/enterizo-rojo-premium.webp';
+
+=======
+>>>>>>> parent of 7652430 (agregar fotos a enterizos)
 import tornasol1 from '../assets/tornasol1.webp';
 import tornasol2 from '../assets/tornasol2.webp';
 import tornasol3 from '../assets/tornasol3.webp';
@@ -84,7 +93,15 @@ export const products = [
     { id: 13, category: 'bikinis', name: 'Bikini Modelo 07', price: 15.0, imageUrl: model7, imageWebp: model7Webp, imageWebp400: model7Webp400, badge: 'FRESH', tag: 'Confort', description: 'Calidad premium y diseños en tendencia.' },
     { id: 14, category: 'enterizos', name: 'Bikini Modelo 08', price: 15.0, imageUrl: model8, imageWebp: model8Webp, imageWebp400: model8Webp400, badge: 'SUMMER', tag: 'Playero', description: 'Calidad premium y diseños en tendencia.' },
     { id: 17, category: 'bikinis', name: 'Bikini Modelo 11', price: 15.0, imageUrl: model11, imageWebp: model11Webp, imageWebp400: model11Webp400, badge: 'TOP', tag: 'Must Have', description: 'Calidad premium y diseños en tendencia.' },
+<<<<<<< HEAD
+    { id: 200, category: 'enterizos', name: 'Enterizo Rojo Pasión - "Fuego Caribeño"', price: 15.0, imageUrl: enterizoRojo1, imageWebp: enterizoRojo1, imageWebp400: enterizoRojo1, badge: 'BEST SELLER', tag: 'Hecho para brillar en la playa', description: 'Un rojo intenso que resalta la figura de la mujer venezolana. Diseño enterizo de corte estilizado.' },
+    { id: 201, category: 'enterizos', name: 'Enterizo Negro Chic - "Noche de Gala"', price: 15.0, imageUrl: enterizoNegro1, imageWebp: enterizoNegro1, imageWebp400: enterizoNegro1, badge: 'TENDENCIA', tag: 'Sofisticada y elegante', description: 'El negro eterno en versión enterizo. Corte moderno que realza la figura y aporta elegancia sin esfuerzo.' },
+    { id: 202, category: 'enterizos', name: 'Enterizo Rosado Tropical - "Flor de Loto"', price: 15.0, imageUrl: enterizoRosado1, imageWebp: enterizoRosado1, imageWebp400: enterizoRosado1, badge: 'NUEVA COLECCIÓN', tag: 'Femenina y delicada', description: 'Un rosado suave y coqueto que evoca la dulzura tropical. Diseño enterizo con detalles únicos.' },
+    { id: 203, category: 'enterizos', name: 'Enterizo Premium Rosado - "Edición Especial"', price: 15.0, imageUrl: enterizoRosadoPremium, imageWebp: enterizoRosadoPremium, imageWebp400: enterizoRosadoPremium, badge: 'PREMIUM', tag: 'Calidad de Exportación', description: 'Un diseño exclusivo con acabados de alta costura. Máximo confort y estilo.' },
+    { id: 204, category: 'enterizos', name: 'Enterizo Premium Rojo - "Diva Solar"', price: 15.0, imageUrl: enterizoRojoPremium, imageWebp: enterizoRojoPremium, imageWebp400: enterizoRojoPremium, badge: 'EXCLUSIVO', tag: 'Brillo Incomparable', description: 'Para la mujer que no teme destacar. Un rojo vibrante con ajuste perfecto.' },
+=======
     { id: 18, category: 'enterizos', name: 'Bikini Modelo 12', price: 15.0, imageUrl: model12, imageWebp: model12Webp, imageWebp400: model12Webp400, badge: 'EXCLUSIVE', tag: 'Premium', description: 'Calidad premium y diseños en tendencia.' },
+>>>>>>> parent of 7652430 (agregar fotos a enterizos)
     { id: 101, category: 'tornasol', name: 'Tornasol "Aurora"', price: 15.0, imageUrl: tornasol1, imageWebp: tornasol1, badge: 'NUEVO', tag: 'Efecto Iridiscente', description: 'Un efecto iridiscente que cambia de color según el ángulo de la luz. Ideal para destacar bajo el sol.' },
     { id: 102, category: 'tornasol', name: 'Tornasol "Prisma"', price: 15.0, imageUrl: tornasol2, imageWebp: tornasol2, badge: 'EDICIÓN ESPECIAL', tag: 'Brillo Camaleónico', description: 'Destellos multicolores y un acabado perlado que te hará brillar como nunca en la playa.' },
     { id: 103, category: 'tornasol', name: 'Tornasol "Galaxia"', price: 15.0, imageUrl: tornasol3, imageWebp: tornasol3, badge: 'POPULAR', tag: 'Reflejos Mágicos', description: 'Un diseño místico con reflejos púrpuras y azulados que evocan la belleza del mar profundo.' },

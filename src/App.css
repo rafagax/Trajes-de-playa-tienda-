@@ -320,8 +320,11 @@ body {
 .details-button {
   background: var(--accent);
   color: #edf8ff;
-  padding-inline: 1rem;
-  white-space: nowrap;
+  padding: 0.6rem 0.9rem;
+  text-align: center;
+  line-height: 1.2;
+  font-size: 0.8rem;
+  font-weight: 600;
 }
 
 .details-button:hover {
@@ -412,7 +415,7 @@ body {
 .product-image {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
   display: block;
   transition: transform 0.4s ease;
 }
@@ -422,15 +425,22 @@ body {
 }
 
 .product-info {
-  padding: 1rem 1.1rem 1.1rem;
+  padding: 1.2rem;
   display: flex;
   flex-direction: column;
-  gap: 0.3rem;
+  flex-grow: 1;
+  gap: 0.5rem;
 }
 
 .product-name {
-  font-size: 1rem;
-  font-weight: 600;
+  font-size: 1.1rem;
+  font-weight: 700;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  min-height: 2.8rem;
 }
 
 .product-tag {
@@ -443,9 +453,16 @@ body {
 }
 
 .product-description {
-  font-size: 0.87rem;
+  font-size: 0.85rem;
   color: var(--text-muted);
-  margin-top: 0.1rem;
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  min-height: 3.8rem;
+  margin-top: 0.2rem;
 }
 
 .product-bottom {
@@ -453,12 +470,15 @@ body {
   align-items: center;
   justify-content: space-between;
   gap: 0.5rem;
-  margin-top: 0.7rem;
+  margin-top: auto;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(0,0,0,0.05);
 }
 
 .product-price {
   font-weight: 700;
-  font-size: 1rem;
+  font-size: 1.1rem;
+  color: var(--dark);
 }
 
 /* Badge */
@@ -530,7 +550,11 @@ body {
 }
 
 .whatsapp-icon {
-  font-size: 1.7rem;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* FOOTER */
@@ -654,10 +678,34 @@ body {
   }
 
   .whatsapp-button-float {
-    width: 3.2rem;
-    height: 3.2rem;
-    right: 1.2rem;
-    bottom: 1.2rem;
+    width: 3.5rem;
+    height: 3.5rem;
+    right: 1rem;
+    bottom: 1rem;
+  }
+  
+  .details-button {
+    font-size: 0.75rem;
+    padding-inline: 0.6rem;
+  }
+  
+  .product-bottom {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.4rem;
+  }
+  
+  .details-button {
+    font-size: 0.7rem;
+    padding: 0.5rem 0.7rem;
+    white-space: normal;
+    max-width: 120px;
+  }
+  
+  .product-price {
+    text-align: left;
+    font-size: 1.1rem;
   }
 
   .categories-preview {
