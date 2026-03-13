@@ -85,18 +85,18 @@ const Home = () => {
                     <section id="coleccion" className="product-section">
                         <h2 style={{ color: 'white', marginBottom: '1.5rem', textAlign: 'center' }}>Vitrina de Bikinis y Trajes de Baño</h2>
                         <ProductGrid items={products.slice(0, 8)} />
-                        
-                        <h3 style={{ 
-                            color: 'white', 
-                            textAlign: 'center', 
-                            marginTop: '3.5rem', 
-                            marginBottom: '1rem', 
-                            fontSize: '1.2rem', 
-                            fontWeight: '500', 
+
+                        <h3 style={{
+                            color: 'white',
+                            textAlign: 'center',
+                            marginTop: '3.5rem',
+                            marginBottom: '0rem',
+                            fontSize: '1.2rem',
+                            fontWeight: '500',
                             opacity: '0.9',
                             letterSpacing: '0.05em'
                         }}>
-                            ¡Explora más modelos increíbles! 🌸✨
+                            ¡Explora más modelos increíbles haz click aqui!  ⬇⬇⬇
                         </h3>
 
                         <div className="categories-preview" style={{ marginTop: '0.5rem' }}>
@@ -119,6 +119,28 @@ const Home = () => {
                                     loading="lazy"
                                 />
                             </picture>
+                        </div>
+                        
+                        <div style={{ textAlign: 'center', marginTop: '2rem' }}>
+                            <h3 style={{ 
+                                color: 'white', 
+                                marginBottom: '1.5rem', 
+                                fontSize: '1.4rem',
+                                fontWeight: '600',
+                                textTransform: 'uppercase',
+                                letterSpacing: '0.05em'
+                            }}>
+                                ¡Compra tu modelo ahora aquí! 🛍️✨
+                            </h3>
+                            <a 
+                                href={WHATSAPP_FLOAT_URL} 
+                                target="_blank" 
+                                rel="noopener noreferrer" 
+                                className="secondary-btn"
+                                style={{ padding: '1rem 2rem', fontSize: '1.1rem' }}
+                            >
+                                💬 Comprar por WhatsApp
+                            </a>
                         </div>
                     </section>
                 </main>
