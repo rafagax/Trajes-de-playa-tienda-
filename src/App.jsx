@@ -15,6 +15,7 @@ const Envios = React.lazy(() => import('./pages/Envios'));
 const Contacto = React.lazy(() => import('./pages/Contacto'));
 const Blog = React.lazy(() => import('./pages/Blog'));
 const Articulo = React.lazy(() => import('./pages/Articulo'));
+const FAQ = React.lazy(() => import('./pages/FAQ'));
 
 // Componentes Globales
 import WhatsAppIcon from './components/common/WhatsAppIcon';
@@ -36,6 +37,7 @@ const App = () => (
           <Route path="/contacto" element={<Contacto />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:id" element={<Articulo />} />
+          <Route path="/faq" element={<FAQ />} />
         </Routes>
       </React.Suspense>
 

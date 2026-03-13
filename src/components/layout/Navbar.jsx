@@ -33,6 +33,7 @@ const Navbar = ({ onScrollToCollection }) => (
             </li>
             <li><Link className="nav-link" to="/blog" title="Blog sobre tendencias de moda playera en Maracay">Blog</Link></li>
             <li><Link className="nav-link" to="/envios" title="Políticas de envíos y devoluciones en Venezuela">Envíos</Link></li>
+            <li><Link className="nav-link" to="/faq" title="Preguntas frecuentes sobre trajes de baño ajustables L'Borgina"><span className="nav-label-desktop">Preguntas Frecuentes</span><span className="nav-label-mobile">FAQ</span></Link></li>
             <li><Link className="nav-link" to="/contacto" title="Contacta con nuestra tienda de trajes de baño en Maracay">Contacto</Link></li>
         </ul>
     </nav>
