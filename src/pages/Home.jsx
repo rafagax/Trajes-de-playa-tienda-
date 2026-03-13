@@ -84,7 +84,26 @@ const Home = () => {
 
                     <section id="coleccion" className="product-section">
                         <h2 style={{ color: 'white', marginBottom: '1.5rem', textAlign: 'center' }}>Vitrina de Bikinis y Trajes de Baño</h2>
-                        <ProductGrid items={products.slice(0, 9)} />
+                        <ProductGrid items={products.slice(0, 8)} />
+                        
+                        <h3 style={{ 
+                            color: 'white', 
+                            textAlign: 'center', 
+                            marginTop: '3.5rem', 
+                            marginBottom: '1rem', 
+                            fontSize: '1.2rem', 
+                            fontWeight: '500', 
+                            opacity: '0.9',
+                            letterSpacing: '0.05em'
+                        }}>
+                            ¡Explora más modelos increíbles! 🌸✨
+                        </h3>
+
+                        <div className="categories-preview" style={{ marginTop: '0.5rem' }}>
+                            <Link to="/tienda/bikinis" className="category-pill">Bikinis</Link>
+                            <Link to="/tienda/tornasol" className="category-pill">Tornasol</Link>
+                            <Link to="/tienda/enterizos" className="category-pill">Enterizos</Link>
+                        </div>
                     </section>
 
                     <section className="wholesale-banner">
