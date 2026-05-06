@@ -489,7 +489,7 @@ body {
 /* WHATSAPP FLOATING BUTTON */
 .whatsapp-button-float {
   position: fixed;
-  right: 1.5rem;
+  left: 1.5rem;
   bottom: 1.5rem;
   width: 3.8rem;
   height: 3.8rem;
@@ -666,8 +666,9 @@ body {
   .whatsapp-button-float {
     width: 3.2rem;
     height: 3.2rem;
-    right: 1.2rem;
+    left: 1.2rem;
     bottom: 1.2rem;
+    right: auto;
   }
 
   .categories-preview {
