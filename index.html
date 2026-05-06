@@ -81,19 +81,6 @@
 
   <script src="https://cdn.botpress.cloud/webchat/v3.6/inject.js"></script>
   <script src="https://files.bpcontent.cloud/2026/05/05/20/20260505200538-RUJAJYP0.js" defer></script>
-
-  <script>
-    // Sincronizar visibilidad de WhatsApp con Botpress
-    window.botpress.on('webchat:opened', () => {
-      const whatsappBtn = document.querySelector('.whatsapp-button-float');
-      if (whatsappBtn) whatsappBtn.style.display = 'none';
-    });
-
-    window.botpress.on('webchat:closed', () => {
-      const whatsappBtn = document.querySelector('.whatsapp-button-float');
-      if (whatsappBtn) whatsappBtn.style.display = 'flex';
-    });
-  </script>
 </body>
 
 </html>
