@@ -2,30 +2,16 @@
 <html lang="es">
 
 <head>
-  <script>(function (w, d, s, l, i) {
-      w[l] = w[l] || []; w[l].push({
-        'gtm.start':
-          new Date().getTime(), event: 'gtm.js'
-      }); var f = d.getElementsByTagName(s)[0],
-        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-    })(window, document, 'script', 'dataLayer', 'GTM-5RRZZGLZ');</script>
+
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/png" href="/favicon.png" />
-  <link rel="shortcut icon" href="/favicon.png" />
-  <link rel="apple-touch-icon" href="/favicon.png" />
-  <link rel="preconnect" href="https://www.googletagmanager.com" />
-  <link rel="preconnect" href="https://www.google-analytics.com" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="google-site-verification" content="P3VL-v39Nb1APvfOGfLEFYR22ltRVadyTLoPvmTGWPc" />
 
   <title>Trajes de Baño en Maracay | Bikinis L'Borgina | Diseños Exclusivos</title>
   <meta name="description"
-    content="Comprar trajes de baño en Maracay. Diseños exclusivos de bikinis y bañadores en Bikinis L'Borgina. Calidad premium y envíos a toda Venezuela." />
-  <meta name="keywords"
-    content="trajes de baño en maracay, bikinis maracay, tienda de trajes de baño venezuela, bikinis lborgina, moda playera maracay" />
+    content="Descubre la colección más exclusiva de bikinis y trajes de baño en Bikinis L Borgina. Diseños únicos, calidad premium y el ajuste perfecto para tu verano." />
+  <meta name="keywords" content="bikinis, trajes de baño, moda playera, bikinis exclusivos, L Borgina" />
   <link rel="canonical" href="https://bikinislborgina.vercel.app/" />
 
   <meta property="og:title" content="Trajes de Baño en Maracay | Bikinis L'Borgina" />
@@ -45,12 +31,39 @@
 <body>
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5RRZZGLZ" height="0" width="0"
       style="display:none;visibility:hidden"></iframe></noscript>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q57XVT6TH4"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'G-Q57XVT6TH4');
+
+    // Lazy Load para GTM y GTAG
+    let analyticsLoaded = false;
+    const loadAnalytics = () => {
+      if (analyticsLoaded) return;
+      analyticsLoaded = true;
+
+      // 1. Inyectar GTM
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || []; w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+        var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true; j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-5RRZZGLZ');
+
+      // 2. Inyectar gtag.js (GA4)
+      const gtagScript = document.createElement('script');
+      gtagScript.async = true;
+      gtagScript.src = "https://www.googletagmanager.com/gtag/js?id=G-Q57XVT6TH4";
+      document.head.appendChild(gtagScript);
+
+      gtag('js', new Date());
+      gtag('config', 'G-Q57XVT6TH4');
+    };
+
+    // Aplazar la carga hasta que el usuario interactúe (scroll, mouse, touch) o pasen 3.5 segundos
+    setTimeout(loadAnalytics, 3500);
+    ['scroll', 'mousemove', 'touchstart', 'click'].forEach(evt =>
+      window.addEventListener(evt, loadAnalytics, { once: true, passive: true })
+    );
   </script>
 
   <div id="root"></div>

@@ -18,6 +18,7 @@ const Blog = () => (
         <Helmet>
             <title>Blog de Moda Playera | Tendencias de Bikinis y Trajes de Baño</title>
             <meta name="description" content="Descubre tips de estilo, tendencias de trajes de baño en Maracay y consejos para cuidar tus bikinis en nuestro Blog oficial." />
+            <link rel="canonical" href="https://bikinislborgina.vercel.app/blog" />
         </Helmet>
         <header className="shop-header"><Navbar /></header>
         <main className="shop-main">
@@ -31,7 +32,10 @@ const Blog = () => (
                     {blogPosts.map(post => (
                         <article key={post.id} className="blog-post-card">
                             <div className="post-image-container">
-                                <img src={post.image} alt={post.title} />
+                                <picture>
+                                    <source srcSet={post.listImageWebp || post.listImage || post.imageWebp || post.image} type="image/webp" />
+                                    <img src={post.listImage || post.image} alt={post.title} loading="lazy" />
+                                </picture>
                             </div>
                             <div className="post-content">
                                 <span className="post-category">{post.category}</span>

@@ -3,7 +3,7 @@
  * @description Vista detallada de un artículo del blog de L'Borgina.
  */
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 import { Link, useParams } from 'react-router-dom';
 import Navbar from '../components/layout/Navbar';
@@ -16,6 +16,10 @@ import { blogPosts } from '../data/blog';
 const Articulo = () => {
     const { id } = useParams();
     const post = blogPosts.find(p => p.id === id);
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [id]);
 
     if (!post) {
         return (
@@ -31,15 +35,19 @@ const Articulo = () => {
             <Helmet>
                 <title>{post.title} | Blog L'Borgina</title>
                 <meta name="description" content={post.description} />
+                <link rel="canonical" href={`https://bikinislborgina.vercel.app/blog/${id}`} />
             </Helmet>
             <header className="shop-header"><Navbar /></header>
             <main className="shop-main">
-                <div className="blog-container" style={{ padding: '3rem 1.5rem' }}>
-                    <Link to="/blog" style={{ color: 'var(--accent)', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '2rem' }}>← Volver al Blog</Link>
+                <div className="blog-container" style={{ padding: '0.5rem 1.5rem 3rem' }}>
+                    <Link to="/blog" style={{ color: 'var(--accent)', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '0.5rem' }}>← Volver al Blog</Link>
                     <span className="post-category">{post.category}</span>
-                    <h1 style={{ fontSize: '2.5rem', marginTop: '1rem', marginBottom: '1.5rem' }}>{post.title}</h1>
-                    <div className="article-image-full" style={{ width: '100%', borderRadius: '25px', overflow: 'hidden', marginBottom: '2rem' }}>
-                        <img src={post.image} alt={post.title} style={{ width: '100%', height: 'auto', display: 'block' }} />
+                    <h1 className="article-title">{post.title}</h1>
+                    <div className="blog-image-wrapper" style={{ marginBottom: '3rem' }}>
+                        <picture>
+                            <source srcSet={post.imageWebp || post.image} type="image/webp" />
+                            <img src={post.image} alt={post.title} className="blog-inline-image" loading="lazy" />
+                        </picture>
                     </div>
                     <div className="article-content" style={{ lineHeight: '1.8', fontSize: '1.1rem' }} dangerouslySetInnerHTML={{ __html: post.content }}></div>
 
