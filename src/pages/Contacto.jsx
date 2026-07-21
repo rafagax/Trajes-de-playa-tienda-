@@ -23,11 +23,11 @@ const Contacto = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        const texto = `Hola L'Borgina! 👙 Me contacto desde la página web.
+        const texto = `Hola L'Borgina. Me contacto desde la página web.
 
-📋 *Nombre:* ${form.name}
-📧 *Correo:* ${form.email}
-💬 *Mensaje:* ${form.message}`;
+*Nombre:* ${form.name}
+*Correo:* ${form.email}
+*Mensaje:* ${form.message}`;
 
         const url = `https://wa.me/584228151085?text=${encodeURIComponent(texto)}`;
         window.open(url, '_blank');
@@ -70,7 +70,7 @@ const Contacto = () => {
                     <section className="contact-form-section">
                         {submitted ? (
                             <div className="form-success-message">
-                                <h3>¡Mensaje enviado a WhatsApp! ✨</h3>
+                                <h3>Mensaje preparado para WhatsApp</h3>
                                 <p>Se abrió WhatsApp con tu mensaje listo. Si no se abrió automáticamente, intenta de nuevo.</p>
                                 <button className="primary-btn" onClick={() => { setSubmitted(false); setForm({ name: '', email: '', message: '' }); }}>Enviar otro mensaje</button>
                             </div>
@@ -89,14 +89,14 @@ const Contacto = () => {
                                     <label htmlFor="message">Mensaje</label>
                                     <textarea id="message" name="message" rows="4" placeholder="¿En qué podemos ayudarte con tus bikinis?" value={form.message} onChange={handleChange} required></textarea>
                                 </div>
-                                <button type="submit" className="primary-btn form-submit-btn">Enviar por WhatsApp 💬</button>
+                                <button type="submit" className="primary-btn form-submit-btn">Enviar por WhatsApp</button>
                             </form>
                         )}
                     </section>
 
                     {/* 3. SECCIÓN TÍTULO COMUNIDAD (Aparece tercero en móvil) */}
                     <header className="contact-header-section">
-                        <h1 className="section-title">✨ Conéctate con L'Borgina ✨</h1>
+                        <h1 className="section-title">Conecta con L'Borgina</h1>
                         <p className="contact-description">
                             Estamos activos en todas nuestras plataformas de redes sociales para brindarte la mejor atención.
                             Síguenos para no perderte las nuevas colecciones, ofertas exclusivas y tips de moda playera.

@@ -39,9 +39,13 @@ const SocialLinks = () => (
  */
 const Footer = ({ showSocial = true }) => (
     <footer className="shop-footer">
-        <SocialLinks />
-        <p>© 2025 L'Borgina. Todos los derechos reservados.</p>
-        <small>Hecho con 💜 para que te vistas de verano todo el año. <strong>Bikinis con envío a toda Venezuela.</strong> Venta de trajes de baño online Venezuela.</small>
+        {showSocial && <SocialLinks />}
+        <p>© 2026 L'Borgina. Todos los derechos reservados.</p>
+        <small>Trajes de baño con atención en Maracay y envíos a toda Venezuela.</small>
+        <p className="web-credit">
+            Diseño y desarrollo web por{' '}
+            <a href="https://webraf.com/" target="_blank" rel="noopener">WebRaf</a>
+        </p>
     </footer>
 );
 

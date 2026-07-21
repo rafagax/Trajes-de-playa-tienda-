@@ -9,23 +9,23 @@ import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 import Navbar from '../components/layout/Navbar';
 import Footer from '../components/layout/Footer';
-import AudioController from '../components/common/AudioController';
 import ProductGrid from '../components/shop/ProductGrid';
 import { products } from '../data/products';
 import { WHATSAPP_FLOAT_URL } from '../constants/whatsapp';
-import precios from '../assets/1.jpeg';
-import preciosWebp from '../assets/1.webp';
+import heroImage from '../assets/traje de baño 1.jpeg';
+import heroImageWebp from '../assets/traje de baño 1.webp';
 
-/**
- * Iconos SVG para beneficios
- */
-const SparklesIcon = () => (
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 3l1.912 5.813a2 2 0 0 0 1.275 1.275L21 12l-5.813 1.912a2 2 0 0 0-1.275 1.275L12 21l-1.912-5.813a2 2 0 0 0-1.275-1.275L3 12l1.813-1.912a2 2 0 0 0 1.275-1.275L12 3z"></path><path d="M5 3L6 4"></path><path d="M19 3L18 4"></path><path d="M5 21L6 20"></path><path d="M19 21L18 20"></path></svg>
-);
-
-const PackageIcon = () => (
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="16.5" y1="9.4" x2="7.5" y2="4.21"></line><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
-);
+const featuredProducts = [
+    products[2],
+    products[1],
+    products[3],
+    products[4],
+    products[0],
+    products[8],
+    products[6],
+    products[7],
+    products[5],
+];
 
 /**
  * Componente funcional para la página de Inicio.
@@ -47,29 +47,45 @@ const Home = () => {
                 <meta name="keywords" content="venta de trajes de baño en maracay, tienda de bikinis maracay, venta de trajes de baño online venezuela, bikinis con envio a toda venezuela" />
             </Helmet>
 
-            <div className="app">
+            <div className="app home-page">
                 <header className="shop-header">
                     <Navbar onScrollToCollection={handleScrollToCollection} />
                     <div className="hero">
-                        <div className="hero-content">
-                            <span className="hero-badge">Nueva colección Semana Santa 2026</span>
-                            <h1 className="hero-title">Venta de trajes de baño en Maracay con actitud veraniega ☀️🌴🌊</h1>
-                            <p className="hero-subtitle">Diseños pensados para realzar tu figura, sentirte segura y disfrutar al máximo la playa, la piscina y cada momento bajo el sol.</p>
-                            {/* <div className="hero-actions">
-                                <button className="primary-btn" onClick={handleScrollToCollection}>✦ Ver colección de bikinis</button>
-                                <a className="secondary-btn" href={WHATSAPP_FLOAT_URL} target="_blank" rel="noopener noreferrer">💬 WhatsApp Directo</a>
-                            </div> */}
-                            {/* <p className="hero-note">Envíos nacionales · Pagos móviles y transferencias · Atención personalizada</p> */}
+                        <div className="hero-inner">
+                            <div className="hero-content">
+                                <span className="hero-badge">Colección 2026</span>
+                                <h1 className="hero-title">Trajes de baño para sentirte tú</h1>
+                                <p className="hero-subtitle">Bikinis y enterizos disponibles en Maracay, con asesoría cercana para elegir el modelo que mejor se adapte a ti.</p>
+                                <div className="hero-actions">
+                                    <button className="primary-btn" onClick={handleScrollToCollection}>Ver colección</button>
+                                    <a className="secondary-btn" href={WHATSAPP_FLOAT_URL} target="_blank" rel="noopener noreferrer">Hablar por WhatsApp</a>
+                                </div>
+                                <p className="hero-note">Entregas en Maracay · Envíos a toda Venezuela</p>
+                            </div>
+                            <div className="hero-media" aria-label="Bikini lavanda ajustable de L'Borgina">
+                                <picture>
+                                    <source srcSet={heroImageWebp} type="image/webp" />
+                                    <img src={heroImage} alt="Modelo luciendo bikini lavanda ajustable L'Borgina" width="540" height="680" fetchPriority="high" />
+                                </picture>
+                                <div className="hero-media-caption">
+                                    <span>Bikini lavanda</span>
+                                    <strong>Triángulo con frunce</strong>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </header>
 
                 <main className="shop-main">
                     {/* Categorías destacadas para navegación rápida */}
-                    <section className="categories-preview" aria-label="Categorías de trajes de baño">
-                        <Link to="/tienda/bikinis" className="category-pill">Bikinis</Link>
-                        <Link to="/tienda/tornasol" className="category-pill">Tornasol</Link>
-                        <Link to="/tienda/enterizos" className="category-pill">Enterizos</Link>
+                    <section className="collection-intro" aria-labelledby="collection-intro-title">
+                        <p className="section-eyebrow">Explora por estilo</p>
+                        <h2 id="collection-intro-title">Encuentra el tuyo</h2>
+                        <div className="categories-preview" aria-label="Categorías de trajes de baño">
+                            <Link to="/tienda/bikinis" className="category-pill"><strong>Bikinis</strong><span>Dos piezas ajustables</span></Link>
+                            <Link to="/tienda/tornasol" className="category-pill"><strong>Tornasol</strong><span>Acabado iridiscente</span></Link>
+                            <Link to="/tienda/enterizos" className="category-pill"><strong>Enterizos</strong><span>Una sola pieza</span></Link>
+                        </div>
                     </section>
 
                     {/* <section className="benefits">
@@ -82,38 +98,70 @@ const Home = () => {
                     </section> */}
 
                     <section id="coleccion" className="product-section">
-                        <h2 style={{ color: 'white', marginBottom: '1.5rem', textAlign: 'center' }}>Vitrina de Bikinis y Trajes de Baño</h2>
-                        <ProductGrid items={products.slice(0, 8)} />
+                        <div className="section-heading">
+                            <p className="section-eyebrow">Selección L'Borgina</p>
+                            <h2>Los favoritos de la colección</h2>
+                            <p>Modelos disponibles para consultar y reservar directamente por WhatsApp.</p>
+                        </div>
+                        <ProductGrid items={featuredProducts} />
 
-                        <h3 style={{
-                            color: 'white',
-                            textAlign: 'center',
-                            marginTop: '3.5rem',
-                            marginBottom: '0rem',
-                            fontSize: '1.4rem',
-                            fontWeight: '600',
-                            textTransform: 'uppercase',
-                            letterSpacing: '0.05em'
-                        }}>
-                            ¡Explora más modelos increíbles haz click aqui! ⬇⬇⬇
-                        </h3>
-
-                        <div className="categories-preview" style={{ marginTop: '0.5rem' }}>
-                            <Link to="/tienda/bikinis" className="category-pill">Bikinis</Link>
-                            <Link to="/tienda/tornasol" className="category-pill">Tornasol</Link>
-                            <Link to="/tienda/enterizos" className="category-pill">Enterizos</Link>
+                        <div className="collection-links">
+                            <p>¿Quieres ver más modelos?</p>
+                            <div className="categories-preview">
+                                <Link to="/tienda/bikinis" className="category-pill">Ver bikinis</Link>
+                                <Link to="/tienda/tornasol" className="category-pill">Ver tornasol</Link>
+                                <Link to="/tienda/enterizos" className="category-pill">Ver enterizos</Link>
+                            </div>
                         </div>
                     </section>
 
-                    <section className="wholesale-banner">
-                        <div className="wholesale-image-container">
-                            <img src={precios} alt="Precios al mayor de trajes de baño en Maracay" className="wholesale-image" />
+                    <section className="pricing-section" aria-labelledby="pricing-title">
+                        <div className="section-heading section-heading--light">
+                            <p className="section-eyebrow">Precios claros</p>
+                            <h2 id="pricing-title">Compra una pieza o arma tu pedido</h2>
+                            <p>Elige la opción que te conviene y confirma los modelos disponibles con nuestro equipo.</p>
                         </div>
+                        <div className="pricing-grid">
+                            <article className="pricing-card">
+                                <div className="pricing-topline">
+                                    <p>Elige tu favorito</p>
+                                </div>
+                                <h3>1 bikini</h3>
+                                <p className="pricing-description">Para elegir tu modelo favorito y disfrutarlo desde el primer día.</p>
+                                <div className="pricing-footer">
+                                    <p className="pricing-price"><span>$</span>15</p>
+                                    <span className="pricing-detail">Una pieza</span>
+                                </div>
+                            </article>
+                            <article className="pricing-card pricing-card--featured">
+                                <div className="pricing-topline">
+                                    <p>Arma tu combinación</p>
+                                </div>
+                                <h3>2 bikinis</h3>
+                                <p className="pricing-description">Combina colores o comparte el pedido con alguien especial.</p>
+                                <div className="pricing-footer">
+                                    <p className="pricing-price"><span>$</span>20</p>
+                                    <span className="pricing-detail">$10 cada uno</span>
+                                </div>
+                            </article>
+                            <article className="pricing-card">
+                                <div className="pricing-topline">
+                                    <p>Impulsa tu negocio</p>
+                                </div>
+                                <h3>12 bikinis</h3>
+                                <p className="pricing-description">Una opción pensada para revendedoras y pedidos de volumen.</p>
+                                <div className="pricing-footer">
+                                    <p className="pricing-price"><span>$</span>60</p>
+                                    <span className="pricing-detail">$5 cada uno</span>
+                                </div>
+                            </article>
+                        </div>
+                        <a className="pricing-cta" href={WHATSAPP_FLOAT_URL} target="_blank" rel="noopener noreferrer">Consultar disponibilidad</a>
+                        <p className="pricing-note">Precios sujetos a disponibilidad. Confirma colores, modelos y condiciones antes de pagar.</p>
                     </section>
                 </main>
 
                 <Footer />
-                <AudioController />
             </div>
         </>
     );

@@ -1581,3 +1581,1260 @@ body {
     font-size: 0.9rem;
   }
 }
+
+/* ==========================================================
+   L'BORGINA 2026 — DIRECCIÓN VISUAL EDITORIAL
+   ========================================================== */
+:root {
+  --brand-ink: #241b1f;
+  --brand-wine: #843553;
+  --brand-wine-dark: #5d263c;
+  --brand-blush: #ead5d9;
+  --brand-paper: #f6f2ed;
+  --brand-paper-soft: #fffaf6;
+  --brand-line: #e1d8d2;
+  --brand-muted: #72686c;
+  --brand-shadow: 0 18px 50px rgba(48, 31, 38, 0.1);
+  --bg-gradient: #f6f2ed;
+  --dark: var(--brand-ink);
+  --accent: var(--brand-wine);
+  --accent-soft: #f5e9ec;
+  --accent-strong: var(--brand-wine-dark);
+  --text-muted: var(--brand-muted);
+  --border-radius-xl: 14px;
+  --shadow-soft: var(--brand-shadow);
+  --header-glass: rgba(255, 250, 246, 0.96);
+  --header-border: rgba(36, 27, 31, 0.1);
+}
+
+body {
+  background: var(--brand-paper);
+  background-attachment: initial;
+}
+
+.home-page {
+  background: var(--brand-paper);
+  color: var(--brand-ink);
+}
+
+.home-page .shop-header {
+  background: var(--brand-ink);
+}
+
+.home-page .shop-header::before {
+  background:
+    radial-gradient(circle at 78% 12%, rgba(211, 130, 143, 0.18), transparent 30%),
+    linear-gradient(115deg, rgba(255, 255, 255, 0.04), transparent 55%);
+}
+
+.navbar {
+  position: relative;
+  padding: 0.9rem clamp(1rem, 4vw, 3.5rem);
+  background: rgba(255, 250, 246, 0.97);
+  border-bottom: 1px solid var(--brand-line);
+  box-shadow: none;
+  backdrop-filter: blur(12px);
+}
+
+.brand-logo {
+  height: 44px;
+  max-width: 112px;
+  filter: none;
+  transition: opacity 0.2s ease;
+}
+
+.brand-logo:hover {
+  filter: none;
+  transform: none;
+  opacity: 0.82;
+}
+
+.logo-text {
+  color: var(--brand-ink);
+  background: none;
+  -webkit-text-fill-color: currentColor;
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  text-transform: none;
+}
+
+.nav-links {
+  gap: 0.2rem;
+}
+
+.nav-link {
+  padding: 0.55rem 0.8rem;
+  color: var(--brand-ink);
+  background: transparent;
+  border: 0;
+  border-radius: 8px;
+  font-size: 0.88rem;
+  font-weight: 500;
+  letter-spacing: 0;
+  box-shadow: none;
+}
+
+.nav-link:hover {
+  color: var(--brand-wine);
+  background: #f2e9e6;
+  border-color: transparent;
+  transform: none;
+  box-shadow: none;
+}
+
+.home-page .hero {
+  min-height: 540px;
+  justify-content: center;
+  padding: 5.5rem 1.5rem 6.5rem;
+  text-align: left;
+  align-items: flex-start;
+}
+
+.home-page .hero-content {
+  width: min(100%, 1180px);
+  max-width: none;
+  margin: 0 auto;
+}
+
+.home-page .hero-badge {
+  margin-bottom: 1.5rem;
+  padding: 0;
+  color: #e8bcc7;
+  background: none;
+  border: 0;
+  border-radius: 0;
+  backdrop-filter: none;
+  font-size: 0.77rem;
+  letter-spacing: 0.16em;
+  animation: none;
+}
+
+.home-page .hero-title {
+  max-width: 780px;
+  margin-bottom: 1.25rem;
+  font-size: clamp(3rem, 7vw, 5.9rem);
+  font-weight: 700;
+  line-height: 0.98;
+  letter-spacing: -0.045em;
+  text-shadow: none;
+  animation: none;
+}
+
+.home-page .hero-subtitle {
+  max-width: 620px;
+  margin: 0 0 2rem;
+  color: rgba(255, 255, 255, 0.73);
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  font-weight: 400;
+  line-height: 1.7;
+  animation: none;
+}
+
+.home-page .hero-actions {
+  justify-content: flex-start;
+  margin-bottom: 1.15rem;
+  animation: none;
+}
+
+.home-page .hero-note {
+  color: rgba(255, 255, 255, 0.58);
+  font-size: 0.82rem;
+  animation: none;
+}
+
+.home-page .primary-btn,
+.home-page .secondary-btn {
+  min-height: 46px;
+  padding: 0.75rem 1.25rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  animation: none;
+}
+
+.home-page .primary-btn {
+  color: var(--brand-ink);
+  background: #ffffff;
+  border: 1px solid #ffffff;
+  backdrop-filter: none;
+}
+
+.home-page .secondary-btn {
+  color: #ffffff;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.34);
+}
+
+.home-page .primary-btn:hover,
+.home-page .secondary-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: none;
+  animation: none;
+}
+
+.home-page .secondary-btn:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.7);
+}
+
+.home-page .shop-main {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+}
+
+.collection-intro,
+.product-section,
+.pricing-section {
+  width: min(calc(100% - 2rem), 1200px);
+  margin-inline: auto;
+}
+
+.collection-intro {
+  padding: 5rem 0 3rem;
+  text-align: center;
+}
+
+.collection-intro h2,
+.section-heading h2 {
+  margin: 0;
+  color: var(--brand-ink);
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 650;
+  line-height: 1.08;
+  letter-spacing: -0.035em;
+}
+
+.section-eyebrow {
+  margin-bottom: 0.7rem;
+  color: var(--brand-wine);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.home-page .categories-preview {
+  gap: 0.65rem;
+  padding: 1.8rem 0 0;
+  margin: 0;
+}
+
+.home-page .category-pill {
+  padding: 0.68rem 1.05rem;
+  color: var(--brand-ink);
+  background: transparent;
+  border: 1px solid var(--brand-line);
+  border-radius: 8px;
+  box-shadow: none;
+  backdrop-filter: none;
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+.home-page .category-pill:hover {
+  color: #ffffff;
+  background: var(--brand-wine);
+  border-color: var(--brand-wine);
+  transform: none;
+  box-shadow: none;
+}
+
+.product-section {
+  padding: 3rem 0 6rem;
+}
+
+.section-heading {
+  max-width: 700px;
+  margin: 0 auto 2.4rem;
+  text-align: center;
+}
+
+.section-heading > p:last-child {
+  margin-top: 0.8rem;
+  color: var(--brand-muted);
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+.home-page .product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.3rem;
+  padding: 0;
+}
+
+.home-page .product-card {
+  min-width: 0;
+  padding: 0;
+  background: var(--brand-paper-soft);
+  border: 1px solid var(--brand-line);
+  border-radius: 14px;
+  box-shadow: none;
+  overflow: hidden;
+}
+
+.home-page .product-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--brand-shadow);
+}
+
+.home-page .product-image-wrapper {
+  margin: 0;
+  background: #eee9e4;
+  aspect-ratio: 4 / 4.65;
+}
+
+.home-page .product-image {
+  object-fit: cover;
+}
+
+.home-page .product-card:hover .product-image {
+  transform: scale(1.015);
+}
+
+.home-page .product-info {
+  min-width: 0;
+  flex: 1;
+  padding: 1.15rem;
+  gap: 0.4rem;
+}
+
+.home-page .product-name {
+  color: var(--brand-ink);
+  font-size: 1.05rem;
+  font-weight: 650;
+  line-height: 1.3;
+}
+
+.home-page .product-tag {
+  width: fit-content;
+  padding: 0;
+  color: var(--brand-wine);
+  background: transparent;
+  border-radius: 0;
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.home-page .product-description {
+  flex: 1;
+  color: var(--brand-muted);
+  font-size: 0.88rem;
+  line-height: 1.55;
+}
+
+.home-page .product-bottom {
+  width: 100%;
+  min-width: 0;
+  margin-top: 0.8rem;
+  padding-top: 0.85rem;
+  border-top: 1px solid var(--brand-line);
+}
+
+.home-page .product-price {
+  flex: 0 0 auto;
+  color: var(--brand-ink);
+  font-size: 1.02rem;
+}
+
+.home-page .details-button {
+  flex: 0 1 auto;
+  min-width: 100px;
+  max-width: 145px;
+  min-height: 40px;
+  padding: 0.55rem 0.8rem;
+  color: #ffffff;
+  background: var(--brand-wine);
+  border-radius: 8px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  white-space: normal;
+}
+
+.home-page .details-button:hover {
+  background: var(--brand-wine-dark);
+  box-shadow: none;
+}
+
+.home-page .product-badge {
+  top: 0.75rem;
+  left: 0.75rem;
+  padding: 0.28rem 0.52rem;
+  color: #ffffff;
+  background: rgba(36, 27, 31, 0.84);
+  border-radius: 5px;
+  font-size: 0.64rem;
+  font-weight: 650;
+  letter-spacing: 0.06em;
+  backdrop-filter: blur(6px);
+}
+
+.collection-links {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.collection-links > p {
+  color: var(--brand-muted);
+  font-size: 0.95rem;
+}
+
+.pricing-section {
+  width: 100%;
+  max-width: none;
+  padding: 6rem max(1rem, calc((100% - 1200px) / 2));
+  color: #ffffff;
+  background: var(--brand-ink);
+}
+
+.section-heading--light h2,
+.section-heading--light .section-eyebrow {
+  color: #ffffff;
+}
+
+.section-heading--light > p:last-child {
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  width: min(100%, 1060px);
+  margin: 0 auto;
+}
+
+.pricing-card {
+  display: flex;
+  min-width: 0;
+  min-height: 320px;
+  flex-direction: column;
+  padding: clamp(1.4rem, 3vw, 2.2rem);
+  background: rgba(255, 255, 255, 0.055);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+}
+
+.pricing-card--featured {
+  background: #fffaf6;
+  color: var(--brand-ink);
+  border-color: #fffaf6;
+}
+
+.pricing-label {
+  margin-bottom: 2.5rem;
+  color: #e2a9b8;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.pricing-card--featured .pricing-label {
+  color: var(--brand-wine);
+}
+
+.pricing-card h3 {
+  margin-bottom: 0.8rem;
+  font-size: clamp(1.7rem, 3vw, 2.35rem);
+  font-weight: 650;
+  letter-spacing: -0.035em;
+}
+
+.pricing-description {
+  color: rgba(255, 255, 255, 0.63);
+  font-size: 0.93rem;
+  line-height: 1.65;
+}
+
+.pricing-card--featured .pricing-description {
+  color: var(--brand-muted);
+}
+
+.pricing-price {
+  margin-top: auto;
+  padding-top: 2rem;
+  font-size: clamp(2.6rem, 5vw, 4rem);
+  font-weight: 650;
+  line-height: 1;
+  letter-spacing: -0.055em;
+}
+
+.pricing-price span {
+  margin-right: 0.3rem;
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  vertical-align: top;
+}
+
+.pricing-cta {
+  display: flex;
+  width: fit-content;
+  min-height: 46px;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem auto 0;
+  padding: 0.75rem 1.3rem;
+  color: var(--brand-ink);
+  background: #ffffff;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 650;
+  text-decoration: none;
+}
+
+.pricing-cta:hover {
+  color: var(--brand-wine);
+}
+
+.pricing-note {
+  max-width: 680px;
+  margin: 1rem auto 0;
+  color: rgba(255, 255, 255, 0.46);
+  font-size: 0.76rem;
+  line-height: 1.55;
+  text-align: center;
+}
+
+.shop-footer {
+  margin: 0;
+  padding: 3.5rem 1.25rem;
+  color: var(--brand-ink);
+  background: #ebe5df;
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.9rem;
+}
+
+.shop-footer .social-links {
+  padding-top: 0 !important;
+}
+
+.shop-footer .social-links a {
+  color: var(--brand-ink) !important;
+  opacity: 0.72;
+}
+
+.shop-footer small {
+  color: var(--brand-muted);
+}
+
+.whatsapp-button-float {
+  width: 3.25rem;
+  height: 3.25rem;
+  left: auto;
+  right: 1.25rem;
+  bottom: 1.25rem;
+  box-shadow: 0 10px 26px rgba(22, 75, 44, 0.22);
+}
+
+.whatsapp-button-float::after {
+  display: none;
+}
+
+.whatsapp-button-float:hover {
+  transform: translateY(-2px);
+}
+
+@media (max-width: 900px) {
+  .home-page .product-grid,
+  .pricing-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .pricing-card:last-child {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0.7rem 0.8rem;
+    gap: 0.5rem;
+  }
+
+  .nav-links {
+    width: 100%;
+    gap: 0.15rem;
+    padding-bottom: 0;
+  }
+
+  .nav-link {
+    padding: 0.45rem 0.55rem;
+    font-size: 0.72rem;
+  }
+
+  .brand-logo {
+    height: 34px;
+  }
+
+  .home-page .hero {
+    min-height: 480px;
+    padding: 4rem 1rem;
+  }
+
+  .home-page .hero-title {
+    max-width: 520px;
+    font-size: clamp(2.65rem, 13vw, 4.2rem) !important;
+  }
+
+  .home-page .hero-actions {
+    width: auto;
+    align-items: flex-start;
+  }
+
+  .home-page .primary-btn,
+  .home-page .secondary-btn {
+    width: auto;
+    max-width: none;
+  }
+
+  .collection-intro {
+    padding: 4rem 0 2rem;
+  }
+
+  .home-page .categories-preview {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .home-page .category-pill {
+    flex: 0 1 auto;
+    min-width: 0;
+    font-size: 0.82rem;
+  }
+
+  .product-section {
+    padding: 2rem 0 4rem;
+  }
+}
+
+@media (max-width: 620px) {
+  .home-page .product-grid,
+  .pricing-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pricing-card:last-child {
+    grid-column: auto;
+  }
+
+  .home-page .product-image-wrapper {
+    aspect-ratio: 4 / 4.4;
+  }
+
+  .pricing-section {
+    padding-block: 4.5rem;
+  }
+
+  .pricing-card {
+    min-height: 280px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Paleta original de L'Borgina sobre el sistema editorial 2026 */
+:root {
+  --brand-ink: #1a0533;
+  --brand-wine: #db2777;
+  --brand-wine-dark: #a21caf;
+  --brand-blush: #f0abfc;
+  --brand-paper: #fdf4ff;
+  --brand-paper-soft: #ffffff;
+  --brand-line: rgba(107, 33, 168, 0.16);
+  --brand-muted: #62556a;
+  --brand-shadow: 0 18px 50px rgba(76, 29, 149, 0.16);
+}
+
+body,
+.home-page {
+  background: linear-gradient(160deg, #1a0533 0%, #6b21a8 42%, #db2777 78%, #f97316 100%);
+  background-attachment: fixed;
+}
+
+.home-page .shop-header {
+  background: linear-gradient(145deg, #160329 0%, #4c1583 48%, #bb236d 80%, #f06422 100%);
+}
+
+.home-page .shop-header::before {
+  background:
+    radial-gradient(circle at 76% 16%, rgba(240, 171, 252, 0.23), transparent 32%),
+    radial-gradient(circle at 92% 90%, rgba(249, 115, 22, 0.2), transparent 30%);
+}
+
+.navbar {
+  background: rgba(26, 5, 51, 0.92);
+  border-bottom-color: rgba(240, 171, 252, 0.2);
+  box-shadow: 0 8px 30px rgba(15, 5, 30, 0.2);
+}
+
+.logo-text,
+.nav-link {
+  color: #ffffff;
+}
+
+.nav-link:hover {
+  color: #ffffff;
+  background: rgba(232, 121, 249, 0.18);
+}
+
+.home-page .hero-badge {
+  color: #f0abfc;
+}
+
+.home-page .hero-subtitle {
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.home-page .secondary-btn {
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.home-page .shop-main {
+  background: linear-gradient(180deg, rgba(253, 244, 255, 0.98) 0%, #ffffff 72%);
+}
+
+.section-eyebrow {
+  color: #b51d65;
+}
+
+.home-page .category-pill {
+  color: #4a135f;
+  background: #ffffff;
+  border-color: rgba(107, 33, 168, 0.2);
+}
+
+.home-page .category-pill:hover {
+  color: #ffffff;
+  background: linear-gradient(135deg, #a21caf, #db2777);
+  border-color: transparent;
+}
+
+.home-page .product-card {
+  border-color: rgba(107, 33, 168, 0.14);
+  box-shadow: 0 14px 35px rgba(76, 29, 149, 0.1);
+}
+
+.home-page .product-tag {
+  color: #b51d65;
+}
+
+.home-page .details-button {
+  background: linear-gradient(135deg, #a21caf, #db2777);
+}
+
+.home-page .details-button:hover {
+  background: linear-gradient(135deg, #86198f, #be185d);
+}
+
+.home-page .product-badge {
+  background: rgba(76, 29, 149, 0.88);
+}
+
+.pricing-section {
+  background:
+    radial-gradient(circle at 85% 5%, rgba(249, 115, 22, 0.25), transparent 28%),
+    linear-gradient(145deg, #1a0533 0%, #5b168e 50%, #b91c70 100%);
+}
+
+.pricing-card {
+  background: rgba(255, 255, 255, 0.075);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.pricing-card--featured {
+  color: #2b0a3d;
+  background: #fff7fd;
+  border-color: #fff7fd;
+}
+
+.pricing-label {
+  color: #f0abfc;
+}
+
+.pricing-card--featured .pricing-label {
+  color: #be185d;
+}
+
+.pricing-cta {
+  color: #4a135f;
+}
+
+.pricing-cta:hover {
+  color: #be185d;
+}
+
+.shop-footer {
+  color: #ffffff;
+  background: #160329;
+}
+
+.shop-footer .social-links a {
+  color: #ffffff !important;
+}
+
+.shop-footer small {
+  color: rgba(255, 255, 255, 0.68);
+}
+
+/* Ajustes de profundidad, hero visual y precios interactivos */
+.home-page .hero {
+  min-height: 650px;
+  padding: 4.5rem 1.5rem 5.5rem;
+}
+
+.hero-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.72fr);
+  gap: clamp(2.5rem, 6vw, 6rem);
+  width: min(100%, 1180px);
+  margin: 0 auto;
+  align-items: center;
+}
+
+.home-page .hero-content {
+  width: auto;
+  max-width: 720px;
+  margin: 0;
+}
+
+.home-page .hero-title {
+  font-size: clamp(3rem, 6.2vw, 5.35rem);
+}
+
+.hero-media {
+  position: relative;
+  width: min(100%, 430px);
+  justify-self: end;
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  border-radius: 22px;
+  box-shadow: 0 30px 80px rgba(15, 5, 30, 0.38);
+  overflow: hidden;
+  isolation: isolate;
+  transform: rotate(1.25deg);
+  transition: transform 0.45s ease, box-shadow 0.45s ease;
+}
+
+.hero-media::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(180deg, transparent 55%, rgba(26, 5, 51, 0.84) 100%);
+  pointer-events: none;
+}
+
+.hero-media:hover {
+  transform: rotate(0deg) translateY(-7px);
+  box-shadow: 0 38px 95px rgba(15, 5, 30, 0.5);
+}
+
+.hero-media picture,
+.hero-media img {
+  display: block;
+  width: 100%;
+}
+
+.hero-media img {
+  aspect-ratio: 4 / 5.15;
+  object-fit: cover;
+  object-position: center 28%;
+  transition: transform 0.65s ease;
+}
+
+.hero-media:hover img {
+  transform: scale(1.035);
+}
+
+.hero-media-caption {
+  position: absolute;
+  right: 1.25rem;
+  bottom: 1.2rem;
+  left: 1.25rem;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  color: #ffffff;
+}
+
+.hero-media-caption span {
+  color: #f0abfc;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.hero-media-caption strong {
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.collection-intro {
+  position: relative;
+  width: 100%;
+  max-width: none;
+  padding: 4.5rem max(1rem, calc((100% - 1120px) / 2)) 2.4rem;
+  background:
+    radial-gradient(circle at 50% 0%, rgba(232, 121, 249, 0.14), transparent 40%),
+    linear-gradient(180deg, #fff8ff 0%, #fdf4ff 100%);
+  border-bottom: 1px solid rgba(107, 33, 168, 0.1);
+}
+
+.collection-intro .categories-preview {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.9rem;
+  width: min(100%, 820px);
+  margin: 0 auto;
+}
+
+.collection-intro .category-pill {
+  position: relative;
+  display: flex;
+  min-width: 0;
+  min-height: 112px;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 1.2rem 3rem 1.2rem 1.25rem;
+  text-align: left;
+  border-radius: 13px;
+  box-shadow: 0 12px 30px rgba(76, 29, 149, 0.08);
+  overflow: hidden;
+}
+
+.collection-intro .category-pill::after {
+  content: '→';
+  position: absolute;
+  top: 50%;
+  right: 1.2rem;
+  color: #b51d65;
+  font-size: 1.35rem;
+  transform: translateY(-50%);
+  transition: transform 0.25s ease, color 0.25s ease;
+}
+
+.collection-intro .category-pill strong {
+  color: inherit;
+  font-size: 1.02rem;
+  font-weight: 700;
+}
+
+.collection-intro .category-pill span {
+  margin-top: 0.25rem;
+  color: #74647b;
+  font-size: 0.78rem;
+  font-weight: 400;
+}
+
+.collection-intro .category-pill:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 42px rgba(107, 33, 168, 0.2);
+}
+
+.collection-intro .category-pill:hover::after {
+  color: #ffffff;
+  transform: translate(4px, -50%);
+}
+
+.collection-intro .category-pill:hover span {
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.product-section {
+  padding-top: 2.8rem;
+  padding-bottom: 2.8rem;
+}
+
+.collection-links {
+  margin-top: 2.2rem;
+  padding: 1.8rem;
+  background: #fff8ff;
+  border: 1px solid rgba(107, 33, 168, 0.12);
+  border-radius: 14px;
+}
+
+.collection-links .categories-preview {
+  padding-top: 1rem;
+}
+
+.pricing-grid {
+  perspective: 1000px;
+}
+
+.pricing-card {
+  position: relative;
+  overflow: hidden;
+  transform: translateY(0) rotateX(0deg);
+  transform-origin: center bottom;
+  transition:
+    transform 0.38s cubic-bezier(0.2, 0.8, 0.2, 1),
+    box-shadow 0.38s ease,
+    border-color 0.38s ease,
+    background 0.38s ease;
+}
+
+.pricing-card::before {
+  content: '';
+  position: absolute;
+  inset: -45% -20% auto;
+  height: 70%;
+  background: radial-gradient(circle, rgba(240, 171, 252, 0.2), transparent 67%);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.38s ease;
+}
+
+.pricing-card:hover {
+  z-index: 2;
+  transform: translateY(-12px) rotateX(2deg) scale(1.018);
+  border-color: rgba(255, 255, 255, 0.52);
+  box-shadow: 0 30px 65px rgba(15, 5, 30, 0.38);
+}
+
+.pricing-card:hover::before {
+  opacity: 1;
+}
+
+.pricing-card--featured:hover {
+  border-color: #f0abfc;
+  box-shadow: 0 30px 70px rgba(117, 25, 133, 0.42);
+}
+
+.pricing-price {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.08em;
+  transition: transform 0.35s ease, color 0.35s ease;
+}
+
+.pricing-card:hover .pricing-price {
+  color: #f0abfc;
+  transform: translateX(5px) scale(1.04);
+}
+
+.pricing-card--featured:hover .pricing-price {
+  color: #be185d;
+}
+
+.pricing-price span {
+  margin: 0.18em 0 0;
+  font-size: 0.48em;
+  line-height: 1;
+  letter-spacing: 0;
+}
+
+@media (max-width: 900px) {
+  .hero-inner {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .home-page .hero-content {
+    max-width: 680px;
+  }
+
+  .hero-media {
+    width: min(100%, 460px);
+    justify-self: center;
+  }
+}
+
+@media (max-width: 620px) {
+  .home-page .hero {
+    padding-bottom: 4rem;
+  }
+
+  .hero-inner {
+    gap: 2.25rem;
+  }
+
+  .hero-media {
+    width: min(100%, 330px);
+    border-radius: 17px;
+  }
+
+  .collection-intro {
+    padding-block: 3.6rem 2rem;
+  }
+
+  .collection-intro .categories-preview {
+    grid-template-columns: 1fr;
+  }
+
+  .collection-intro .category-pill {
+    min-height: 94px;
+  }
+
+  .collection-links {
+    padding: 1.4rem 0.8rem;
+  }
+
+  .pricing-card:hover {
+    transform: translateY(-6px) scale(1.008);
+  }
+}
+
+/* Pricing cards: taller, clearer and more editorial */
+.pricing-card {
+  min-height: 410px;
+  padding: clamp(1.8rem, 3vw, 2.45rem);
+}
+
+.pricing-topline {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  margin-bottom: 3.2rem;
+}
+
+.pricing-topline p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.pricing-card--featured .pricing-topline p {
+  color: #9d174d;
+}
+
+.pricing-card h3,
+.pricing-description,
+.pricing-footer {
+  position: relative;
+  z-index: 1;
+}
+
+.pricing-card h3 {
+  margin-bottom: 1rem;
+}
+
+.pricing-description {
+  max-width: 28ch;
+}
+
+.pricing-footer {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: auto;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+.pricing-card--featured .pricing-footer {
+  border-top-color: rgba(107, 33, 168, 0.14);
+}
+
+.pricing-footer .pricing-price {
+  margin: 0;
+  padding: 0;
+}
+
+.pricing-detail {
+  max-width: 7.5rem;
+  padding-bottom: 0.38rem;
+  color: rgba(255, 255, 255, 0.58);
+  font-size: 0.78rem;
+  font-weight: 600;
+  line-height: 1.3;
+  text-align: right;
+}
+
+.pricing-card--featured .pricing-detail {
+  color: #7e6472;
+}
+
+@media (max-width: 620px) {
+  .pricing-card {
+    min-height: 365px;
+  }
+
+  .pricing-topline {
+    margin-bottom: 2.4rem;
+  }
+}
+
+/* Category cards: purple by default, warm accent on hover */
+.collection-intro .category-pill {
+  padding-right: 1.25rem;
+  color: #ffffff;
+  background: linear-gradient(135deg, #5b168e 0%, #7e22ce 100%);
+  border-color: rgba(255, 255, 255, 0.16);
+  box-shadow: 0 14px 32px rgba(91, 22, 142, 0.2);
+}
+
+.collection-intro .category-pill::after {
+  content: none;
+}
+
+.collection-intro .category-pill span {
+  color: rgba(255, 255, 255, 0.76);
+}
+
+.collection-intro .category-pill:hover {
+  color: #ffffff;
+  background: linear-gradient(135deg, #c026d3 0%, #f97316 100%);
+  border-color: transparent;
+  box-shadow: 0 20px 42px rgba(190, 24, 93, 0.26);
+  transform: translateY(-5px);
+}
+
+.collection-intro .category-pill:hover span {
+  color: rgba(255, 255, 255, 0.86);
+}
+
+.collection-links .category-pill {
+  color: #ffffff;
+  background: linear-gradient(135deg, #5b168e 0%, #7e22ce 100%);
+  border-color: rgba(255, 255, 255, 0.16);
+  box-shadow: 0 10px 24px rgba(91, 22, 142, 0.18);
+}
+
+.collection-links .category-pill:hover {
+  color: #ffffff;
+  background: linear-gradient(135deg, #c026d3 0%, #f97316 100%);
+  border-color: transparent;
+  box-shadow: 0 16px 32px rgba(190, 24, 93, 0.24);
+  transform: translateY(-3px);
+}
+
+.shop-footer .web-credit {
+  margin: 1.15rem 0 0;
+  color: rgba(255, 255, 255, 0.58);
+  font-size: 0.78rem;
+  font-weight: 400;
+}
+
+.shop-footer .web-credit a {
+  color: #f0abfc;
+  font-weight: 650;
+  text-decoration: none;
+  text-underline-offset: 0.2em;
+}
+
+.shop-footer .web-credit a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}

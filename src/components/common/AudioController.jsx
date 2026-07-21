@@ -38,7 +38,7 @@ const AudioController = () => {
                 if (playPromise !== undefined) {
                     playPromise.then(() => {
                         removeListeners();
-                    }).catch(e => {
+                    }).catch(() => {
                         isTryingToPlay = false;
                     });
                 }

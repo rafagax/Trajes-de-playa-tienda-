@@ -34,7 +34,7 @@ const ProductCard = ({ product, priority }) => {
                         alt={`Comprar ${product.name} - Traje de baño exclusivo en Venezuela`}
                         className="product-image"
                         loading={priority ? "eager" : "lazy"}
-                        fetchpriority={priority ? "high" : "auto"}
+                        fetchPriority={priority ? "high" : "auto"}
                         width="400"
                         height="500"
                     />
@@ -50,7 +50,7 @@ const ProductCard = ({ product, priority }) => {
                         className="details-button"
                         onClick={handleWhatsAppClick}
                     >
-                        Preguntar por WhatsApp
+                        Consultar
                     </button>
                 </div>
             </div>

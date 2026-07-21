@@ -7,10 +7,7 @@ import model1 from '../assets/modelo-1.jfif';
 import model1Webp from '../assets/modelo-1.webp';
 import model5 from '../assets/modelo-5.jfif';
 import model5Webp from '../assets/modelo-5.webp';
-import model8 from '../assets/modelo-8.jfif';
 import model8Webp from '../assets/modelo-8.webp';
-import model9Webp from '../assets/modelo-9.webp';
-import model10Webp from '../assets/modelo-10.webp';
 import traje1Webp from '../assets/traje de baño 1.webp';
 import traje2Webp from '../assets/traje de baño 2.webp';
 import traje5Webp from '../assets/traje de baño 5.webp';
@@ -69,7 +66,7 @@ export const blogPosts = [
         <h3>¿Estás lista para deslumbrar este verano?</h3>
         <p>Atrévete a llevar el brillo más deslumbrante del 2026 y sé la envidia en todas tus escapadas tropicales.</p>
         <div style="margin-top: 1.5rem">
-          <a href="/tienda/tornasol" class="primary-btn">Comprar Colección Tornasol ✦</a>
+          <a href="/tienda/tornasol" class="primary-btn">Ver colección Tornasol</a>
         </div>
       </div>
     `,
@@ -124,7 +121,7 @@ export const blogPosts = [
         <h3>¿Ya tienes lista tu maleta?</h3>
         <p>No te vayas a la playa con un traje de baño viejo. Descubre nuestros estilos perfectos para Aragua y el Caribe.</p>
         <div style="margin-top: 1.5rem">
-          <a href="/tienda" class="primary-btn">Ver Catálogo de Tienda ✦</a>
+          <a href="/tienda" class="primary-btn">Ver catálogo</a>
         </div>
       </div>
     `,
@@ -165,7 +162,7 @@ export const blogPosts = [
         <h3>¿Qué color te define esta temporada?</h3>
         <p>No importa si eres team Lavanda, Neón o Clásico, tenemos el bikini soñado esperando por ti.</p>
         <div style="margin-top: 1.5rem">
-          <a href="/tienda" class="primary-btn">Explorar Tienda por Colores ✦</a>
+          <a href="/tienda" class="primary-btn">Explorar por colores</a>
         </div>
       </div>
     `,
@@ -204,7 +201,7 @@ export const blogPosts = [
         <h3>Tus bikinis durarán más que nunca</h3>
         <p>Aplica estos tips y tus piezas favoritas estarán listas para tu próximo viaje. ¿Falta añadir uno nuevo a la colección?</p>
         <div style="margin-top: 1.5rem">
-          <a href="/tienda" class="primary-btn">Comprar Traje de Baño Nuevo ✦</a>
+          <a href="/tienda" class="primary-btn">Ver trajes de baño</a>
         </div>
       </div>
     `,

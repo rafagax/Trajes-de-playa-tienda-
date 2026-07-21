@@ -15,7 +15,7 @@ import { WHATSAPP_FLOAT_URL } from '../constants/whatsapp';
  */
 const FAQ_DATA = [
   {
-    categoria: '👙 Sobre los Trajes de Baño',
+    categoria: 'Sobre los trajes de baño',
     preguntas: [
       {
         id: 'faq-talla',
@@ -202,7 +202,7 @@ const FAQ = () => {
       <main className="shop-main faq-main">
         {/* ── HERO DE LA SECCIÓN ── */}
         <div className="faq-hero">
-          <span className="faq-hero-badge">✨ Centro de Ayuda</span>
+          <span className="faq-hero-badge">Centro de ayuda</span>
           <h1 className="faq-hero-title">Preguntas Frecuentes</h1>
           <p className="faq-hero-subtitle">
             Todo lo que necesitas saber sobre nuestros trajes de baño ajustables y el proceso de
@@ -261,7 +261,7 @@ const FAQ = () => {
                 rel="noopener noreferrer"
                 className="faq-whatsapp-cta"
               >
-                💬 ¿Más dudas? Escríbenos
+                ¿Más dudas? Escríbenos
               </a>
             </div>
           </div>
@@ -312,7 +312,7 @@ const FAQ = () => {
               className="faq-cta-btn"
               id="btn-whatsapp-faq"
             >
-              💬 Chatear por WhatsApp
+              Chatear por WhatsApp
             </a>
           </div>
         </section>

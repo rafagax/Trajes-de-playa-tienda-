@@ -24,7 +24,7 @@ const Blog = () => (
         <main className="shop-main">
             <div className="blog-container">
                 <header className="blog-page-header">
-                    <h1 className="section-title" style={{ color: 'white', fontSize: '2.5rem' }}>L'Borgina Blog: Verano Infinito 🌊</h1>
+                    <h1 className="section-title" style={{ color: 'white', fontSize: '2.5rem' }}>L'Borgina Blog</h1>
                     <p style={{ color: 'rgba(255,255,255,0.8)', fontSize: '1.1rem' }}>Tendencias, cuidado de prendas y mucho más sobre bikinis en Maracay.</p>
                 </header>
 
@@ -41,7 +41,7 @@ const Blog = () => (
                                 <span className="post-category">{post.category}</span>
                                 <h3>{post.title}</h3>
                                 <p>{post.description}</p>
-                                <Link to={`/blog/${post.id}`} className="read-more" style={{ textDecoration: 'none' }}>Leer más ✦</Link>
+                                <Link to={`/blog/${post.id}`} className="read-more" style={{ textDecoration: 'none' }}>Leer más</Link>
                             </div>
                         </article>
                     ))}

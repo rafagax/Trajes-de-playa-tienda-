@@ -54,7 +54,7 @@ const Articulo = () => {
                     <div style={{ marginTop: '4rem', padding: '2rem', background: 'rgba(255,255,255,0.1)', borderRadius: '25px', textAlign: 'center' }}>
                         <h3>¿Te gustó este artículo?</h3>
                         <p>Mira nuestra colección completa de trajes de baño en Maracay.</p>
-                        <Link to="/" className="primary-btn" style={{ marginTop: '1rem' }}>Ir a la Tienda ✦</Link>
+                        <Link to="/" className="primary-btn" style={{ marginTop: '1rem' }}>Ir a la tienda</Link>
                     </div>
                 </div>
             </main>
