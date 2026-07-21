@@ -15,8 +15,8 @@ const overlay = Buffer.from(`
     <rect width="1200" height="630" fill="url(#shade)" />
     <text x="78" y="230" fill="#f0abfc" font-family="Arial, sans-serif" font-size="25" font-weight="700" letter-spacing="4">L'BORGINA · MARACAY</text>
     <text x="76" y="315" fill="#ffffff" font-family="Arial, sans-serif" font-size="62" font-weight="700">Trajes de baño</text>
-    <text x="76" y="385" fill="#ffffff" font-family="Arial, sans-serif" font-size="62" font-weight="700">para sentirte tú</text>
-    <text x="78" y="450" fill="#f7eaff" font-family="Arial, sans-serif" font-size="27">Bikinis y enterizos · Envíos a toda Venezuela</text>
+    <text x="76" y="385" fill="#ffffff" font-family="Arial, sans-serif" font-size="62" font-weight="700">para mujer</text>
+    <text x="78" y="450" fill="#f7eaff" font-family="Arial, sans-serif" font-size="25">Bikinis y enterizos · Entregas en Maracay · Envíos nacionales</text>
   </svg>
 `);
 
@@ -24,7 +24,7 @@ await sharp(hero)
   .resize(1200, 630, { fit: 'cover', position: 'right' })
   .composite([{ input: overlay }])
   .jpeg({ quality: 88, progressive: true })
-  .toFile('public/og-lborgina.jpg');
+  .toFile('public/og-lborgina-v2.jpg');
 
 await Promise.all([
   sharp(logo).resize(32, 32).png().toFile('public/favicon-32.png'),

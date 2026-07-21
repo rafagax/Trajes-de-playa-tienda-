@@ -7,6 +7,7 @@ const Seo = ({
   description,
   path,
   image = DEFAULT_SOCIAL_IMAGE,
+  imageAlt = `Portada de ${SITE_NAME}`,
   type = 'website',
   noindex = false,
   children,
@@ -58,7 +59,7 @@ const Seo = ({
       'og:image': socialImage,
       'og:image:width': '1200',
       'og:image:height': '630',
-      'og:image:alt': `Colección de trajes de baño ${SITE_NAME}`,
+      'og:image:alt': imageAlt,
     };
     if (canonical) openGraph['og:url'] = canonical;
     else removeMeta('property', 'og:url');
@@ -68,7 +69,7 @@ const Seo = ({
     upsertMeta('name', 'twitter:title', title);
     upsertMeta('name', 'twitter:description', description);
     upsertMeta('name', 'twitter:image', socialImage);
-  }, [canonical, description, noindex, socialImage, title, type]);
+  }, [canonical, description, imageAlt, noindex, socialImage, title, type]);
 
   return (
     <Helmet>
@@ -87,7 +88,7 @@ const Seo = ({
       <meta property="og:image" content={socialImage} />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
-      <meta property="og:image:alt" content={`Colección de trajes de baño ${SITE_NAME}`} />
+      <meta property="og:image:alt" content={imageAlt} />
 
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />

@@ -45,6 +45,7 @@ const Home = () => {
                 title="Trajes de baño en Maracay | Bikinis L'Borgina"
                 description="Compra trajes de baño para mujer online. Encuentra bikinis y enterizos con entregas en Maracay y envíos a toda Venezuela."
                 path="/"
+                imageAlt="Trajes de baño para mujer con entregas en Maracay y envíos a Venezuela"
             />
 
             <div className="app home-page">

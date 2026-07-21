@@ -1,7 +1,7 @@
 export const SITE_URL = (import.meta.env.VITE_SITE_URL || 'https://bikinislborgina.vercel.app').replace(/\/+$/, '');
 
 export const SITE_NAME = "L'Borgina";
-export const DEFAULT_SOCIAL_IMAGE = '/og-lborgina.jpg';
+export const DEFAULT_SOCIAL_IMAGE = '/og-lborgina-v2.jpg';
 
 export const CATEGORY_SEO = {
   bikinis: {

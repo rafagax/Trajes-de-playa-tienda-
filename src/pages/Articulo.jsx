@@ -65,6 +65,7 @@ const Articulo = () => {
                 description={post.description}
                 path={`/blog/${id}`}
                 image={post.imageWebp || post.image}
+                imageAlt={post.imageAlt || post.title}
                 type="article"
             >
                 <meta property="article:published_time" content={post.datePublished} />
