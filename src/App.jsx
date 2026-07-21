@@ -4,8 +4,8 @@
  * Organiza la navegación entre las secciones de bikinis, enterizos y blog de trajes de baño en Maracay.
  */
 
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import './App.css';
 
 import Home from './pages/Home';
@@ -25,8 +25,19 @@ import { WHATSAPP_FLOAT_URL } from './constants/whatsapp';
  * Componente principal de la aplicación.
  * Define la estructura de rutas y elementos globales como el botón flotante de WhatsApp.
  */
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+  }, [pathname]);
+
+  return null;
+};
+
 export const AppContent = () => (
     <div style={{ position: 'relative' }}>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/tienda" element={<Tienda />} />
