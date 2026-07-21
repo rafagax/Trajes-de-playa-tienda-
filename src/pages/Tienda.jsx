@@ -5,12 +5,14 @@
  */
 
 import React from 'react';
-import { Helmet } from 'react-helmet';
 import { Link, useParams } from 'react-router-dom';
+import Seo from '../components/common/Seo';
 import Navbar from '../components/layout/Navbar';
 import Footer from '../components/layout/Footer';
 import ProductGrid from '../components/shop/ProductGrid';
+import NotFound from './NotFound';
 import { products } from '../data/products';
+import { CATEGORY_SEO } from '../seo/site';
 
 /**
  * Componente funcional para la página de la Tienda.
@@ -21,35 +23,24 @@ const Tienda = () => {
     // Filtrado de productos basado en la categoría seleccionada en la URL
     const filtered = cat ? products.filter(p => p.category === cat) : products;
 
-    // Títulos dinámicos para optimización SEO por categoría
-    const titles = {
-        bikinis: 'Precio de bikinis tiro alto | Comprar bikinis en Maracay',
-        tornasol: 'Bikinis Tornasol | Diseños que brillan con el sol',
-        enterizos: 'Comprar traje de baño enterizo | Enterizos elegantes'
+    const meta = cat ? CATEGORY_SEO[cat] : {
+        title: "Tienda de trajes de baño en Maracay | L'Borgina",
+        description: 'Explora bikinis, enterizos y modelos tornasol disponibles en Maracay, con atención por WhatsApp y envíos a toda Venezuela.',
+        heading: 'Tienda de trajes de baño en Maracay',
     };
 
-    // Descripciones dinámicas para optimización SEO
-    const descriptions = {
-        bikinis: 'Encuentra los mejores precios de bikinis tiro alto y diseños de dos piezas. Envíos a toda Venezuela desde nuestra tienda en Maracay.',
-        tornasol: 'Descubre nuestra exclusiva colección de bikinis tornasol. Colores vibrantes y acabados que cambian con la luz.',
-        enterizos: '¿Buscas comprar un traje de baño enterizo con estilo? Descubre nuestra colección de enterizos elegantes y calidad premium.'
-    };
+    if (cat && !meta) return <NotFound />;
 
     return (
         <>
-            <Helmet>
-                <title>{cat ? titles[cat] : 'Tienda de bikinis Maracay precios | Comprar traje de baño'}</title>
-                <meta name="description" content={cat ? descriptions[cat] : 'Explora nuestra tienda de bikinis en Maracay con los mejores precios. Venta de trajes de baño online en Venezuela con envíos rápidos.'} />
-                <meta name="keywords" content="comprar traje de baño, bikinis maracay precios, trajes de baño online venezuela, bikinis con envio" />
-                <link rel="canonical" href={`https://bikinislborgina.vercel.app/tienda${cat ? '/' + cat : ''}`} />
-            </Helmet>
+            <Seo title={meta.title} description={meta.description} path={`/tienda${cat ? `/${cat}` : ''}`} />
             <div className="app">
                 <header className="shop-header">
                     <Navbar />
                 </header>
                 <main className="shop-main" style={{ padding: '2rem' }}>
                     <h1 style={{ color: 'white', textAlign: 'center', marginBottom: '2rem' }}>
-                        {cat ? titles[cat].split('|')[0].trim() : 'Nuestra Tienda de Trajes de Baño en Maracay'}
+                        {meta.heading}
                     </h1>
 
                     {/* Sub-navegación por categorías */}

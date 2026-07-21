@@ -4,11 +4,12 @@
  */
 
 import React, { useEffect } from 'react';
-import { Helmet } from 'react-helmet';
 import { Link, useParams } from 'react-router-dom';
+import Seo from '../components/common/Seo';
 import Navbar from '../components/layout/Navbar';
 import Footer from '../components/layout/Footer';
 import { blogPosts } from '../data/blog';
+import NotFound from './NotFound';
 
 /**
  * Componente funcional para un artículo individual del blog.
@@ -21,22 +22,16 @@ const Articulo = () => {
         window.scrollTo(0, 0);
     }, [id]);
 
-    if (!post) {
-        return (
-            <div className="app" style={{ color: 'white', textAlign: 'center', padding: '5rem' }}>
-                <h1>Artículo no encontrado</h1>
-                <Link to="/blog" className="primary-btn">Volver al Blog</Link>
-            </div>
-        );
-    }
+    if (!post) return <NotFound />;
 
     return (
         <div className="app">
-            <Helmet>
-                <title>{post.title} | Blog L'Borgina</title>
-                <meta name="description" content={post.description} />
-                <link rel="canonical" href={`https://bikinislborgina.vercel.app/blog/${id}`} />
-            </Helmet>
+            <Seo
+                title={`${post.title} | Blog L'Borgina`}
+                description={post.description}
+                path={`/blog/${id}`}
+                type="article"
+            />
             <header className="shop-header"><Navbar /></header>
             <main className="shop-main">
                 <div className="blog-container" style={{ padding: '0.5rem 1.5rem 3rem' }}>

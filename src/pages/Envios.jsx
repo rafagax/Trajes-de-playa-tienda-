@@ -4,7 +4,7 @@
  */
 
 import React from 'react';
-import { Helmet } from 'react-helmet';
+import Seo from '../components/common/Seo';
 import Navbar from '../components/layout/Navbar';
 import Footer from '../components/layout/Footer';
 
@@ -28,11 +28,11 @@ const ShieldIcon = () => (
  */
 const Envios = () => (
     <div className="app">
-        <Helmet>
-            <title>Políticas de Envíos y Devoluciones | Bikinis con envío a toda Venezuela</title>
-            <meta name="description" content="Información sobre envíos de trajes de baño en Venezuela (MRW, Zoom, Tealca) y entregas personales en Maracay. Conoce nuestras políticas de devolución." />
-            <link rel="canonical" href="https://bikinislborgina.vercel.app/envios" />
-        </Helmet>
+        <Seo
+            title="Envíos y entregas en Maracay | L'Borgina"
+            description="Consulta las entregas coordinadas en Maracay, los envíos de trajes de baño a toda Venezuela y las condiciones de cambios de L'Borgina."
+            path="/envios"
+        />
         <header className="shop-header"><Navbar /></header>
         <main className="shop-main" style={{ padding: '3rem 1.5rem', color: 'white', maxWidth: '800px', margin: '0 auto' }}>
             <h1 style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>

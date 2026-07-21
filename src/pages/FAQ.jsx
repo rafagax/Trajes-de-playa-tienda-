@@ -6,6 +6,7 @@
 
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet';
+import Seo from '../components/common/Seo';
 import Navbar from '../components/layout/Navbar';
 import Footer from '../components/layout/Footer';
 import { WHATSAPP_FLOAT_URL } from '../constants/whatsapp';
@@ -165,17 +166,12 @@ const FAQItem = ({ pregunta, respuesta, id }) => {
 const FAQ = () => {
   return (
     <div className="app">
+      <Seo
+        title="Preguntas frecuentes sobre bikinis | L'Borgina"
+        description="Resuelve dudas sobre tallas, ajuste, pedidos, pagos, entregas en Maracay y envíos de los trajes de baño L'Borgina."
+        path="/faq"
+      />
       <Helmet>
-        <title>Preguntas Frecuentes | Trajes de Baño Ajustables L'Borgina Maracay</title>
-        <meta
-          name="description"
-          content="Resuelve todas tus dudas sobre nuestros trajes de baño ajustables talla única de L'Borgina. Cómo ajustarlos, cómo comprar, envíos a toda Venezuela y métodos de pago."
-        />
-        <meta
-          name="keywords"
-          content="preguntas frecuentes bikinis, traje de baño ajustable, talla única bikini Venezuela, cómo usar bikini ajustable, envíos trajes de baño Venezuela, L'Borgina FAQ"
-        />
-        <link rel="canonical" href="https://bikinislborgina.vercel.app/faq" />
         {/* Schema.org FAQPage para SEO enriquecido en Google */}
         <script type="application/ld+json">
           {JSON.stringify({

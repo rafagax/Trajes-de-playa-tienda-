@@ -4,8 +4,8 @@
  */
 
 import React from 'react';
-import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
+import Seo from '../components/common/Seo';
 import Navbar from '../components/layout/Navbar';
 import Footer from '../components/layout/Footer';
 import { blogPosts } from '../data/blog';
@@ -15,11 +15,11 @@ import { blogPosts } from '../data/blog';
  */
 const Blog = () => (
     <div className="app">
-        <Helmet>
-            <title>Blog de Moda Playera | Tendencias de Bikinis y Trajes de Baño</title>
-            <meta name="description" content="Descubre tips de estilo, tendencias de trajes de baño en Maracay y consejos para cuidar tus bikinis en nuestro Blog oficial." />
-            <link rel="canonical" href="https://bikinislborgina.vercel.app/blog" />
-        </Helmet>
+        <Seo
+            title="Blog de moda playera y bikinis | L'Borgina"
+            description="Guías sobre cuidado de trajes de baño, tendencias de bikinis y destinos de playa en Aragua preparadas por L'Borgina."
+            path="/blog"
+        />
         <header className="shop-header"><Navbar /></header>
         <main className="shop-main">
             <div className="blog-container">

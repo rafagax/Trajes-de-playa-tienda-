@@ -5,7 +5,11 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "generate:seo-assets": "node scripts/generate-social-image.mjs",
+    "build:client": "vite build",
+    "build:ssr": "vite build --ssr src/entry-server.jsx --outDir dist-server",
+    "prerender": "node scripts/prerender.mjs",
+    "build": "npm run generate:seo-assets && npm run build:client && npm run build:ssr && npm run prerender",
     "lint": "eslint .",
     "preview": "vite preview"
   },

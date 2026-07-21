@@ -5,8 +5,8 @@
  */
 
 import React from 'react';
-import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
+import Seo from '../components/common/Seo';
 import Navbar from '../components/layout/Navbar';
 import Footer from '../components/layout/Footer';
 import ProductGrid from '../components/shop/ProductGrid';
@@ -41,11 +41,11 @@ const Home = () => {
 
     return (
         <>
-            <Helmet>
-                <title>Venta de trajes de baño en Maracay | Tienda de bikinis Maracay | L'Borgina</title>
-                <meta name="description" content="Venta de trajes de baño en Maracay y online para toda Venezuela. Encuentra bikinis, enterizos y tallas completas con diseños exclusivos. ¡Compra hoy!" />
-                <meta name="keywords" content="venta de trajes de baño en maracay, tienda de bikinis maracay, venta de trajes de baño online venezuela, bikinis con envio a toda venezuela" />
-            </Helmet>
+            <Seo
+                title="Trajes de baño en Maracay | Bikinis L'Borgina"
+                description="Compra trajes de baño para mujer online. Encuentra bikinis y enterizos con entregas en Maracay y envíos a toda Venezuela."
+                path="/"
+            />
 
             <div className="app home-page">
                 <header className="shop-header">
@@ -54,10 +54,10 @@ const Home = () => {
                         <div className="hero-inner">
                             <div className="hero-content">
                                 <span className="hero-badge">Colección 2026</span>
-                                <h1 className="hero-title">Trajes de baño para sentirte tú</h1>
-                                <p className="hero-subtitle">Bikinis y enterizos disponibles en Maracay, con asesoría cercana para elegir el modelo que mejor se adapte a ti.</p>
+                                <h1 className="hero-title"><span>Trajes de baño</span>{' '}<span>para mujer</span></h1>
+                                <p className="hero-subtitle">Compra bikinis y enterizos online, con entregas en Maracay y envíos a toda Venezuela.</p>
                                 <div className="hero-actions">
-                                    <button className="primary-btn" onClick={handleScrollToCollection}>Ver colección</button>
+                                    <button className="primary-btn" onClick={handleScrollToCollection}>Comprar trajes de baño</button>
                                     <a className="secondary-btn" href={WHATSAPP_FLOAT_URL} target="_blank" rel="noopener noreferrer">Hablar por WhatsApp</a>
                                 </div>
                                 <p className="hero-note">Entregas en Maracay · Envíos a toda Venezuela</p>

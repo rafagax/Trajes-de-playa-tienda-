@@ -4,7 +4,7 @@
  */
 
 import React, { useState } from 'react';
-import { Helmet } from 'react-helmet';
+import Seo from '../components/common/Seo';
 import Navbar from '../components/layout/Navbar';
 import Footer from '../components/layout/Footer';
 import WhatsAppIcon from '../components/common/WhatsAppIcon';
@@ -36,11 +36,11 @@ const Contacto = () => {
 
     return (
         <div className="app">
-            <Helmet>
-                <title>Contacto y Quiénes Somos | Tienda de trajes de baño Maracay</title>
-                <meta name="description" content="Conoce la historia de L'Borgina y contacta con nuestra tienda de trajes de baño en Maracay. Asesoría personalizada por WhatsApp para tus compras online." />
-                <link rel="canonical" href="https://bikinislborgina.vercel.app/contacto" />
-            </Helmet>
+            <Seo
+                title="Contacto y asesoría por WhatsApp | L'Borgina Maracay"
+                description="Contacta a L'Borgina para consultar modelos, disponibilidad, entregas en Maracay y envíos de trajes de baño a toda Venezuela."
+                path="/contacto"
+            />
             <header className="shop-header"><Navbar /></header>
             <main className="shop-main" style={{ padding: '2rem 1.5rem 0' }}>
                 <div className="contact-container">
