@@ -102,7 +102,7 @@ const Home = () => {
                         <div className="section-heading">
                             <p className="section-eyebrow">Selección L'Borgina</p>
                             <h2>Los favoritos de la colección</h2>
-                            <p>Modelos disponibles para consultar y reservar directamente por WhatsApp.</p>
+                            <p>Catálogo sujeto a disponibilidad.</p>
                         </div>
                         <ProductGrid items={featuredProducts} />
 
@@ -120,7 +120,7 @@ const Home = () => {
                         <div className="section-heading section-heading--light">
                             <p className="section-eyebrow">Precios claros</p>
                             <h2 id="pricing-title">Compra una pieza o arma tu pedido</h2>
-                            <p>Elige la opción que te conviene y confirma los modelos disponibles con nuestro equipo.</p>
+                            <p>Elige la opción que te conviene para comprar una pieza o hacer un pedido al mayor.</p>
                         </div>
                         <div className="pricing-grid">
                             <article className="pricing-card">
@@ -149,16 +149,16 @@ const Home = () => {
                                 <div className="pricing-topline">
                                     <p>Impulsa tu negocio</p>
                                 </div>
-                                <h3>12 bikinis</h3>
-                                <p className="pricing-description">Una opción pensada para revendedoras y pedidos de volumen.</p>
+                                <h3>Desde 6 bikinis</h3>
+                                <p className="pricing-description">Precio al mayor para revendedoras y pedidos desde seis piezas.</p>
                                 <div className="pricing-footer">
-                                    <p className="pricing-price"><span>$</span>60</p>
+                                    <p className="pricing-price"><span>$</span>30</p>
                                     <span className="pricing-detail">$5 cada uno</span>
                                 </div>
                             </article>
                         </div>
-                        <a className="pricing-cta" href={WHATSAPP_FLOAT_URL} target="_blank" rel="noopener noreferrer">Consultar disponibilidad</a>
-                        <p className="pricing-note">Precios sujetos a disponibilidad. Confirma colores, modelos y condiciones antes de pagar.</p>
+                        <a className="pricing-cta" href={WHATSAPP_FLOAT_URL} target="_blank" rel="noopener noreferrer">Comprar por WhatsApp</a>
+                        <p className="pricing-note">Catálogo sujeto a disponibilidad. Confirma colores, modelos y condiciones antes de pagar.</p>
                     </section>
                 </main>
 

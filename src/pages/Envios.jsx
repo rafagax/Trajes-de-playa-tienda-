@@ -54,7 +54,7 @@ const Envios = () => (
                 <h3 style={{ marginTop: '2rem', display: 'flex', alignItems: 'center', gap: '10px', color: '#f0abfc' }}>
                     <ShieldIcon /> Políticas de Devolución por Higiene
                 </h3>
-                <p style={{ marginTop: '0.5rem', opacity: 0.9 }}>Por razones de salud, <strong>no aceptamos devoluciones de las partes inferiores</strong> de los trajes de baño. Si hay un defecto de fábrica, tienes 48h para reportarlo.</p>
+                <p style={{ marginTop: '0.5rem', opacity: 0.9 }}>Por razones de salud, <strong>no aceptamos devoluciones de las partes inferiores</strong> de los trajes de baño. Si hay un defecto de fábrica, tienes 48 horas para reportarlo.</p>
             </div>
         </main>
         <Footer />

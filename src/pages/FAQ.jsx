@@ -51,7 +51,7 @@ const FAQ_DATA = [
         id: 'faq-como-comprar',
         pregunta: '¿Cómo hago un pedido?',
         respuesta:
-          'Para hacer tu pedido, simplemente elige el traje que te guste en nuestra tienda y haz clic en "Pedir por WhatsApp". Te redirigirá directamente a nuestra cuenta oficial donde podrás confirmar tu pedido, color y forma de entrega con una de nuestras asesoras.',
+          'Para hacer tu pedido, elige el traje que te guste en nuestra tienda y usa el botón de WhatsApp de su tarjeta. El mensaje incluirá automáticamente el nombre del modelo para que puedas confirmar disponibilidad, color y forma de entrega con una de nuestras asesoras.',
       },
       {
         id: 'faq-pago',
@@ -69,7 +69,7 @@ const FAQ_DATA = [
         id: 'faq-disponibilidad',
         pregunta: '¿Cómo sé si hay disponibilidad de un traje específico?',
         respuesta:
-          'Toda la colección mostrada en nuestra tienda está disponible. Sin embargo, dado que manejamos stock limitado de algunos modelos, te recomendamos consultar por WhatsApp para confirmar disponibilidad antes de realizar tu pago.',
+          'Catálogo sujeto a disponibilidad. Escríbenos por WhatsApp con el nombre del modelo para confirmar existencias antes de realizar tu pago.',
       },
     ],
   },
@@ -78,7 +78,7 @@ const FAQ_DATA = [
     preguntas: [
       {
         id: 'faq-envio-donde',
-        pregunta: '¿Hacen envíos a todo Venezuela?',
+        pregunta: '¿Hacen envíos a toda Venezuela?',
         respuesta:
           'Sí, enviamos a todo el territorio nacional a través de empresas de encomiendas. Trabajamos con MRW, Zoom y encomiendas locales. También ofrecemos entrega en mano en Maracay, estado Aragua.',
       },
@@ -98,7 +98,7 @@ const FAQ_DATA = [
         id: 'faq-cambios',
         pregunta: '¿Puedo cambiar o devolver mi traje de baño?',
         respuesta:
-          'Por cuestiones de higiene, no realizamos cambios ni devoluciones en trajes de baño ya usados. Sin embargo, si el producto llegó defectuoso o dañado, puedes contactarnos dentro de las primeras 24 horas de recibir tu pedido con fotos del problema para buscar una solución.',
+          'Por cuestiones de higiene, no realizamos cambios ni devoluciones en trajes de baño ya usados. Sin embargo, si el producto llegó defectuoso o dañado, puedes contactarnos dentro de las primeras 48 horas de recibir tu pedido con fotos del problema para buscar una solución.',
       },
     ],
   },

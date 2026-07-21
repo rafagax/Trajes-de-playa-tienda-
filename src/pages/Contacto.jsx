@@ -50,7 +50,7 @@ const Contacto = () => {
                         <div className="direct-contact-cards">
                             <div className="contact-card-small">
                                 <h4>WhatsApp Directo</h4>
-                                <p>¿Quieres una respuesta rápida? Escribenos al WhatsApp</p>
+                                <p>¿Quieres una respuesta rápida? Escríbenos por WhatsApp.</p>
                                 <p>  </p>
                                 <a href={WHATSAPP_FLOAT_URL} target="_blank" rel="noopener noreferrer" style={{
                                     color: 'rgb(37, 211, 102)',

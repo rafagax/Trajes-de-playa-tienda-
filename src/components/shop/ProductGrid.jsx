@@ -11,6 +11,12 @@ import { createWhatsAppUrl } from '../../constants/whatsapp';
  * Componente de tarjeta de producto individual.
  */
 const ProductCard = ({ product, priority }) => {
+    const ctaLabel = {
+        bikinis: 'Quiero este bikini',
+        enterizos: 'Pedir este modelo',
+        tornasol: 'Confirmar disponibilidad',
+    }[product.category] || 'Comprar por WhatsApp';
+
     const handleWhatsAppClick = () => {
         // Silenciamos audio si está sonando al salir a WhatsApp
         window.dispatchEvent(new Event('silence-audio'));
@@ -50,7 +56,7 @@ const ProductCard = ({ product, priority }) => {
                         className="details-button"
                         onClick={handleWhatsAppClick}
                     >
-                        Consultar
+                        {ctaLabel}
                     </button>
                 </div>
             </div>

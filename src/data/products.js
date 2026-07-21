@@ -1,7 +1,7 @@
 /**
  * @file data\products.js
  * @description Listado de productos de L'Borgina: Bikinis, Enterizos, Talla Plus y Tornasol.
- * Todos los modelos disponibles para venta en Maracay y envíos a toda Venezuela.
+ * Catálogo sujeto a disponibilidad para venta en Maracay y envíos a toda Venezuela.
  */
 
 import traje1 from '../assets/traje de baño 1.jpeg';

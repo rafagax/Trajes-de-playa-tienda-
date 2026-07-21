@@ -24,6 +24,6 @@ export const WHATSAPP_FLOAT_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encod
  * @returns {string} URL de WhatsApp con mensaje personalizado.
  */
 export const createWhatsAppUrl = (productName) => {
-    const message = `Hola 👋, me interesa el modelo "${productName}" que vi en la web. ¿Está disponible?`;
+    const message = `Hola, quiero consultar disponibilidad del ${productName}.`;
     return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
 };
