@@ -15,7 +15,7 @@ import { WHATSAPP_FLOAT_URL } from '../constants/whatsapp';
  */
 const Contacto = () => {
     const [submitted, setSubmitted] = useState(false);
-    const [form, setForm] = useState({ name: '', email: '', message: '' });
+    const [form, setForm] = useState({ name: '', email: '', phone: '', message: '' });
 
     const handleChange = (e) => {
         setForm({ ...form, [e.target.name]: e.target.value });
@@ -27,6 +27,7 @@ const Contacto = () => {
 
 *Nombre:* ${form.name}
 *Correo:* ${form.email}
+*Teléfono:* ${form.phone}
 *Mensaje:* ${form.message}`;
 
         const url = `https://wa.me/584228151085?text=${encodeURIComponent(texto)}`;
@@ -35,14 +36,14 @@ const Contacto = () => {
     };
 
     return (
-        <div className="app">
+        <div className="app contact-page">
             <Seo
                 title="Contacto y asesoría por WhatsApp | L'Borgina Maracay"
                 description="Contacta a L'Borgina para consultar modelos, disponibilidad, entregas en Maracay y envíos de trajes de baño a toda Venezuela."
                 path="/contacto"
             />
             <header className="shop-header"><Navbar /></header>
-            <main className="shop-main" style={{ padding: '2rem 1.5rem 0' }}>
+            <main className="shop-main contact-main">
                 <div className="contact-container">
                     {/* 1. SECCIÓN WHATSAPP (Aparece primero en móvil) */}
                     <section className="contact-info-section">
@@ -72,22 +73,26 @@ const Contacto = () => {
                             <div className="form-success-message">
                                 <h3>Mensaje preparado para WhatsApp</h3>
                                 <p>Se abrió WhatsApp con tu mensaje listo. Si no se abrió automáticamente, intenta de nuevo.</p>
-                                <button className="primary-btn" onClick={() => { setSubmitted(false); setForm({ name: '', email: '', message: '' }); }}>Enviar otro mensaje</button>
+                                <button className="primary-btn" onClick={() => { setSubmitted(false); setForm({ name: '', email: '', phone: '', message: '' }); }}>Enviar otro mensaje</button>
                             </div>
                         ) : (
                             <form className="contact-form" onSubmit={handleSubmit}>
                                 <h2>Cuéntanos qué necesitas</h2>
                                 <div className="form-group">
                                     <label htmlFor="name">Nombre completo</label>
-                                    <input type="text" id="name" name="name" placeholder="Ej. Maria Perez" value={form.name} onChange={handleChange} required />
+                                    <input type="text" id="name" name="name" placeholder="Ej. María Pérez" value={form.name} onChange={handleChange} autoComplete="name" required />
                                 </div>
                                 <div className="form-group">
                                     <label htmlFor="email">Correo electrónico</label>
-                                    <input type="email" id="email" name="email" placeholder="maria@ejemplo.com" value={form.email} onChange={handleChange} required />
+                                    <input type="email" id="email" name="email" placeholder="maria@ejemplo.com" value={form.email} onChange={handleChange} autoComplete="email" required />
+                                </div>
+                                <div className="form-group">
+                                    <label htmlFor="phone">Teléfono</label>
+                                    <input type="tel" id="phone" name="phone" placeholder="Ej. +58 412 123 4567" value={form.phone} onChange={handleChange} inputMode="tel" autoComplete="tel" required />
                                 </div>
                                 <div className="form-group">
                                     <label htmlFor="message">Mensaje</label>
-                                    <textarea id="message" name="message" rows="4" placeholder="¿En qué podemos ayudarte con tus bikinis?" value={form.message} onChange={handleChange} required></textarea>
+                                    <textarea id="message" name="message" rows="3" placeholder="¿En qué podemos ayudarte con tus bikinis?" value={form.message} onChange={handleChange} required></textarea>
                                 </div>
                                 <button type="submit" className="primary-btn form-submit-btn">Enviar por WhatsApp</button>
                             </form>

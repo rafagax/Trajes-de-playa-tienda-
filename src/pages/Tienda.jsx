@@ -38,17 +38,18 @@ const Tienda = () => {
                 <header className="shop-header">
                     <Navbar />
                 </header>
-                <main className="shop-main" style={{ padding: '2rem' }}>
-                    <h1 style={{ color: 'white', textAlign: 'center', marginBottom: '2rem' }}>
-                        {meta.heading}
-                    </h1>
+                <main className="shop-main catalog-main">
+                    <div className="catalog-heading">
+                        <p>Colección L'Borgina</p>
+                        <h1>{meta.heading}</h1>
+                    </div>
 
                     {/* Sub-navegación por categorías */}
-                    <div style={{ display: 'flex', justifyContent: 'center', gap: '10px', marginBottom: '2rem', flexWrap: 'wrap' }}>
-                        <Link to="/tienda/bikinis" className="nav-link">Bikinis</Link>
-                        <Link to="/tienda/tornasol" className="nav-link">Tornasol</Link>
-                        <Link to="/tienda/enterizos" className="nav-link">Enterizos</Link>
-                    </div>
+                    <nav className="catalog-tabs" aria-label="Categorías de trajes de baño">
+                        <Link to="/tienda/bikinis" className={`catalog-tab${cat === 'bikinis' ? ' is-active' : ''}`} aria-current={cat === 'bikinis' ? 'page' : undefined}>Bikinis</Link>
+                        <Link to="/tienda/tornasol" className={`catalog-tab${cat === 'tornasol' ? ' is-active' : ''}`} aria-current={cat === 'tornasol' ? 'page' : undefined}>Tornasol</Link>
+                        <Link to="/tienda/enterizos" className={`catalog-tab${cat === 'enterizos' ? ' is-active' : ''}`} aria-current={cat === 'enterizos' ? 'page' : undefined}>Enterizos</Link>
+                    </nav>
 
                     <ProductGrid items={filtered} />
                 </main>

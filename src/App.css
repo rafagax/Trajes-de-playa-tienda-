@@ -952,20 +952,29 @@ body {
 }
 
 .read-more {
-  background: none;
+  background: var(--accent);
   border: 1px solid var(--accent);
-  color: var(--accent);
+  color: #ffffff;
   padding: 8px 16px;
   border-radius: 20px;
   cursor: pointer;
   align-self: flex-start;
   margin-top: auto;
-  transition: all 0.3s ease;
+  font-weight: 650;
+  transition: background 0.25s ease, border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .read-more:hover {
-  background: var(--accent);
-  color: white;
+  background: #7e22ce;
+  border-color: #7e22ce;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgba(126, 34, 206, 0.32);
+}
+
+.read-more:focus-visible {
+  outline: 3px solid rgba(126, 34, 206, 0.45);
+  outline-offset: 3px;
 }
 
 /* ============================================
@@ -1146,17 +1155,30 @@ body {
   width: 100%;
   padding: 12px 16px;
   border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  background: rgba(255, 255, 255, 0.05);
-  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.11);
+  color: #ffffff;
   font-family: inherit;
-  transition: border-color 0.3s ease;
+  caret-color: #ffffff;
+  transition: border-color 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-main {
+  padding: 2rem 1.5rem 0;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: rgba(255, 255, 255, 0.68);
+  opacity: 1;
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
   outline: none;
   border-color: var(--accent);
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 0 3px rgba(232, 121, 249, 0.16);
 }
 
 .form-submit-btn {
@@ -2152,6 +2174,11 @@ body {
 }
 
 @media (max-width: 768px) {
+  .shop-header {
+    overflow: visible;
+    padding-top: 64px;
+  }
+
   .navbar {
     padding: 0.7rem 0.8rem;
     gap: 0.5rem;
@@ -2853,8 +2880,15 @@ body,
 }
 
 @media (max-width: 768px) {
+  html {
+    scroll-padding-top: 72px;
+  }
+
   .navbar {
-    position: relative;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
     z-index: 1000;
     width: 100%;
     min-height: 64px;
@@ -3143,4 +3177,285 @@ body,
     font-size: 0.84rem;
   }
 
+}
+
+/* Catálogo: selector de categorías claro y táctil */
+.catalog-main {
+  width: min(calc(100% - 2rem), 1120px);
+  margin: 0 auto;
+  padding: clamp(2.2rem, 5vw, 3.5rem) 0 4.5rem;
+}
+
+.catalog-heading {
+  max-width: 680px;
+  margin: 0 auto 1.4rem;
+  color: #ffffff;
+  text-align: center;
+}
+
+.catalog-heading p {
+  margin-bottom: 0.55rem;
+  color: #f0abfc;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.catalog-heading h1 {
+  margin: 0;
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 750;
+  line-height: 1.05;
+  letter-spacing: -0.035em;
+}
+
+.catalog-tabs {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.35rem;
+  width: min(100%, 470px);
+  margin: 0 auto 2rem;
+  padding: 0.4rem;
+  background: rgba(26, 5, 51, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 14px;
+  box-shadow: 0 14px 32px rgba(15, 5, 30, 0.18);
+  backdrop-filter: blur(10px);
+}
+
+.catalog-tab {
+  display: flex;
+  min-width: 0;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+  padding: 0.65rem 0.4rem;
+  color: rgba(255, 255, 255, 0.8);
+  background: transparent;
+  border-radius: 10px;
+  font-size: 0.88rem;
+  font-weight: 650;
+  text-decoration: none;
+  transition: color 0.22s ease, background 0.22s ease, transform 0.22s ease, box-shadow 0.22s ease;
+}
+
+.catalog-tab:hover {
+  color: #ffffff;
+  background: linear-gradient(135deg, #c026d3, #f97316);
+}
+
+.catalog-tab.is-active {
+  color: #4a135f;
+  background: #ffffff;
+  box-shadow: 0 8px 20px rgba(15, 5, 30, 0.2);
+}
+
+.catalog-tab:focus-visible {
+  outline: 3px solid rgba(249, 115, 22, 0.55);
+  outline-offset: 2px;
+}
+
+@media (max-width: 620px) {
+  .catalog-main {
+    width: calc(100% - 2rem);
+    padding-top: 1.7rem;
+  }
+
+  .catalog-heading {
+    margin-bottom: 1.15rem;
+  }
+
+  .catalog-heading h1 {
+    max-width: 330px;
+    margin-inline: auto;
+    font-size: 1.85rem;
+  }
+
+  .catalog-tabs {
+    margin-bottom: 1.35rem;
+  }
+
+  .catalog-tab {
+    min-height: 42px;
+    font-size: 0.8rem;
+  }
+}
+
+/* Precios móviles: jerarquía centrada y aspecto de plan de compra */
+@media (max-width: 620px) {
+  .pricing-section {
+    padding: 3.5rem 1rem 4rem;
+  }
+
+  .pricing-section .section-heading {
+    margin-bottom: 1.8rem;
+  }
+
+  .pricing-grid {
+    gap: 1rem;
+  }
+
+  .pricing-card {
+    min-height: 315px;
+    align-items: center;
+    padding: 1.5rem 1.35rem;
+    text-align: center;
+    border-radius: 18px;
+    box-shadow: 0 18px 42px rgba(15, 5, 30, 0.18);
+  }
+
+  .pricing-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 2rem;
+    left: 2rem;
+    height: 3px;
+    background: linear-gradient(90deg, #f0abfc, #f97316);
+    border-radius: 0 0 999px 999px;
+  }
+
+  .pricing-card:hover {
+    transform: none;
+  }
+
+  .pricing-topline {
+    justify-content: center;
+    margin-bottom: 1.15rem;
+  }
+
+  .pricing-topline p {
+    padding: 0.42rem 0.72rem;
+    color: #f7d8ff;
+    background: rgba(255, 255, 255, 0.09);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 999px;
+    font-size: 0.65rem;
+    line-height: 1;
+  }
+
+  .pricing-card--featured .pricing-topline p {
+    color: #9d174d;
+    background: rgba(190, 24, 93, 0.08);
+    border-color: rgba(190, 24, 93, 0.14);
+  }
+
+  .pricing-card h3 {
+    margin-bottom: 0.7rem;
+    font-size: 2rem;
+  }
+
+  .pricing-description {
+    max-width: 31ch;
+    margin-inline: auto;
+    line-height: 1.55;
+  }
+
+  .pricing-footer {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.55rem;
+    padding-top: 1.25rem;
+  }
+
+  .pricing-footer .pricing-price {
+    justify-content: center;
+    font-size: 3.65rem;
+    text-align: center;
+  }
+
+  .pricing-card:hover .pricing-price {
+    transform: none;
+  }
+
+  .pricing-detail {
+    max-width: none;
+    padding: 0;
+    font-size: 0.76rem;
+    text-align: center;
+  }
+}
+
+/* Contacto móvil: formulario compacto sin sacrificar legibilidad */
+@media (max-width: 620px) {
+  .contact-main {
+    margin: 0 auto;
+    padding: 0.85rem 1rem 0;
+  }
+
+  .contact-container {
+    gap: 0.7rem;
+  }
+
+  .contact-header-section,
+  .contact-info-section,
+  .contact-form-section,
+  .social-info-section {
+    margin-bottom: 0.7rem;
+  }
+
+  .contact-page .contact-card-small {
+    padding: 0.95rem 1rem;
+    border-radius: 16px;
+  }
+
+  .contact-page .contact-card-small h4 {
+    margin-bottom: 0.3rem;
+    font-size: 1rem;
+  }
+
+  .contact-page .contact-card-small p,
+  .contact-page .contact-card-small a {
+    font-size: 0.82rem;
+    line-height: 1.35;
+  }
+
+  .contact-page .contact-form {
+    padding: 1.1rem;
+    border-radius: 18px;
+  }
+
+  .contact-page .contact-form h2 {
+    margin-bottom: 0.95rem;
+    font-size: 1.45rem;
+    line-height: 1.15;
+  }
+
+  .contact-page .form-group {
+    margin-bottom: 0.72rem;
+  }
+
+  .contact-page .form-group label {
+    margin-bottom: 0.28rem;
+    font-size: 0.8rem;
+  }
+
+  .contact-page .form-group input,
+  .contact-page .form-group textarea {
+    padding: 0.62rem 0.78rem;
+    border-radius: 10px;
+    font-size: 0.86rem;
+  }
+
+  .contact-page .form-group input {
+    min-height: 42px;
+  }
+
+  .contact-page .form-group textarea {
+    min-height: 78px;
+    resize: vertical;
+  }
+
+  .contact-page .form-submit-btn {
+    min-height: 44px;
+    margin-top: 0.15rem;
+    padding-block: 0.65rem;
+  }
+
+  .contact-page + .whatsapp-button-float {
+    display: none;
+  }
 }

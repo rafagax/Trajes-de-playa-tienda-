@@ -62,7 +62,9 @@ const Navbar = ({ onScrollToCollection }) => {
             </button>
 
             <ul id="primary-navigation" className="nav-links">
-                <li className="nav-home-mobile"><Link className="nav-link" to="/" onClick={closeMenu}>Inicio</Link></li>
+                {!onScrollToCollection && (
+                    <li className="nav-home-mobile"><Link className="nav-link" to="/" onClick={closeMenu}>Inicio</Link></li>
+                )}
                 <li>
                     {onScrollToCollection ? (
                         <button className="nav-link" onClick={handleCollectionClick}>Colección</button>
