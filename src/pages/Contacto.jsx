@@ -86,8 +86,8 @@ const Contacto = () => {
                                     <label htmlFor="email">Correo electrónico</label>
                                     <input type="email" id="email" name="email" placeholder="maria@ejemplo.com" value={form.email} onChange={handleChange} autoComplete="email" required />
                                 </div>
-                                <div className="form-group">
-                                    <label htmlFor="phone">Teléfono</label>
+                                <div className="form-group form-group-phone">
+                                    <label htmlFor="phone">Teléfono / WhatsApp</label>
                                     <input type="tel" id="phone" name="phone" placeholder="Ej. +58 412 123 4567" value={form.phone} onChange={handleChange} inputMode="tel" autoComplete="tel" required />
                                 </div>
                                 <div className="form-group">
