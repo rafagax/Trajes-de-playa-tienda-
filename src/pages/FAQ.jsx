@@ -5,11 +5,12 @@
  */
 
 import React, { useState } from 'react';
-import { Helmet } from 'react-helmet';
 import Seo from '../components/common/Seo';
 import Navbar from '../components/layout/Navbar';
 import Footer from '../components/layout/Footer';
 import { WHATSAPP_FLOAT_URL } from '../constants/whatsapp';
+import { createBreadcrumbSchema, STORE_ID, WEBSITE_ID } from '../seo/schemas';
+import { absoluteUrl } from '../seo/site';
 
 /**
  * Datos de preguntas frecuentes agrupadas por categoría.
@@ -164,32 +165,41 @@ const FAQItem = ({ pregunta, respuesta, id }) => {
  * Componente principal de la página de Preguntas Frecuentes.
  */
 const FAQ = () => {
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    '@id': absoluteUrl('/faq#pagina'),
+    name: "Preguntas frecuentes de L'Borgina",
+    url: absoluteUrl('/faq'),
+    inLanguage: 'es-VE',
+    isPartOf: { '@id': WEBSITE_ID },
+    about: { '@id': STORE_ID },
+    mainEntity: FAQ_DATA.flatMap((cat) =>
+      cat.preguntas.map((faq) => ({
+        '@type': 'Question',
+        name: faq.pregunta,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: faq.respuesta,
+        },
+      }))
+    ),
+  };
+
   return (
     <div className="app">
       <Seo
         title="Preguntas frecuentes sobre bikinis | L'Borgina"
         description="Resuelve dudas sobre tallas, ajuste, pedidos, pagos, entregas en Maracay y envíos de los trajes de baño L'Borgina."
         path="/faq"
+        structuredData={[
+          faqSchema,
+          createBreadcrumbSchema([
+            { name: 'Inicio', path: '/' },
+            { name: 'Preguntas frecuentes', path: '/faq' },
+          ]),
+        ]}
       />
-      <Helmet>
-        {/* Schema.org FAQPage para SEO enriquecido en Google */}
-        <script type="application/ld+json">
-          {JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'FAQPage',
-            mainEntity: FAQ_DATA.flatMap((cat) =>
-              cat.preguntas.map((faq) => ({
-                '@type': 'Question',
-                name: faq.pregunta,
-                acceptedAnswer: {
-                  '@type': 'Answer',
-                  text: faq.respuesta,
-                },
-              }))
-            ),
-          })}
-        </script>
-      </Helmet>
 
       <header className="shop-header">
         <Navbar />

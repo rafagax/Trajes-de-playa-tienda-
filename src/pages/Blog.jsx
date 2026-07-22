@@ -9,6 +9,7 @@ import Seo from '../components/common/Seo';
 import Navbar from '../components/layout/Navbar';
 import Footer from '../components/layout/Footer';
 import { blogPosts } from '../data/blog';
+import { createBreadcrumbSchema, createWebPageSchema } from '../seo/schemas';
 
 const formatArticleDate = (date) => new Intl.DateTimeFormat('es-VE', {
     day: 'numeric',
@@ -26,6 +27,18 @@ const Blog = () => (
             title="Blog de moda playera y bikinis | L'Borgina"
             description="Guías sobre cuidado de trajes de baño, tendencias de bikinis y destinos de playa en Aragua preparadas por L'Borgina."
             path="/blog"
+            structuredData={[
+                createWebPageSchema({
+                    type: 'Blog',
+                    path: '/blog',
+                    name: "Blog de moda playera y bikinis de L'Borgina",
+                    description: "Guías sobre cuidado de trajes de baño, tendencias de bikinis y destinos de playa en Aragua preparadas por L'Borgina.",
+                }),
+                createBreadcrumbSchema([
+                    { name: 'Inicio', path: '/' },
+                    { name: 'Blog', path: '/blog' },
+                ]),
+            ]}
         />
         <header className="shop-header"><Navbar /></header>
         <main className="shop-main">

@@ -10,6 +10,7 @@ const Seo = ({
   imageAlt = `Portada de ${SITE_NAME}`,
   type = 'website',
   noindex = false,
+  structuredData,
   children,
 }) => {
   const canonical = path ? absoluteUrl(path) : null;
@@ -94,6 +95,11 @@ const Seo = ({
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={socialImage} />
+      {structuredData && (Array.isArray(structuredData) ? structuredData : [structuredData]).map((schema, index) => (
+        <script key={`json-ld-${index}`} type="application/ld+json">
+          {JSON.stringify(schema).replace(/</g, '\\u003c')}
+        </script>
+      ))}
       {children}
     </Helmet>
   );

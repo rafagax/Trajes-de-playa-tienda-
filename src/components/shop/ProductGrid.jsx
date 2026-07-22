@@ -24,7 +24,7 @@ const ProductCard = ({ product, priority }) => {
     };
 
     return (
-        <article className="product-card">
+        <article className="product-card" id={`producto-${product.id}`}>
             {product.badge && <span className="product-badge">{product.badge}</span>}
             <div className="product-image-wrapper">
                 <picture>

@@ -9,6 +9,7 @@ import Navbar from '../components/layout/Navbar';
 import Footer from '../components/layout/Footer';
 import WhatsAppIcon from '../components/common/WhatsAppIcon';
 import { WHATSAPP_FLOAT_URL } from '../constants/whatsapp';
+import { createBreadcrumbSchema, createWebPageSchema } from '../seo/schemas';
 
 /**
  * Componente funcional para la página de Contacto.
@@ -41,6 +42,18 @@ const Contacto = () => {
                 title="Contacto y asesoría por WhatsApp | L'Borgina Maracay"
                 description="Contacta a L'Borgina para consultar modelos, disponibilidad, entregas en Maracay y envíos de trajes de baño a toda Venezuela."
                 path="/contacto"
+                structuredData={[
+                    createWebPageSchema({
+                        type: 'ContactPage',
+                        path: '/contacto',
+                        name: "Contacto y asesoría de L'Borgina",
+                        description: "Contacta a L'Borgina para consultar modelos, disponibilidad, entregas en Maracay y envíos de trajes de baño a toda Venezuela.",
+                    }),
+                    createBreadcrumbSchema([
+                        { name: 'Inicio', path: '/' },
+                        { name: 'Contacto', path: '/contacto' },
+                    ]),
+                ]}
             />
             <header className="shop-header"><Navbar /></header>
             <main className="shop-main contact-main">

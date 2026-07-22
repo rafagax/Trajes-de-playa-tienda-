@@ -13,6 +13,7 @@ import ProductGrid from '../components/shop/ProductGrid';
 import NotFound from './NotFound';
 import { products } from '../data/products';
 import { CATEGORY_SEO } from '../seo/site';
+import { createBreadcrumbSchema, createProductListSchema, createWebPageSchema } from '../seo/schemas';
 
 /**
  * Componente funcional para la página de la Tienda.
@@ -31,9 +32,25 @@ const Tienda = () => {
 
     if (cat && !meta) return <NotFound />;
 
+    const path = `/tienda${cat ? `/${cat}` : ''}`;
+    const breadcrumbs = [
+        { name: 'Inicio', path: '/' },
+        { name: 'Tienda', path: '/tienda' },
+        ...(cat ? [{ name: meta.heading, path }] : []),
+    ];
+
     return (
         <>
-            <Seo title={meta.title} description={meta.description} path={`/tienda${cat ? `/${cat}` : ''}`} />
+            <Seo
+                title={meta.title}
+                description={meta.description}
+                path={path}
+                structuredData={[
+                    createWebPageSchema({ type: 'CollectionPage', path, name: meta.heading, description: meta.description }),
+                    createBreadcrumbSchema(breadcrumbs),
+                    createProductListSchema(filtered, path, meta.heading),
+                ]}
+            />
             <div className="app">
                 <header className="shop-header">
                     <Navbar />

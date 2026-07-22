@@ -12,6 +12,7 @@ import Footer from '../components/layout/Footer';
 import ProductGrid from '../components/shop/ProductGrid';
 import { products } from '../data/products';
 import { WHATSAPP_FLOAT_URL } from '../constants/whatsapp';
+import { createProductListSchema, storeSchema, websiteSchema } from '../seo/schemas';
 import heroImage from '../assets/traje de baño 1.jpeg';
 import heroImageWebp from '../assets/traje de baño 1.webp';
 
@@ -46,6 +47,11 @@ const Home = () => {
                 description="Compra trajes de baño para mujer online. Encuentra bikinis y enterizos con entregas en Maracay y envíos a toda Venezuela."
                 path="/"
                 imageAlt="Trajes de baño para mujer con entregas en Maracay y envíos a Venezuela"
+                structuredData={[
+                    storeSchema,
+                    websiteSchema,
+                    createProductListSchema(featuredProducts, '/', "Trajes de baño destacados de L'Borgina"),
+                ]}
             />
 
             <div className="app home-page">

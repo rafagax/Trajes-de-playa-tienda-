@@ -7,6 +7,7 @@ import React from 'react';
 import Seo from '../components/common/Seo';
 import Navbar from '../components/layout/Navbar';
 import Footer from '../components/layout/Footer';
+import { createBreadcrumbSchema, createWebPageSchema } from '../seo/schemas';
 
 /**
  * Iconos SVG definidos localmente para mantener el estilo limpio de la marca.
@@ -32,6 +33,17 @@ const Envios = () => (
             title="Envíos y entregas en Maracay | L'Borgina"
             description="Consulta las entregas coordinadas en Maracay, los envíos de trajes de baño a toda Venezuela y las condiciones de cambios de L'Borgina."
             path="/envios"
+            structuredData={[
+                createWebPageSchema({
+                    path: '/envios',
+                    name: "Envíos y entregas de L'Borgina",
+                    description: "Consulta las entregas coordinadas en Maracay, los envíos de trajes de baño a toda Venezuela y las condiciones de cambios de L'Borgina.",
+                }),
+                createBreadcrumbSchema([
+                    { name: 'Inicio', path: '/' },
+                    { name: 'Envíos', path: '/envios' },
+                ]),
+            ]}
         />
         <header className="shop-header"><Navbar /></header>
         <main className="shop-main" style={{ padding: '3rem 1.5rem', color: 'white', maxWidth: '800px', margin: '0 auto' }}>

@@ -11,6 +11,7 @@ import Footer from '../components/layout/Footer';
 import { blogPosts } from '../data/blog';
 import { WHATSAPP_FLOAT_URL } from '../constants/whatsapp';
 import { absoluteUrl, SITE_NAME } from '../seo/site';
+import { createBreadcrumbSchema, STORE_ID, WEBSITE_ID } from '../seo/schemas';
 import NotFound from './NotFound';
 
 const formatArticleDate = (date) => new Intl.DateTimeFormat('es-VE', {
@@ -36,9 +37,12 @@ const Articulo = () => {
     const articleSchema = {
         '@context': 'https://schema.org',
         '@type': 'BlogPosting',
+        '@id': absoluteUrl(`/blog/${id}#articulo`),
         headline: post.title,
         description: post.description,
         image: absoluteUrl(post.imageWebp || post.image),
+        url: absoluteUrl(`/blog/${id}`),
+        inLanguage: 'es-VE',
         datePublished: post.datePublished,
         dateModified: post.dateModified,
         author: {
@@ -48,6 +52,7 @@ const Articulo = () => {
         },
         publisher: {
             '@type': 'Organization',
+            '@id': STORE_ID,
             name: SITE_NAME,
             url: absoluteUrl('/'),
             logo: {
@@ -55,7 +60,11 @@ const Articulo = () => {
                 url: absoluteUrl('/icon-512.png'),
             },
         },
-        mainEntityOfPage: absoluteUrl(`/blog/${id}`),
+        isPartOf: { '@id': WEBSITE_ID },
+        mainEntityOfPage: {
+            '@type': 'WebPage',
+            '@id': absoluteUrl(`/blog/${id}`),
+        },
     };
 
     return (
@@ -67,11 +76,18 @@ const Articulo = () => {
                 image={post.imageWebp || post.image}
                 imageAlt={post.imageAlt || post.title}
                 type="article"
+                structuredData={[
+                    articleSchema,
+                    createBreadcrumbSchema([
+                        { name: 'Inicio', path: '/' },
+                        { name: 'Blog', path: '/blog' },
+                        { name: post.title, path: `/blog/${id}` },
+                    ]),
+                ]}
             >
                 <meta property="article:published_time" content={post.datePublished} />
                 <meta property="article:modified_time" content={post.dateModified} />
                 <meta property="article:author" content={post.author} />
-                <script type="application/ld+json">{JSON.stringify(articleSchema)}</script>
             </Seo>
             <header className="shop-header"><Navbar /></header>
             <main className="shop-main">
